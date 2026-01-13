@@ -15,7 +15,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-lg text-white">
-                  Minu Quality Testing Laboratory
+                  Minu Quality Testing Laboratory Pvt. Ltd.
                 </h3>
                 <p className="text-xs text-gray-400">
                   Quality & Compliance Testing
@@ -100,8 +100,10 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-red-400 mt-0.5" />
                 <span className="text-gray-400">
-                  Gautam Buddha Nagar, Noida,
-                  <br /> Uttar Pradesh, India
+                Plot No. 79, 2nd Floor<br />
+                Gautam Buddha Nagar<br />
+                Noida Sector 155<br />
+                UP – 201310
                 </span>
               </li>
 
@@ -111,7 +113,7 @@ const Footer = () => {
                   href="tel:+917782069184"
                   className="text-gray-400 hover:text-red-400 transition"
                 >
-                  +91 77820 69184
+                  +91 99712 34474
                 </a>
               </li>
 

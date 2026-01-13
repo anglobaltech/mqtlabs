@@ -38,7 +38,7 @@ export default function ContactPage() {
                 href="tel:+917782069184"
                 className="text-gray-600 text-sm hover:text-red-400 transition"
               >
-                +91 77820 69184
+                +91 99712 34474
               </a>
             </div>
 
