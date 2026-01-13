@@ -47,7 +47,7 @@ const Footer = () => {
                   href="/about"
                   className="text-gray-400 hover:text-red-400 transition"
                 >
-                  About
+                  About Us
                 </Link>
               </li>
 
