@@ -128,7 +128,7 @@ const Footer = () => {
               </li>
 
               {/* Social */}
-              <li className="flex gap-4 pt-2">
+              {/* <li className="flex gap-4 pt-2">
                 <a
                   href="#"
                   className="text-gray-400 hover:text-red-400 transition"
@@ -141,7 +141,7 @@ const Footer = () => {
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
