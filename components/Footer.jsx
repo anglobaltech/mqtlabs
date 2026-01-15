@@ -148,21 +148,10 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
           <p>
-            © {new Date().getFullYear()} Minu Quality Testing Laboratory. All
+            © {new Date().getFullYear()} Menu Quality Testing Laboratory PVT. LTD. All
             rights reserved.
           </p>
-
-          <p className="mt-2">
-            Powered by{" "}
-            <a
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-red-400 transition"
-            >
-              Menu Quality Testing Laboratory PVT. LTD.
-            </a>
-          </p>
+          
         </div>
       </div>
     </footer>
