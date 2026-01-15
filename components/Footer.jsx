@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-linear-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">M</span>
               </div>
               <div>
@@ -155,12 +155,12 @@ const Footer = () => {
           <p className="mt-2">
             Powered by{" "}
             <a
-              href="https://www.anglobalservices.com"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-red-400 transition"
             >
-              AN Global Services PVT. LTD.
+              Menu Quality Testing Laboratory PVT. LTD.
             </a>
           </p>
         </div>
