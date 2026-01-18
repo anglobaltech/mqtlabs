@@ -22,23 +22,23 @@ const Header = () => {
           
           {/* Logo */}
           <a href="/" className="flex items-center ">
-            <div className="w-10 h-10">
+            <div className="">
               <Image
-                src="/weblogo.png"
+                src="/mqtl-logo1.png"
                 alt="MQTL Laboratory"
-                width={40}
+                width={150}
                 height={40}
                 className="object-contain"
               />
             </div>
-            <div className="leading-tight">
+            {/* <div className="leading-tight">
               <h1 className="text-base font-bold text-gray-900">
                 MQTL Laboratory
               </h1>
               <p className="text-xs text-gray-800">
                 Quality & Testing
               </p>
-            </div>
+            </div> */}
           </a>
 
           {/* Desktop Menu */}
