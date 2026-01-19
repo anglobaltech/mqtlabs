@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
 
 const Footer = () => {
   return (
@@ -9,19 +11,25 @@ const Footer = () => {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-linear-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
+            {/* Logo */}
+            <a href="/" className="flex items-center gap-2">
               <div>
-                <h3 className="font-semibold text-lg text-white">
-                  Minu Quality Testing Laboratory Pvt. Ltd.
-                </h3>
-                <p className="text-xs text-gray-400">
-                  Quality & Compliance Testing
-                </p>
+                <Image
+                  src="/logo.png"
+                  alt="MQTL Laboratory"
+                  width={70}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
-            </div>
+
+              <div className="leading-tight">
+                <h1 className="text-base font-bold text-white">
+                  MQTL Laboratory
+                </h1>
+                <p className="text-xs text-white">Quality & Testing</p>
+              </div>
+            </a>
 
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
               Providing reliable testing services for wood, plywood, furniture,
@@ -56,7 +64,7 @@ const Footer = () => {
                   href="/services"
                   className="text-gray-400 hover:text-red-400 transition"
                 >
-                 Our Services
+                  Our Services
                 </Link>
               </li>
 
@@ -100,10 +108,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-red-400 mt-0.5" />
                 <span className="text-gray-400">
-                Plot No. 79, 2nd Floor<br />
-                Gautam Buddha Nagar<br />
-                Noida Sector 155<br />
-                UP – 201310
+                  Plot No. 79, 2nd Floor
+                  <br />
+                  Gautam Buddha Nagar
+                  <br />
+                  Noida Sector 155
+                  <br />
+                  UP – 201310
                 </span>
               </li>
 
@@ -148,10 +159,9 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
           <p>
-            © {new Date().getFullYear()} Menu Quality Testing Laboratory PVT. LTD. All
-            rights reserved.
+            © {new Date().getFullYear()} Menu Quality Testing Laboratory PVT.
+            LTD. All rights reserved.
           </p>
-          
         </div>
       </div>
     </footer>

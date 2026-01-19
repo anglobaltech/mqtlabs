@@ -32,10 +32,10 @@ const Header = () => {
             </div>
 
             <div className="leading-tight">
-              <h1 className="text-base font-bold text-gray-900">
+              <h1 className="text-base font-bold text-[#05526e]">
                 MQTL Laboratory
               </h1>
-              <p className="text-xs text-gray-800">Quality & Testing</p>
+              <p className="text-xs text-black">Precision & Integrity</p>
             </div>
           </a>
 
