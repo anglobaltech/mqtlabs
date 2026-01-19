@@ -19,26 +19,24 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4">
         {/* Main Row */}
         <div className="flex items-center justify-between h-20">
-          
           {/* Logo */}
-          <a href="/" className="flex items-center ">
-            <div className="">
+          <a href="/" className="flex items-center gap-2">
+            <div>
               <Image
-                src="/mqtl-logo1.png"
+                src="/logo.png"
                 alt="MQTL Laboratory"
-                width={150}
+                width={70}
                 height={40}
                 className="object-contain"
               />
             </div>
-            {/* <div className="leading-tight">
+
+            <div className="leading-tight">
               <h1 className="text-base font-bold text-gray-900">
                 MQTL Laboratory
               </h1>
-              <p className="text-xs text-gray-800">
-                Quality & Testing
-              </p>
-            </div> */}
+              <p className="text-xs text-gray-800">Quality & Testing</p>
+            </div>
           </a>
 
           {/* Desktop Menu */}
