@@ -78,7 +78,7 @@ const HomePage = () => {
             {/* Company Name */}
             <div className="text-amber-50 text-center sm:text-left mt-6">
               <h2 className="text-lg sm:text-2xl font-semibold tracking-wide">
-                Minu Quality Testing Laboratory
+                Minu Quality Testing Laboratory Pvt. Ltd.
               </h2>
 
               <p className="text-gray-300 text-sm sm:text-base mt-3 max-w-5xl">
