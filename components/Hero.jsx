@@ -25,74 +25,68 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden">
-        {/* Background image with overlay */}
+      <section className="relative min-h-screen flex items-start py-16 overflow-hidden">
+
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/hero-lab.jpg"
             alt="Wood testing laboratory"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40" />
         </div>
 
-        {/* Decorative elements */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-red-400/20 rounded-full blur-3xl animate-pulse hidden md:block" />
-        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl hidden lg:block" />
+        {/* Decorative blur shapes */}
+        <div className="absolute top-32 right-32 w-64 h-64 bg-red-400/20 rounded-full blur-3xl hidden md:block" />
+        <div className="absolute bottom-32 left-40 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl hidden lg:block" />
 
-        <div className="container mx-auto px-4 relative z-10 w-full">
-          <div className="max-w-3xl">
-            {/* Hero Heading */}
-            <h1
-              className="font-display text-white text-[28px] sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-5 sm:mb-6 leading-snug sm:leading-tight animate-fade-up"
-              style={{ animationDelay: "0.1s" }}
-            >
+        {/* Content */}
+        <div className="mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-20 relative z-10">
+          <div className="md:max-w-5xl">
+
+            <h1 className="text-white text-[30px] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5">
               Precision Testing for
-              <span className="block text-red-400">Wood Products</span>
+              <span className="block text-red-400 mt-1">Wood Products</span>
             </h1>
-            {/* Hero Subtext */}
-            <p
-              className="text-[15px] sm:text-lg text-gray-200 mb-7 sm:mb-8 max-w-2xl animate-fade-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+
+            <p className="text-gray-200 text-sm sm:text-lg mb-9 leading-relaxed
+                   w-full sm:max-w-xl md:max-w-2xl">
               Trusted laboratory for comprehensive quality testing of plywood,
               furniture, timber, and all wooden products. Ensuring safety and
               compliance with international standards.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              {/* Request Testing → Contact Page */}
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/contact-us">
-                <button className="group px-6 py-3 cursor-pointer text-black text-base md:text-lg font-semibold rounded-lg shadow-lg bg-red-400 hover:text-white transition-all flex items-center justify-center gap-2 w-full sm:w-auto">
+                <button className="px-7 py-3 bg-red-400 text-black cursor-pointer font-semibold rounded-lg shadow hover:text-white transition w-full sm:w-auto">
                   Request Testing
                 </button>
               </Link>
 
-              {/* View Services → Services Page */}
               <Link href="/services">
-                <button className="px-6 py-3 bg-transparent border-2 cursor-pointer border-white text-white text-base md:text-lg font-semibold rounded-lg hover:bg-white hover:text-black transition-all w-full sm:w-auto">
+                <button className="px-7 py-3 border-2 border-white cursor-pointer text-white font-semibold rounded-lg hover:bg-white hover:text-black transition w-full sm:w-auto">
                   View Services
                 </button>
               </Link>
             </div>
-            {/* Company Name */}
-            <div className="text-amber-50 text-center sm:text-left mt-6">
-              <h2 className="text-lg sm:text-2xl font-semibold tracking-wide">
+
+            <div>
+              <h2 className="text-white text-base sm:text-xl font-semibold">
                 Minu Quality Testing Laboratory Pvt. Ltd.
               </h2>
-
-              <p className="text-gray-300 text-sm sm:text-base mt-3 max-w-5xl">
-                Minu Quality Testing Laboratory provides testing services for
-                wood, plywood, and textile products, helping manufacturers meet
-                quality and compliance requirements with confidence.
+              <p className="text-gray-300 text-sm sm:text-base mt-4 leading-relaxed
+                     w-full sm:max-w-xl md:max-w-2xl">
+                Providing reliable testing services for wood, plywood, and textile
+                products to help manufacturers meet quality and compliance standards
+                with confidence.
               </p>
             </div>
-            v
+
           </div>
         </div>
       </section>
 
-      {/* ================= ABOUT SECTION ================= */}
       <section id="about" className="pt-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-6xl mx-auto">
