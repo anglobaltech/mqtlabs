@@ -18,7 +18,7 @@ const Header = () => {
     <header className="top-0 z-50 bg-white shadow-sm">
       <nav className="max-w-7xl mx-auto px-4">
         {/* Main Row */}
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-21">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <div>
@@ -32,10 +32,10 @@ const Header = () => {
             </div>
 
             <div className="leading-tight">
-              <h1 className="text-base font-bold text-[#05526e]">
-                MQTL Laboratory
+              <h1 className="text-xl font-bold text-[#05526e]">
+                MQT Laboratory
               </h1>
-              <p className="text-xs text-black">Precision & Integrity</p>
+              <p className="text-sm text-black">Precision & Integrity</p>
             </div>
           </a>
 
@@ -48,7 +48,7 @@ const Header = () => {
                 className="relative text-lg font-medium text-gray-900 hover:text-black transition group"
               >
                 {link.label}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-red-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-linear-to-r from-red-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>

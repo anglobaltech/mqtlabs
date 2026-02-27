@@ -18,6 +18,9 @@ import {
   Target,
   Users,
   TrendingUp,
+  Trees,
+  Armchair,
+  TreeDeciduous,
 } from "lucide-react";
 
 const HomePage = () => {
@@ -25,86 +28,146 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative min-h-screen flex items-start py-16 overflow-hidden">
+      <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden">
 
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/hero-lab.jpg"
-            alt="Wood testing laboratory"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40" />
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/bg.jpg"
+      alt="Testing Laboratory"
+      className="w-full h-fit object-cover"
+    />
+    <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/60 to-black/50" />
+  </div>
+
+  {/* Decorative Blur Shapes */}
+  <div className="absolute top-24 right-24 w-72 h-72 bg-red-500/20 rounded-full blur-3xl hidden md:block animate-pulse" />
+  <div className="absolute bottom-20 left-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl hidden lg:block" />
+
+  {/* Content */}
+  <div className="relative z-10 mx-auto w-full px-6 md:px-12 lg:px-20">
+    <div className="max-w-5xl">
+
+      <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+        Precision Testing for
+        <span className="block bg-linear-to-r from-red-500 to-orange-400 bg-clip-text text-transparent mt-2">
+          Construction Materials
+        </span>
+      </h1>
+
+      <p className="text-gray-200 text-base sm:text-lg mb-10 leading-relaxed max-w-2xl">
+        Trusted laboratory for comprehensive quality testing of
+        <span className="font-semibold text-white">
+          {" "}Wood, Polywood, Water, Furniture, Hinges,
+          Cement, Aggregates, Soil & Concrete Paver Blocks
+        </span>.
+        Ensuring safety, durability, and compliance with national and international standards.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-5 mb-12">
+        <Link href="/contact-us">
+          <button className="px-8 py-3 bg-red-500 hover:bg-red-800 text-white cursor-pointer font-semibold rounded-xl shadow-lg transition duration-300 w-full sm:w-auto">
+            Contact Us
+          </button>
+        </Link>
+
+        <Link href="/services">
+          <button className="px-8 py-3 border border-white text-white font-semibold cursor-pointer rounded-xl hover:bg-white hover:text-black transition duration-300 w-full sm:w-auto">
+            View Services
+          </button>
+        </Link>
+      </div>
+
+      <div className=" backdrop-blur-xs p-6  rounded-2xl border border-white/20 max-w-2xl shadow-xl">
+        <h2 className="text-red-400 text-xl sm:text-2xl font-semibold mb-3">
+          Minu Quality Testing Laboratory Pvt. Ltd.
+        </h2>
+        <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+          Delivering reliable and accurate testing services for wood,
+          polywood, water, furniture, cement, and construction materials.
+          We help manufacturers and builders meet quality, safety,
+          and compliance standards with complete confidence.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+            {/* ================= TRUST & STATS SECTION ================= */}
+{/* <section className="bg-transparent">
+  <div className="max-w-15xl px-2">
+
+    <div className="text-center ">
+      <h2 className="text-3xl md:text-5xl  font-bold text-red-400 mb-4">
+        Trusted by Industry Leaders
+      </h2>
+      <p className="text-white max-w-4xl mx-auto">
+        Delivering reliable and certified testing solutions with accuracy,
+        transparency, and industry compliance.
+      </p>
+      <div className="w-20 h-1 bg-red-400 mx-auto mt-4"></div>
+    </div>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+      {/* Clients */}
+      {/* <div>
+        <Users className="w-10 h-10 text-red-400 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white">500+</h3>
+        <p className="text-white mt-2 font-semibold">Satisfied Clients</p>
+      </div>
+
+      {/* Projects */}
+      {/* <div>
+        <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white">5000+</h3>
+        <p className="text-white mt-2 font-semibold">Tests Conducted</p>
+      </div> */}
+
+      {/* Experience */}
+      {/* <div>
+        <Clock className="w-10 h-10 text-indigo-400 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white">5+</h3>
+        <p className="text-white mt-2 font-semibold">Years Experience</p>
+      </div> */}
+
+      {/* Certifications */}
+      {/* <div>
+        <Award className="w-10 h-10 text-yellow-500 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white">100%</h3>
+        <p className="text-white mt-2 font-semibold">Standards Compliance</p>
+      </div>
+
+    </div>
+  </div>
+</section>  */}
+
+           {/* </div>
         </div>
-
-        {/* Decorative blur shapes */}
-        <div className="absolute top-32 right-32 w-64 h-64 bg-red-400/20 rounded-full blur-3xl hidden md:block" />
-        <div className="absolute bottom-32 left-40 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl hidden lg:block" />
-
-        {/* Content */}
-        <div className="mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-20 relative z-10">
-          <div className="md:max-w-5xl">
-
-            <h1 className="text-white text-[30px] sm:text-5xl lg:text-6xl font-bold leading-tight mb-5">
-              Precision Testing for
-              <span className="block text-red-400 mt-1">Wood Products</span>
-            </h1>
-
-            <p className="text-gray-200 text-sm sm:text-lg mb-9 leading-relaxed
-                   w-full sm:max-w-xl md:max-w-2xl">
-              Trusted laboratory for comprehensive quality testing of plywood,
-              furniture, timber, and all wooden products. Ensuring safety and
-              compliance with international standards.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Link href="/contact-us">
-                <button className="px-7 py-3 bg-red-400 text-black cursor-pointer font-semibold rounded-lg shadow hover:text-white transition w-full sm:w-auto">
-                  Request Testing
-                </button>
-              </Link>
-
-              <Link href="/services">
-                <button className="px-7 py-3 border-2 border-white cursor-pointer text-white font-semibold rounded-lg hover:bg-white hover:text-black transition w-full sm:w-auto">
-                  View Services
-                </button>
-              </Link>
-            </div>
-
-            <div>
-              <h2 className="text-white text-base sm:text-xl font-semibold">
-                Minu Quality Testing Laboratory Pvt. Ltd.
-              </h2>
-              <p className="text-gray-300 text-sm sm:text-base mt-4 leading-relaxed
-                     w-full sm:max-w-xl md:max-w-2xl">
-                Providing reliable testing services for wood, plywood, and textile
-                products to help manufacturers meet quality and compliance standards
-                with confidence.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      </section> */}
 
       <section id="about" className="pt-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                About Minu Quality Testing Laboratory
+                About Us
               </h2>
-              <p className="text-md text-gray-600 max-w-3xl mx-auto">
-                Established in India, Minu Quality Testing Laboratory
-                specializes in testing solutions for wooden products, plywood,
-                and textiles, supporting manufacturers with reliable quality
-                assurance.
+              <p className="text-md text-gray-600 max-w-6xl mx-auto">
+                <b>Minu Quality Testing Laboratory</b> is an independent testing lab in
+                Noida, Uttar Pradesh, India, that provides quality testing
+                and evaluation services for <b>wooden products, plywood, furniture and other construction materials.</b>.
+                It helps manufacturers and suppliers verify <b>strength, durability, moisture content, bonding
+                quality,</b> and other performance properties according to national and international standards
+                such as <b>IS, ASTM, and ISO,</b> ensuring products meet regulatory and quality requirements.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Mission */}
-              <div className="bg-gradient-to-br from-red-50 to-indigo-50 p-8 rounded-2xl">
+              <div className="bg-linear-to-br from-red-50 to-indigo-50 p-8 rounded-2xl">
                 <Factory className="w-14 h-14 text-red-400 mb-4" />
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   Our Mission
@@ -115,8 +178,8 @@ const HomePage = () => {
                   safety, and regulatory requirements.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  We support industries involved in wooden products, plywood,
-                  furniture, and textiles with equipment and testing methods
+                  We support industries involved in wood, polywood,
+                  furniture, water, soil, cement, hinges, aggregates and concrete paver block  with equipment and testing methods
                   aligned to national and international standards.
                 </p>
               </div>
@@ -124,7 +187,7 @@ const HomePage = () => {
               {/* Values */}
               <div className="space-y-6">
                 <div className="flex gap-4 items-start p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
-                  <Target className="w-10 h-10 text-red-400 flex-shrink-0" />
+                  <Target className="w-10 h-10 text-red-400 shrink-0" />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
                       Practical & Accurate Testing
@@ -137,7 +200,7 @@ const HomePage = () => {
                 </div>
 
                 <div className="flex gap-4 items-start p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
-                  <Shield className="w-10 h-10 text-red-400 flex-shrink-0" />
+                  <Shield className="w-10 h-10 text-red-400 shrink-0" />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
                       Quality & Compliance
@@ -150,7 +213,7 @@ const HomePage = () => {
                 </div>
 
                 <div className="flex gap-4 items-start p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
-                  <Globe className="w-10 h-10 text-red-400 flex-shrink-0" />
+                  <Globe className="w-10 h-10 text-red-400 shrink-0" />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
                       Industry Standards
@@ -167,106 +230,156 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ================= PRODUCTS SECTION ================= */}
-      <section id="products" className="pt-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Testing Equipment
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Laboratory equipment designed for precise testing of wooden
-              products, plywood panels, furniture, and textiles.
-            </p>
-          </div>
+      {/* Testing Equipdment */}
+<section id="products" className="pt-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Testing Equipment
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        Advanced laboratory equipment for accurate testing of construction,
+        structural, and industrial materials.
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Wood & Plywood */}
-            <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-6">
-                <Beaker className="w-7 h-7 text-red-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Wood & Plywood Testing Equipment
-              </h3>
-              <p className="text-gray-600 mb-5">
-                Equipment for strength, bonding quality, moisture content, and
-                dimensional stability testing of wooden and plywood products.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Compression & bending tests
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Glue shear & bonding tests
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Moisture & density analysis
-                </li>
-              </ul>
-            </div>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-            {/* Textile */}
-            <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-              <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-                <TrendingUp className="w-7 h-7 text-indigo-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Textile Testing Instruments
-              </h3>
-              <p className="text-gray-600 mb-5">
-                Instruments for evaluating strength, durability, and performance
-                characteristics of textile materials and fabrics.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Tensile & tear strength
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Abrasion & pilling resistance
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Color fastness testing
-                </li>
-              </ul>
-            </div>
-
-            {/* Quality Systems */}
-            <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Shield className="w-7 h-7 text-green-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Quality Control Systems
-              </h3>
-              <p className="text-gray-600 mb-5">
-                Supporting tools and systems for laboratory quality control,
-                reporting, and compliance verification.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Digital data recording
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Repeatable test procedures
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Standard-compliant reporting
-                </li>
-              </ul>
-            </div>
-          </div>
+      {/* Wood Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-blue-200 rounded-full flex items-center justify-center mb-6">
+          <Trees className="w-7 h-7 text-green-900" />
         </div>
-      </section>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Wood Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Wood Testing Equipment</li>
+          <li>Timber Analysis Equipmen</li>
+          <li>Wood Strength Analyzer</li>
+        </ul>
+      </div>
+      {/* Polywood Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-gray-600 rounded-full flex items-center justify-center mb-6">
+          <TreeDeciduous className="w-7 h-7 text-green-100" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Polywood Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Plywood Testing</li>
+          <li>Quality Testing</li>
+          <li>Durability Testing</li>
+        </ul>
+      </div>
+      {/* Water Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+          <Beaker className="w-7 h-7 text-blue-500" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Water Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>pH Measurement</li>
+          <li>TDS Measurement</li>
+        </ul>
+      </div>
+
+      {/* Soil Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+          <Factory className="w-7 h-7 text-yellow-600" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Soil Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Compaction & Density Tests</li>
+          <li>Atterberg Limits</li>
+          <li>Shear Strength Analysis</li>
+        </ul>
+      </div>
+
+      {/* Cement Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-6">
+          <Shield className="w-7 h-7 text-gray-700" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Cement Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Compressive Strength</li>
+          <li>Initial & Final Setting Time</li>
+          <li>Fineness & Soundness Tests</li>
+        </ul>
+      </div>
+
+      {/* Aggregates Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+          <Target className="w-7 h-7 text-orange-500" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Aggregates Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Impact & Crushing Value</li>
+          <li>Sieve Analysis</li>
+          <li>Specific Gravity Test</li>
+        </ul>
+      </div>
+
+      {/* Concrete Paver Block */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-6">
+          <TrendingUp className="w-7 h-7 text-red-400" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Concrete Paver Block Testing
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Compressive Strength</li>
+          <li>Water Absorption</li>
+          <li>Abrasion Resistance</li>
+        </ul>
+      </div>
+
+      {/* Hinges Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+          <Award className="w-7 h-7 text-indigo-500" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Hinges Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Cycle Durability Test</li>
+          <li>Corrosion Resistance</li>
+          <li>Load Bearing Capacity</li>
+        </ul>
+      </div>
+
+      {/* Furniture Testing */}
+      <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+          <Armchair className="w-7 h-7 text-green-500" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          Furniture Testing Equipment
+        </h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>Load & Stability Test</li>
+          <li>Impact & Drop Test</li>
+          <li>Durability Assessment</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ================= SERVICES SECTION ================= */}
       <section id="services" className="py-20 bg-white">
@@ -288,7 +401,7 @@ const HomePage = () => {
               "Wood Moisture & Density Analysis",
               "Furniture Load & Durability Tests",
               "Formaldehyde Emission Testing",
-              "Textile Tensile & Tear Strength",
+              "Water Chemical Analysis, Water Sample Testing",
               "Abrasion & Pilling Resistance",
               "Color Fastness Testing",
               "Compliance & Test Reports",
@@ -308,7 +421,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0f3c5f] via-[#154c79] to-[#1b5d8f]">
+      <section className="py-20 bg-linear-to-r from-[#0f3c5f] via-[#154c79] to-[#1b5d8f]">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Ready to Ensure Quality & Compliance?

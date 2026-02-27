@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export const metadata = {
   title: "Testing Services | Minu Quality Testing Laboratory",
@@ -9,106 +11,112 @@ export const metadata = {
 const services = [
   {
     title: "Wood Testing Services",
-    description:
-      "Comprehensive testing of solid wood and timber products to evaluate strength, durability, moisture content, and overall performance.",
-    points: [
-      "Moisture content & density testing",
-      "Compression & bending strength",
-      "Dimensional stability analysis",
-      "Durability & performance evaluation",
-    ],
+    description: "Comprehensive testing of solid wood...",
     image: "/wood-testing-service.jpeg",
+    link: "/services/woodTesting",
   },
   {
-    title: "Plywood Testing Services",
-    description:
-      "Testing solutions for plywood and panel boards to verify bonding quality, strength, and compliance with applicable standards.",
-    points: [
-      "Bonding & glue shear strength",
-      "Bending & load-bearing tests",
-      "Moisture resistance testing",
-      "Thickness & dimensional checks",
-    ],
-    image: "/plywood-testing-service.jpeg",
+    title: "Polywood Testing Services",
+    description: "Testing solutions for plywood...",
+    image: "/polywood-testing-service.jpeg",
+    link: "/services/polyWoodTesting",
   },
   {
-    title: "Textile Testing Services",
-    description:
-      "Laboratory testing of textile materials and fabrics to assess physical performance, durability, and appearance retention.",
-    points: [
-      "Tensile & tear strength testing",
-      "Abrasion & pilling resistance",
-      "Color fastness testing",
-      "Fabric performance analysis",
-    ],
-    image: "/textile-testing-service.jpeg",
+    title: "Water Testing Services",
+    description: "Water Testing involves analyzing...",
+    image: "/waterTesting.jpg",
+    link: "/services/waterTesting",
+  },
+  {
+    title: "Furniture Testing Services",
+    description: "Furniture Testing ensures strength...",
+    image: "/Furniture Testing.jpg",
+    link: "/services/furnitureTesting",
+  },
+  {
+    title: "Hinges Testing Services",
+    description: "Hinges Testing evaluates strength...",
+    image: "/Hinges Testing.jpg",
+    link: "/services/hingesTesting",
+  },
+  {
+    title: "Cement Testing Services",
+    description: "Cement Testing evaluates strength...",
+    image: "/Cement Testing.jpg",
+    link: "/services/cementTesting",
+  },
+  {
+    title: "Aggregates Testing Services",
+    description: "Aggregates Testing checks strength...",
+    image: "/Aggregates Testing.jpg",
+    link: "/services/aggregatesTesting",
+  },
+  {
+    title: "Soil Testing Services",
+    description: "Soil Testing evaluates strength...",
+    image: "/Soil Testing.jpg",
+    link: "/services/soilTesting",
+  },
+  {
+    title: "Concrete Paver Block Testing Services",
+    description: "Concrete Paver Block Testing checks...",
+    image: "/paverBlockTesting.jpg",
+    link: "/services/concretePaverBlockTesting",
   },
 ];
-
 export default function ServicesPage() {
   return (
     <main className="bg-white">
       {/* ================= HERO ================= */}
-      <section className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
+      <section className="bg-gray-900 py-15">
+        <div className="max-w-7xl mx-auto px-2 text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-white mb-5">
             Testing Services
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg">
-            Reliable laboratory testing services for wood, plywood, furniture,
-            and textile products.
+          <p className="text-gray-300 max-w-6xl mx-auto text-xl md:text-xl">
+           Testing is the process of examining and evaluating a product or material to ensure it meets required quality, safety, and performance standards.
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-16 max-w-6xl mx-auto">
+    
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-14">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="grid md:grid-cols-2 gap-10 items-start"
-              >
-                <div
-                  className={`relative h-64 rounded-xl overflow-hidden bg-white shadow ${
-                    index % 2 !== 0 ? "md:order-2" : ""
-                  }`}
-                >
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                    priority={index === 0}
-                  />
-                </div>
+            <Link href={service.link} key={index}>
+          <div
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl 
+                       transition duration-300 overflow-hidden cursor-pointer"
+          >
+            {/* Image */}
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover transition-transform duration-500 
+                           ease-in-out hover:scale-110"
+              />
+            </div>
 
-                {/* Content */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
-                    {service.title}
-                  </h2>
-                  <p className="text-gray-600 text-sm md:text-base mb-4">
-                    {service.description}
-                  </p>
+            {/* Content */}
+            <div className="p-6">
+              <h2 className="text-lg font-bold text-gray-900 mb-2">
+                {service.title}
+              </h2>
 
-                  <ul className="space-y-2">
-                    {service.points.map((point, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-gray-700 text-sm"
-                      >
-                        <span className="text-green-500 mt-1">•</span>
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              <p className="text-gray-600 text-m mb-4">
+                {service.description}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </Link>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* ================= CTA ================= */}
       <section className="bg-gray-900 py-16">

@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Minu Quality Testing Laboratory | Wood, Plywood & Textile Testing",
+  title: "Minu Quality Testing Laboratory",
   description:
-    "Minu Quality Testing Laboratory provides reliable testing services for wood, plywood, furniture, and textile products. Focused on accuracy, compliance, and industry standards.",
+    "Minu Quality Testing Laboratory provides reliable testing services for wood, plywood, furniture, and other textile materials. Focused on accuracy, compliance, and industry standards.",
 };
 
 

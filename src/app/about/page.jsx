@@ -16,14 +16,14 @@ export default function AboutPage() {
   return (
     <main className="bg-white">
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-gray-900 py-24">
+      <section className="bg-gray-900 py-15">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            About Minu Quality Testing Laboratory
+            About Us
           </h1>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-            Reliable testing services for wood, plywood, furniture, and textile
-            products — focused on accuracy, compliance, and practical results.
+            Reliable testing services for wood, polywood, furniture, and other construction materials
+            focused on accuracy, compliance, and practical results.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 Minu Quality Testing Laboratory is an independent testing
                 laboratory based in India, providing testing and evaluation
-                services for wooden products, plywood, furniture, and textile
+                services for wood, polywood, furniture, and other construction
                 materials.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -128,12 +128,15 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              "Wood & Timber Products",
-              "Plywood & Panel Boards",
-              "Furniture Components",
-              "Textile Fabrics",
-              "Finished Textile Products",
-              "Raw Materials & Samples",
+              "Wood Testing",
+              "Plywood Testing",
+              "Furniture Testing",
+              "Water Testing",
+              "Hinges Testing",
+              "Cement Testing",
+              "Soil Testing",
+              "Aggregate Testing",
+              "Concrete Paver Block Testing",
             ].map((item, idx) => (
               <div
                 key={idx}
