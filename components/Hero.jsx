@@ -458,7 +458,7 @@ const HomePage = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Phone */}
+             
               <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition text-center">
                 <div className="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-7 h-7 text-red-400" />
