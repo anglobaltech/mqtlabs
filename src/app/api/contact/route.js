@@ -14,7 +14,7 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: `"Website Enquiry" <${process.env.EMAIL_USER}>`, 
-      to: "yadavmonuu1212@gmail.com", 
+      to: "mail@anglobalservices.com", 
       subject: "New Enquiry Received From MQTL Laboratory",
       html: `
         <h3> MQTL WEBSITE TESTING REQUEST </h3>
