@@ -23,8 +23,89 @@ import {
   TreeDeciduous,
 } from "lucide-react";
 
+
 const HomePage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+ const [formData, setFormData] = useState({
+  fullName: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
+const [errors, setErrors] = useState({});
+const [status, setStatus] = useState("");
+
+const handleChange = (e) => {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+};
+
+const validateForm = () => {
+  let newErrors = {};
+
+  if (!formData.fullName || formData.fullName.length < 4) {
+    newErrors.fullName = "Full name must be at least 4 characters.";
+  }
+
+  if (!formData.email) {
+    newErrors.email = "Email is required.";
+  } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+    newErrors.email = "Invalid email format.";
+  }
+
+  if (!formData.phone) {
+    newErrors.phone = "Phone number is required.";
+  } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+    newErrors.phone = "Phone must be 10 digits.";
+  }
+
+  if (!formData.message || formData.message.length < 1) {
+    newErrors.message = "Please write which services are you interested.";
+  }
+
+  return newErrors;
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const validationErrors = validateForm();
+  setErrors(validationErrors);
+
+  if (Object.keys(validationErrors).length !== 0) return;
+
+  try {
+    setStatus("loading");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setStatus("success");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      setTimeout(() => setStatus(""), 3000);
+    } else {
+      setStatus("error");
+    }
+
+  } catch {
+    setStatus("error");
+  }
+};
 
   return (
     <div className="min-h-screen bg-white">
@@ -95,58 +176,6 @@ const HomePage = () => {
 
 </section>
 
-            {/* ================= TRUST & STATS SECTION ================= */}
-{/* <section className="bg-transparent">
-  <div className="max-w-15xl px-2">
-
-    <div className="text-center ">
-      <h2 className="text-3xl md:text-5xl  font-bold text-red-400 mb-4">
-        Trusted by Industry Leaders
-      </h2>
-      <p className="text-white max-w-4xl mx-auto">
-        Delivering reliable and certified testing solutions with accuracy,
-        transparency, and industry compliance.
-      </p>
-      <div className="w-20 h-1 bg-red-400 mx-auto mt-4"></div>
-    </div>
-
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-
-      {/* Clients */}
-      {/* <div>
-        <Users className="w-10 h-10 text-red-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white">500+</h3>
-        <p className="text-white mt-2 font-semibold">Satisfied Clients</p>
-      </div>
-
-      {/* Projects */}
-      {/* <div>
-        <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white">5000+</h3>
-        <p className="text-white mt-2 font-semibold">Tests Conducted</p>
-      </div> */}
-
-      {/* Experience */}
-      {/* <div>
-        <Clock className="w-10 h-10 text-indigo-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white">5+</h3>
-        <p className="text-white mt-2 font-semibold">Years Experience</p>
-      </div> */}
-
-      {/* Certifications */}
-      {/* <div>
-        <Award className="w-10 h-10 text-yellow-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white">100%</h3>
-        <p className="text-white mt-2 font-semibold">Standards Compliance</p>
-      </div>
-
-    </div>
-  </div>
-</section>  */}
-
-           {/* </div>
-        </div>
-      </section> */}
 
       <section id="about" className="pt-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -420,30 +449,153 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-linear-to-r from-[#0f3c5f] via-[#154c79] to-[#1b5d8f]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Ready to Ensure Quality & Compliance?
-          </h2>
+      <section className="py-12 bg-linear-to-r from-[#0f3c5f] via-[#154c79] to-[#1b5d8f]">
+  <div className="max-w-7xl  mx-auto ">
+    <div className="grid md:grid-cols-2 gap-15 items-start">
 
-          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Partner with us for world-class laboratory testing equipment,
-            inspection systems and technical support.
-          </p>
+      {/* LEFT SIDE CTA CONTENT (UNCHANGED) */}
+      <div className="text-white pt-8">
+        <h2 className="text-3xl md:text-4xl font-bold mb-5">
+          Ready to Ensure Quality & Compliance?
+        </h2>
 
-          <div className=" justify-center">
-            <Link
-              href="/contact-us"
-              className="px-8 py-4 w-70 bg-white text-[#0f3c5f] cursor-pointer text-md font-semibold rounded-lg hover:bg-gray-100 transition shadow-lg inline-flex items-center justify-center"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
+        <p className="text-lg text-white/90 mb-6">
+          Partner with us for world-class laboratory testing equipment,
+          inspection systems and technical support.
+        </p>
+      </div>
 
-      <section id="contact" className="py-20 bg-gray-50">
+      
+
+      {/* RIGHT SIDE FORM */}
+      <div className="bg-white p-6 rounded-2xl shadow-2xl">
+        <h2 className="text-2xl font-bold text-gray-900 mb-1">
+          Let's Connect
+        </h2>
+        <p className="text-gray-600 text-sm mb-2">
+          Fill out the form and our team will contact you shortly.
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+
+  {/* ROW 1 */}
+  <div className="grid md:grid-cols-2 gap-5">
+
+    {/* Full Name */}
+    <div>
+      <input
+        type="text"
+        name="fullName"
+        value={formData.fullName}
+        onChange={handleChange}
+        placeholder="Full Name"
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+      />
+      {errors.fullName && (
+        <p className="text-red-500 text-xs mt-1">
+          {errors.fullName}
+        </p>
+      )}
+    </div>
+
+    {/* Email */}
+    <div>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="Email Address"
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+      />
+      {errors.email && (
+        <p className="text-red-500 text-xs mt-1">
+          {errors.email}
+        </p>
+      )}
+    </div>
+
+  </div>
+
+  {/* ROW 2 */}
+  <div className="grid md:grid-cols-2 gap-4">
+
+    {/* Phone */}
+    <div>
+      <input
+        type="tel"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        maxLength={10}
+        placeholder="Phone Number"
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+      />
+      {errors.phone && (
+        <p className="text-red-500 text-xs mt-1">
+          {errors.phone}
+        </p>
+      )}
+    </div>
+
+    {/* Message */}
+    <div>
+      <textarea
+        name="message"
+        rows={3}
+        value={formData.message}
+        onChange={handleChange}
+        placeholder="Your Message..."
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400 resize-none"
+      />
+      {errors.message && (
+        <p className="text-red-500 text-xs mt-1">
+          {errors.message}
+        </p>
+      )}
+    </div>
+
+  </div>
+
+  {/* BUTTON CENTERED */}
+  <div className="flex justify-center">
+    <button
+      type="submit"
+      disabled={status === "loading"}
+      className={`px-10 py-2.5 text-white text-sm font-semibold rounded-lg transition flex items-center gap-2
+        ${status === "loading"
+          ? "bg-red-300 cursor-not-allowed"
+          : "bg-red-400 hover:bg-red-500"
+        }`}
+    >
+      {status === "loading" && (
+        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+      )}
+      {status === "loading" ? "Sending..." : "Submit Enquiry"}
+    </button>
+  </div>
+
+  {/* Success / Error */}
+  {status === "success" && (
+    <div className="mt-3 bg-green-100 text-green-700 px-4 py-3 rounded-lg text-sm text-center">
+      ✅ Your Enquiry Send Successfully. We will connect you soon.
+    </div>
+  )}
+
+  {status === "error" && (
+    <div className="mt-3 bg-red-100 text-red-700 px-4 py-3 rounded-lg text-sm text-center">
+      ❌ Something went wrong.
+    </div>
+  )}
+
+</form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      {/* <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -475,7 +627,7 @@ const HomePage = () => {
               </div>
 
               {/* Email */}
-              <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition text-center">
+              {/* <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition text-center">
                 <div className="w-14 h-14 bg-indigo-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-7 h-7 text-indigo-400" />
                 </div>
@@ -488,10 +640,10 @@ const HomePage = () => {
                 >
                   info@mqtlab.com
                 </a>
-              </div>
+              </div> */}
 
               {/* Location */}
-              <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition text-center">
+              {/* <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition text-center">
                 <div className="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-7 h-7 text-green-400" />
                 </div>
@@ -511,7 +663,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -14,11 +14,9 @@ export default function ContactPage() {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null);
 
-  // Handle Change
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Phone: only numbers allowed
     if (name === "phone") {
       const numericValue = value.replace(/\D/g, "");
       setFormData({ ...formData, phone: numericValue });
@@ -27,7 +25,6 @@ export default function ContactPage() {
     }
   };
 
-  // Validation Function
   const validate = () => {
     let newErrors = {};
 
@@ -48,7 +45,7 @@ export default function ContactPage() {
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
+      newErrors.message = "Please Explain which services are you interested.";
     } else if (formData.message.length < 10) {
       newErrors.message = "Message must be at least 10 characters";
     }
@@ -57,10 +54,8 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validate()) return;
 
     setStatus("loading");
@@ -76,77 +71,83 @@ export default function ContactPage() {
 
       if (data.success) {
         setStatus("success");
-
         setFormData({
           fullName: "",
           email: "",
           phone: "",
           message: "",
         });
-
         setErrors({});
-
-        setTimeout(() => {
-          setStatus(null);
-        }, 5000);
+        setTimeout(() => setStatus(null), 5000);
       } else {
         setStatus("error");
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
     }
   };
 
   return (
     <main className="bg-white">
+
       {/* HERO */}
-      <section className="bg-gray-900 py-20">
+      <section className="bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
             Contact Us
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg">
-            Reach out to us for testing services, technical queries, or general
-            information.
+          <p className="text-gray-300 max-w-2xl mx-auto text-base">
+            Reach out to us for testing services, technical queries, or general information.
           </p>
         </div>
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="py-14">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
 
-            {/* LEFT SIDE FORM */}
+          {/* HOW WE CAN HELP - TOP */}
+          <div className="mb-10 max-w-6xl mx-auto">
+            <h3 className="text-4xl font-bold text-center text-gray-900 mb-3 mt-1">
+              How We Can Help
+            </h3>
+            <p className="text-gray-900 text-lg leading-relaxed mb-2">
+              We assist manufacturers and suppliers with testing, compliance,
+              and quality-related queries. Responses are provided during business hours.
+            </p>
+            <p className="text-gray-600 text-md leading-relaxed">
+              
+            </p>
+          </div>
+
+          {/* GRID */}
+          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+            {/* LEFT - FORM */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 Let's Connect
               </h2>
-              <p className="text-gray-600 text-md mb-5">
+              <p className="text-gray-600 text-sm mb-5">
                 Fill out the form and our team will contact you shortly.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
 
-                {/* Full Name */}
                 <div>
                   <input
                     type="text"
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    minLength={4}
                     placeholder="Full Name"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.fullName && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.fullName}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>
                   )}
                 </div>
 
-                {/* Email */}
                 <div>
                   <input
                     type="email"
@@ -154,16 +155,13 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Address"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.email}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
                   )}
                 </div>
 
-                {/* Phone */}
                 <div>
                   <input
                     type="tel"
@@ -172,16 +170,13 @@ export default function ContactPage() {
                     onChange={handleChange}
                     maxLength={10}
                     placeholder="Phone Number"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.phone && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.phone}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
                   )}
                 </div>
 
-                {/* Message */}
                 <div>
                   <textarea
                     name="message"
@@ -189,23 +184,20 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Your Message..."
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-red-400"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-xs mt-1">
-                      {errors.message}
-                    </p>
+                    <p className="text-red-500 text-xs mt-1">{errors.message}</p>
                   )}
                 </div>
 
-                {/* Button */}
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className={`w-full px-6 py-2.5 text-white text-sm font-semibold rounded-lg transition flex items-center justify-center gap-2
-                    ${status === "loading"
+                  className={`w-full px-6 py-2 text-white text-sm font-semibold rounded-lg transition flex items-center justify-center gap-2
+                  ${status === "loading"
                       ? "bg-red-300 cursor-not-allowed"
-                      : "bg-red-400 hover:bg-red-500 cursor-pointer"
+                      : "bg-red-400 hover:bg-red-500"
                     }`}
                 >
                   {status === "loading" && (
@@ -214,39 +206,63 @@ export default function ContactPage() {
                   {status === "loading" ? "Sending..." : "Submit Enquiry"}
                 </button>
 
-                {/* Success / Error Message */}
                 {status === "success" && (
-                  <div className="mt-3 bg-green-100 text-green-700 px-4 py-3 rounded-lg text-sm">
-                    ✅ Message sent successfully. Our team will contact you within 24 hours.
+                  <div className="mt-3 bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm">
+                    ✅ Message sent successfully.
                   </div>
                 )}
 
                 {status === "error" && (
-                  <div className="mt-3 bg-red-100 text-red-700 px-4 py-3 rounded-lg text-sm">
-                    ❌ Sorry, something went wrong. Please try again.
+                  <div className="mt-3 bg-red-100 text-red-700 px-4 py-2 rounded-lg text-sm">
+                    ❌ Something went wrong. Please try again.
                   </div>
                 )}
-
               </form>
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-3xl font-bold text-gray-900 mb-3">
-                How We Can Help
-              </h3>
-              <p className="text-gray-600 text-md leading-relaxed mb-3">
-                We assist manufacturers and suppliers with testing, compliance,
-                and quality-related queries.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Responses are provided during business hours...
-              </p>
+            {/* RIGHT - CONTACT INFO */}
+            <div className="space-y-6">
+
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Get In Touch
+                </h2>
+                <p className="text-gray-600 text-sm">
+                  Reach out to us for testing services or technical inquiries.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-red-400" />
+                  <a href="tel:+919971234474" className="text-gray-700 text-sm">
+                    +91 99712 34474
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-indigo-400" />
+                  <a href="mailto:info@mqtlab.com" className="text-gray-700 text-sm">
+                    info@mqtlab.com
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-5 h-5 text-green-400" />
+                  <p className="text-gray-700 text-sm">
+                    Plot No. 79, 2nd Floor, Gautam Buddha Nagar, Noida Sector 155, Uttar Pradesh – 201310
+                  </p>
+                </div>
+
+              </div>
+
             </div>
 
           </div>
         </div>
       </section>
+
     </main>
   );
 }

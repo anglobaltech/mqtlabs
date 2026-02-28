@@ -32,3 +32,43 @@ export async function POST(req) {
     return Response.json({ success: false }, { status: 500 });
   }
 }
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const validationErrors = validateForm();
+  setErrors(validationErrors);
+
+  if (Object.keys(validationErrors).length !== 0) return;
+
+  try {
+    setStatus("loading");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setStatus("success");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      setTimeout(() => setStatus(""), 3000);
+    } else {
+      setStatus("error");
+    }
+
+  } catch {
+    setStatus("error");
+  }
+};
