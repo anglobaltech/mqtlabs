@@ -38,14 +38,21 @@ const [errors, setErrors] = useState({});
 const [status, setStatus] = useState("");
 
 const handleChange = (e) => {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
+  const { name, value } = e.target;
+
+  if (name === "phone") {
+    const numericValue = value.replace(/\D/g, ""); // remove letters
+    setFormData({ ...formData, phone: numericValue });
+  } else {
+    setFormData({ ...formData, [name]: value });
+  }
 };
 
 const validateForm = () => {
   let newErrors = {};
 
-  if (!formData.fullName || formData.fullName.length < 4) {
-    newErrors.fullName = "Full name must be at least 4 characters.";
+  if (!formData.fullName || formData.fullName.length < 1) {
+    newErrors.fullName = "Write Your Full Name";
   }
 
   if (!formData.email) {
@@ -54,11 +61,12 @@ const validateForm = () => {
     newErrors.email = "Invalid email format.";
   }
 
-  if (!formData.phone) {
-    newErrors.phone = "Phone number is required.";
-  } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-    newErrors.phone = "Phone must be 10 digits.";
-  }
+   if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be exactly 10 digits";
+    }
+
 
   if (!formData.message || formData.message.length < 1) {
     newErrors.message = "Please write which services are you interested.";

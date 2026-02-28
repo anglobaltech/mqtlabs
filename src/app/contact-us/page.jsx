@@ -46,8 +46,8 @@ export default function ContactPage() {
 
     if (!formData.message.trim()) {
       newErrors.message = "Please Explain which services are you interested.";
-    } else if (formData.message.length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
+    } else if (formData.message.length < 1) {
+      newErrors.message = "Please Explain which services are you interested.";
     }
 
     setErrors(newErrors);
