@@ -37,7 +37,7 @@ export default function GlobalPopup() {
         if (!isOpen && !hasSubmitted) {
           setIsOpen(true);
         }
-      }, 12000);
+      }, 120000);
     }, 10000);
 
     return () => {
