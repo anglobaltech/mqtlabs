@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import page from "./about/page";
 import Aboutmql from "./about/page";
 import Footer from "../../components/Footer";
+import GlobalPopup from "../../components/globalPopUp";
 
 
 const geistSans = Geist({
@@ -31,7 +32,10 @@ export default function RootLayout({ children }) {
         className= ' antialiased'
       >
         <Header />
-        <main>{children}</main>
+        <main>
+          {children}
+          <GlobalPopup />
+          </main>
         <Footer/>
         
       </body>

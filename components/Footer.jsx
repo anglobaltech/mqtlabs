@@ -6,10 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-black text-gray-300">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
-        
         {/* Top Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
@@ -21,19 +19,14 @@ const Footer = () => {
                 className="object-contain"
               />
               <div>
-                <h1 className="text-lg font-bold text-white">
-                  MQT Laboratory
-                </h1>
-                <p className="text-xs text-gray-400">
-                  Quality & Testing
-                </p>
+                <h1 className="text-lg font-bold text-white">MQT Laboratory</h1>
+                <p className="text-xs text-gray-400">Quality & Testing</p>
               </div>
             </Link>
 
             <p className="text-sm text-gray-400 leading-relaxed">
-              Providing reliable testing services for wood, plywood,
-              furniture, and construction materials with accuracy
-              and compliance.
+              Providing reliable testing services for wood, plywood, furniture,
+              and construction materials with accuracy and compliance.
             </p>
           </div>
 
@@ -91,16 +84,14 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-white text-lg">
-              Contact
-            </h4>
+            <h4 className="font-semibold mb-4 text-white text-lg">Contact Info</h4>
 
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-red-400 mt-1" />
                 <span>
-                  Plot No. 79, 2nd Floor Gautam Buddha Nagar,
-                  Sector 155, Noida, UP – 201310
+                  Plot No. 79, 2nd Floor Gautam Buddha Nagar, Sector 155, Noida,
+                  UP – 201310
                 </span>
               </li>
 
@@ -125,12 +116,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* Bottom */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Minu Quality Testing Laboratory Pvt. Ltd. All rights reserved.
+          © {new Date().getFullYear()} Minu Quality Testing Laboratory Pvt. Ltd.
+          All rights reserved.
         </div>
       </div>
     </footer>

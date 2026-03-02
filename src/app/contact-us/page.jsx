@@ -89,7 +89,6 @@ export default function ContactPage() {
 
   return (
     <main className="bg-white">
-
       {/* HERO */}
       <section className="bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -97,7 +96,8 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto text-base">
-            Reach out to us for testing services, technical queries, or general information.
+            Reach out to us for testing services, technical queries, or general
+            information.
           </p>
         </div>
       </section>
@@ -105,7 +105,6 @@ export default function ContactPage() {
       {/* CONTACT SECTION */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
-
           {/* HOW WE CAN HELP - TOP */}
           <div className="mb-10 max-w-6xl mx-auto">
             <h3 className="text-4xl font-bold text-center text-gray-900 mb-3 mt-1">
@@ -113,16 +112,14 @@ export default function ContactPage() {
             </h3>
             <p className="text-gray-900 text-lg leading-relaxed mb-2">
               We assist manufacturers and suppliers with testing, compliance,
-              and quality-related queries. Responses are provided during business hours.
+              and quality-related queries. Responses are provided during
+              business hours.
             </p>
-            <p className="text-gray-600 text-md leading-relaxed">
-              
-            </p>
+            <p className="text-gray-600 text-md leading-relaxed"></p>
           </div>
 
           {/* GRID */}
           <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-
             {/* LEFT - FORM */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-3">
@@ -133,7 +130,6 @@ export default function ContactPage() {
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
-
                 <div>
                   <input
                     type="text"
@@ -144,7 +140,9 @@ export default function ContactPage() {
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.fullName && (
-                    <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.fullName}
+                    </p>
                   )}
                 </div>
 
@@ -187,7 +185,9 @@ export default function ContactPage() {
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
 
@@ -195,10 +195,11 @@ export default function ContactPage() {
                   type="submit"
                   disabled={status === "loading"}
                   className={`w-full px-6 py-2 text-white text-sm font-semibold rounded-lg transition flex items-center justify-center gap-2
-                  ${status === "loading"
+                  ${
+                    status === "loading"
                       ? "bg-red-300 cursor-not-allowed"
                       : "bg-red-400 hover:bg-red-500"
-                    }`}
+                  }`}
                 >
                   {status === "loading" && (
                     <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
@@ -208,7 +209,7 @@ export default function ContactPage() {
 
                 {status === "success" && (
                   <div className="mt-3 bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm">
-                    ✅ Message sent successfully.
+                    ✅ Your Enquiry Send Successfully. We will connect you soon.
                   </div>
                 )}
 
@@ -222,7 +223,6 @@ export default function ContactPage() {
 
             {/* RIGHT - CONTACT INFO */}
             <div className="space-y-6">
-
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
                   Get In Touch
@@ -233,7 +233,6 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-4">
-
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-red-400" />
                   <a href="tel:+919971234474" className="text-gray-700 text-sm">
@@ -243,7 +242,10 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-indigo-400" />
-                  <a href="mailto:info@mqtlab.com" className="text-gray-700 text-sm">
+                  <a
+                    href="mailto:info@mqtlab.com"
+                    className="text-gray-700 text-sm"
+                  >
                     info@mqtlab.com
                   </a>
                 </div>
@@ -251,18 +253,15 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-green-400" />
                   <p className="text-gray-700 text-sm">
-                    Plot No. 79, 2nd Floor, Gautam Buddha Nagar, Noida Sector 155, Uttar Pradesh – 201310
+                    Plot No. 79, 2nd Floor, Gautam Buddha Nagar, Noida Sector
+                    155, Uttar Pradesh – 201310
                   </p>
                 </div>
-
               </div>
-
             </div>
-
           </div>
         </div>
       </section>
-
     </main>
   );
 }
