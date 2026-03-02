@@ -42,7 +42,7 @@ const page = () => {
       {/* Hero Section */}
       <section className="relative h-[35vh] flex items-center justify-center">
         <Image
-          src="/furniture Testing.jpg"
+          src="/Furniture Testing.jpg"
           alt="Furniture Testing"
           fill
           className="object-cover brightness-50"

@@ -39,23 +39,33 @@ const HomePage = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   useEffect(() => {
-    if (hasSubmitted) return;
+  const submitted = sessionStorage.getItem("popupSubmitted");
+  if (submitted === "true") {
+    setHasSubmitted(true);
+    return; // agar already submit hua hai, popup show nahi hoga
+  }
 
-    const initialTimer = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 10000);
+  const showPopup = () => {
+    if (!hasSubmitted) setIsModalOpen(true);
+  };
 
-    const interval = setInterval(() => {
-      if (!hasSubmitted) {
-        setIsModalOpen(true);
-      }
-    }, 60000);
+  // First popup after 10 sec
+  const firstTimer = setTimeout(() => {
+    showPopup();
 
-    return () => {
-      clearTimeout(initialTimer);
-      clearInterval(interval);
-    };
-  }, [hasSubmitted]);
+    // Repeat every 2 min if popup is not submitted
+    const repeatInterval = setInterval(() => {
+      if (!hasSubmitted) showPopup();
+      else clearInterval(repeatInterval); // agar submit ho gaya to interval stop
+    }, 120000);
+
+    // Clean interval on unmount
+    return () => clearInterval(repeatInterval);
+  }, 10000);
+
+  // Clean timeout on unmount
+  return () => clearTimeout(firstTimer);
+}, [hasSubmitted]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -99,7 +109,6 @@ const handleSubmit = async (e) => {
 
   const validationErrors = validateForm();
   setErrors(validationErrors);
-
   if (Object.keys(validationErrors).length !== 0) return;
 
   setStatus("loading");
@@ -107,19 +116,16 @@ const handleSubmit = async (e) => {
   try {
     const res = await fetch("/api/contact", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
-    if (!res.ok) {
-      throw new Error("Server Error");
-    }
+    if (!res.ok) throw new Error("Server Error");
 
-    // ✅ SUCCESS
     setStatus("success");
     setHasSubmitted(true);
+    sessionStorage.setItem("popupSubmitted", "true"); // ✅ permanently block future popups
+    setIsModalOpen(false); // ✅ close popup
 
     setFormData({
       fullName: "",
@@ -737,90 +743,6 @@ const handleSubmit = async (e) => {
         </div>
       </section>  */}
 
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 relative animate-fadeIn">
-            {/* Close Button */}
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl"
-            >
-              ✕
-            </button>
-
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Get In Touch
-            </h2>
-            <p className="text-gray-600 mb-6 text-sm">
-              Fill the form and our team will contact you shortly.
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Success / Error Message */}
-              {status === "success" && (
-                <div className="bg-green-100 text-green-700 px-4 py-2 rounded text-sm text-center">
-                  ✅ Your enquiry sent successfully!
-                </div>
-              )}
-
-              {status === "error" && (
-                <div className="bg-red-100 text-red-700 px-4 py-2 rounded text-sm text-center">
-                  ❌ Something went wrong. Try again.
-                </div>
-              )}
-
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name *"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address *"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number *"
-                 maxLength={10}
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="3"
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              ></textarea>
-
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className={`w-full py-3 rounded-lg font-semibold text-white transition ${
-                  status === "loading"
-                    ? "bg-red-300 cursor-not-allowed"
-                    : "bg-red-500 hover:bg-red-600"
-                }`}
-              >
-                {status === "loading" ? "Sending..." : "Submit"}
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
