@@ -37,8 +37,8 @@ export default function GlobalPopup() {
         if (!isOpen && !hasSubmitted) {
           setIsOpen(true);
         }
-      }, 5000);
-    }, 3000);
+      }, 12000);
+    }, 10000);
 
     return () => {
       clearTimeout(firstTimerRef.current);
