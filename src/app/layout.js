@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Minu Quality Testing Laboratory",
+  title: "Minu Quality Testing Laboratory Pvt. Ltd. :: Delhi NCR || Noida || Greater Noida",
   description:
-    "Minu Quality Testing Laboratory provides reliable testing services for wood, plywood, furniture, and other textile materials. Focused on accuracy, compliance, and industry standards.",
+    "Minu Quality Testing Lab Pvt Ltd is a trusted laboratory providing professional testing services for wood, plywood, water, furniture, cement, aggregates, soil and construction materials. We ensure safety, durability and compliance with national and international quality standards.",
 };
 
 

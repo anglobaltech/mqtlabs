@@ -181,16 +181,36 @@ export default function AboutPage() {
       </section>
 
       {/* ================= CLOSING SECTION ================= */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 mb-10 rounded-2xl bg-gray-100 shadow">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             A Trusted Partner in Quality Testing
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-700 max-w-3xl mx-auto text-lg">
             Minu Quality Testing Laboratory is committed to supporting your
             quality goals through accurate testing, clear reporting, and
             dependable technical support.
           </p>
+        </div>
+      </section>
+
+      {/* ================= CONTACT SECTION ================= */}
+
+      <section className="bg-gray-900 py-16">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+            Need Testing Support
+          </h2>
+          <p className="text-gray-300 max-w-xl mx-auto mb-6">
+            Contact our team to discuss your testing requirements or request a
+            quotation.
+          </p>
+          <a
+            href="/contact-us"
+            className="inline-block px-6 py-3 bg-red-400 text-white text-sm font-semibold rounded-lg hover:bg-red-500 transition"
+          >
+            Contact Us
+          </a>
         </div>
       </section>
     </main>

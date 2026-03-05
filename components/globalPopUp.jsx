@@ -38,7 +38,7 @@ export default function GlobalPopup() {
           setIsOpen(true);
         }
       }, 120000);
-    }, 10000);
+    }, 60000);
 
     return () => {
       clearTimeout(firstTimerRef.current);
@@ -198,7 +198,7 @@ export default function GlobalPopup() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className={`w-full py-3 rounded-lg font-semibold text-white transition ${
+                className={`w-full py-3 rounded-lg font-semibold cursor-pointer text-white transition ${
                   status === "loading"
                     ? "bg-red-300 cursor-not-allowed"
                     : "bg-red-500 hover:bg-red-600"

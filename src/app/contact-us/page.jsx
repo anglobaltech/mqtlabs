@@ -194,7 +194,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className={`w-full px-6 py-2 text-white text-sm font-semibold rounded-lg transition flex items-center justify-center gap-2
+                  className={`w-full px-6 py-2 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center justify-center gap-2
                   ${
                     status === "loading"
                       ? "bg-red-300 cursor-not-allowed"

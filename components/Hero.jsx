@@ -641,7 +641,7 @@ const handleSubmit = async (e) => {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className={`px-10 py-2.5 text-white text-sm font-semibold rounded-lg transition flex items-center gap-2
+                    className={`px-10 py-2.5 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center gap-2
         ${
           status === "loading"
             ? "bg-red-300 cursor-not-allowed"
