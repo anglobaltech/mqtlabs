@@ -33,7 +33,7 @@ const Header = () => {
 
             <div className="leading-tight">
               <h1 className="text-xl font-bold text-[#05526e]">
-                MQT Laboratory
+                MQT Laboratory Pvt. Ltd.
               </h1>
               <p className="text-sm text-black">Precision & Integrity</p>
             </div>

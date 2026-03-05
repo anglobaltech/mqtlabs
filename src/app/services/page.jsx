@@ -1,141 +1,195 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Beaker, Trees, Sofa, Wrench, Building2, Layers, Mountain, Box } from "lucide-react";
 
 export const metadata = {
   title: "Testing Services | Minu Quality Testing Laboratory",
   description:
-    "Professional testing services for wood, plywood, furniture, and textile products. Reliable laboratory testing aligned with industry standards.",
+    "Professional laboratory testing services including wood, plywood, water, furniture, hinges, cement, aggregates, soil and concrete paver block testing.",
 };
 
 const services = [
   {
     title: "Wood Testing Services",
-    description: "Comprehensive testing of solid wood...",
+    description:
+      "Comprehensive testing of solid wood to evaluate strength, durability, moisture content and performance according to industry standards.",
     image: "/wood-testing-service.jpeg",
     link: "/services/woodTesting",
+    icon: Trees,
   },
   {
-    title: "Polywood Testing Services",
-    description: "Testing solutions for plywood...",
+    title: "Plywood Testing Services",
+    description:
+      "Professional plywood testing including bonding strength, water resistance and durability evaluation.",
     image: "/polywood-testing-service.jpeg",
     link: "/services/polyWoodTesting",
+    icon: Layers,
   },
   {
     title: "Water Testing Services",
-    description: "Water Testing involves analyzing...",
+    description:
+      "Laboratory analysis of water quality including pH, TDS and chemical parameters to ensure safe industrial and domestic usage.",
     image: "/waterTesting.jpg",
     link: "/services/waterTesting",
+    icon: Beaker,
   },
   {
     title: "Furniture Testing Services",
-    description: "Furniture Testing ensures strength...",
+    description:
+      "Furniture durability and load testing to ensure safety, stability and structural strength.",
     image: "/Furniture Testing.jpg",
     link: "/services/furnitureTesting",
+    icon: Sofa,
   },
   {
     title: "Hinges Testing Services",
-    description: "Hinges Testing evaluates strength...",
+    description:
+      "Evaluation of hinge durability, corrosion resistance and load capacity for long-term performance.",
     image: "/Hinges Testing.jpg",
     link: "/services/hingesTesting",
+    icon: Wrench,
   },
   {
     title: "Cement Testing Services",
-    description: "Cement Testing evaluates strength...",
+    description:
+      "Cement testing including compressive strength, setting time and consistency for construction quality assurance.",
     image: "/Cement Testing.jpg",
     link: "/services/cementTesting",
+    icon: Building2,
   },
   {
     title: "Aggregates Testing Services",
-    description: "Aggregates Testing checks strength...",
+    description:
+      "Testing aggregates for size distribution, strength and durability to ensure construction reliability.",
     image: "/Aggregates Testing.jpg",
     link: "/services/aggregatesTesting",
+    icon: Mountain,
   },
   {
     title: "Soil Testing Services",
-    description: "Soil Testing evaluates strength...",
+    description:
+      "Soil analysis for construction suitability including bearing capacity and composition testing.",
     image: "/Soil Testing.jpg",
     link: "/services/soilTesting",
+    icon: Box,
   },
   {
-    title: "Concrete Paver Block Testing Services",
-    description: "Concrete Paver Block Testing checks...",
+    title: "Concrete Paver Block Testing",
+    description:
+      "Testing compressive strength, durability and water absorption of concrete paver blocks.",
     image: "/paverBlockTesting.jpg",
     link: "/services/concretePaverBlockTesting",
+    icon: Building2,
   },
 ];
+
 export default function ServicesPage() {
   return (
     <main className="bg-white">
-      {/* ================= HERO ================= */}
-      <section className="bg-gray-900 py-15">
-        <div className="max-w-7xl mx-auto px-2 text-center">
-          <h1 className="text-2xl md:text-5xl font-bold text-white mb-5">
-            Testing Services
+
+      {/* HERO SECTION */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-24">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            Professional Laboratory Testing Services
           </h1>
-          <p className="text-gray-300 max-w-6xl mx-auto text-xl md:text-xl">
-           Testing is the process of examining and evaluating a product or material to ensure it meets required quality, safety, and performance standards.
+
+          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+            Minu Quality Testing Laboratory provides reliable and accurate
+            testing services for various materials used in construction,
+            manufacturing and industrial applications. Our laboratory follows
+            certified testing standards and modern analytical techniques to
+            ensure safety, durability and compliance with national and
+            international quality standards.
           </p>
+
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+
+      {/* SERVICES GRID */}
+      <section className="py-20 bg-gray-50">
+
         <div className="max-w-7xl mx-auto px-6">
-    
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-14">
-            {services.map((service, index) => (
-            <Link href={service.link} key={index}>
-          <div
-            className="bg-white rounded-2xl shadow-md hover:shadow-xl 
-                       transition duration-300 overflow-hidden cursor-pointer"
-          >
-            {/* Image */}
-            <div className="relative h-48 overflow-hidden">
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover transition-transform duration-500 
-                           ease-in-out hover:scale-110"
-              />
-            </div>
 
-            {/* Content */}
-            <div className="p-6">
-              <h2 className="text-lg font-bold text-gray-900 mb-2">
-                {service.title}
-              </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
 
-              <p className="text-gray-600 text-m mb-4">
-                {service.description}
-              </p>
-            </div>
+            {services.map((service, index) => {
+              const Icon = service.icon;
+
+              return (
+                <Link href={service.link} key={index}>
+
+                  <div className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden group cursor-pointer">
+
+                    {/* IMAGE */}
+                    <div className="relative h-52 overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+
+                    {/* CONTENT */}
+                    <div className="p-6">
+
+                      <div className="flex items-center gap-3 mb-3">
+
+                        <Icon className="text-blue-600" size={26} />
+
+                        <h2 className="text-lg font-bold text-gray-900">
+                          {service.title}
+                        </h2>
+
+                      </div>
+
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </Link>
+              );
+            })}
+
           </div>
-        </Link>
-      ))}
-    </div>
 
-  </div>
-</section>
-
-      {/* ================= CTA ================= */}
-      <section className="bg-gray-900 py-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-            Need Testing Support
-          </h2>
-          <p className="text-gray-300 max-w-xl mx-auto mb-6">
-            Contact our team to discuss your testing requirements or request a
-            quotation.
-          </p>
-          <a
-            href="/contact-us"
-            className="inline-block px-6 py-3 bg-red-400 text-white text-sm font-semibold rounded-lg hover:bg-red-500 transition"
-          >
-            Contact Us
-          </a>
         </div>
+
       </section>
+
+
+      {/* CTA */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
+
+        <div className="max-w-4xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Professional Testing Services?
+          </h2>
+
+          <p className="text-gray-300 mb-8">
+            Contact our laboratory to schedule professional testing and receive
+            accurate analysis reports for your materials and products.
+          </p>
+
+          <Link
+            href="/contact-us"
+            className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition"
+          >
+            Contact Laboratory
+          </Link>
+
+        </div>
+
+      </section>
+
     </main>
   );
 }

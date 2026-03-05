@@ -1,140 +1,277 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Droplet,
+  Beaker,
+  ShieldCheck,
+  Factory,
+  CheckCircle,
+  ClipboardCheck,
+} from "lucide-react";
 
-const services = [
+export const metadata = {
+  title: "Water Testing Services | Minu Quality Testing Laboratory",
+  description:
+    "Professional water testing services including pH, TDS, hardness and chemical analysis ensuring water quality, safety and regulatory compliance.",
+};
+
+const waterServices = [
   {
-    title: "pH Level Testing",
+    title: "pH Water Testing",
     description:
-      "Measurement of water acidity or alkalinity to determine suitability for drinking, construction, and industrial applications as per standard guidelines.",
+      "Measurement of acidity and alkalinity level of water to ensure safe usage.",
+    image: "/phTesting.png",
+    link: "/services/waterTesting/phTesting",
   },
   {
-    title: "Total Dissolved Solids (TDS) Testing",
+    title: "TDS Water Testing",
     description:
-      "Quantification of dissolved salts, minerals, and inorganic substances to assess overall water purity and quality compliance.",
+      "Testing total dissolved solids present in water for quality evaluation.",
+    image: "/tdsTesting.jpg",
+    link: "/services/waterTesting/tdsTesting",
   },
 ];
 
-const page = () => {
+export default function WaterTesting() {
   return (
-    <div className="bg-gray-50">
+    <main className="bg-white">
 
-      {/* Hero Section */}
-      <section className="relative h-[35vh] flex items-center justify-center">
-        <Image
-          src="/waterTesting.jpg"
-          alt="Water Testing"
-          fill
-          className="object-cover brightness-50"
-          priority
-        />
-        <div className="relative text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      {/* HERO SECTION */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Water Testing Services
           </h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Certified laboratory water testing to ensure safety, purity,
-            and regulatory compliance for domestic and industrial use.
+
+          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+            Water testing is essential to ensure the safety, purity, and
+            compliance of water for drinking, industrial usage, construction,
+            and environmental applications. Our laboratory provides accurate
+            and certified testing services using modern instruments and
+            scientific analysis methods.
           </p>
+
         </div>
       </section>
 
-      {/* About Section
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center mb-6">
-          About Our Water Testing Laboratory
-        </h2>
-        <p className="text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
-          Our advanced laboratory provides comprehensive water testing
-          services following national and international standards. We
-          analyze physical, chemical, and microbiological parameters to
-          ensure water safety and quality. Our testing solutions support
-          residential, commercial, and industrial clients in maintaining
-          safe and compliant water systems.
-        </p>
-      </section> */}
+      {/* SERVICES GRID */}
+      <section className="py-20 bg-gray-50">
 
-      {/* Services Grid */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <h2 className="text-3xl font-bold text-center m-12">
-          Our Water Testing Services
-        </h2>
+        <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {service.title}
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Water Testing Services
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            {waterServices.map((service, index) => (
+              <Link href={service.link} key={index}>
+
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden">
+
+                  <div className="relative h-52">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover hover:scale-110 transition duration-500"
+                    />
+                  </div>
+
+                  <div className="p-6">
+
+                    <h3 className="text-xl font-bold mb-2">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-sm">
+                      {service.description}
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </Link>
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* WHY WATER TESTING */}
+      <section className="py-20">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Why Water Testing is Important
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+
+            <div className="p-8 rounded-xl bg-blue-50">
+              <Droplet className="mx-auto text-blue-600 mb-4" size={40}/>
+              <h3 className="font-semibold text-lg mb-2">
+                Safe Drinking Water
               </h3>
               <p className="text-gray-600 text-sm">
-                {service.description}
+                Testing ensures water is free from harmful contaminants,
+                chemicals, and microorganisms that may affect human health.
               </p>
             </div>
-          ))}
+
+            <div className="p-8 rounded-xl bg-green-50">
+              <ShieldCheck className="mx-auto text-green-600 mb-4" size={40}/>
+              <h3 className="font-semibold text-lg mb-2">
+                Regulatory Compliance
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Industries and laboratories must comply with national and
+                international water quality standards.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-yellow-50">
+              <Factory className="mx-auto text-yellow-600 mb-4" size={40}/>
+              <h3 className="font-semibold text-lg mb-2">
+                Industrial Applications
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Water testing ensures water quality for manufacturing,
+                construction, cooling systems, and industrial processes.
+              </p>
+            </div>
+
+          </div>
+
         </div>
+
       </section>
 
-      {/* Testing Process */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Testing Process
+      {/* TESTING PROCESS */}
+      <section className="py-20 bg-gray-50">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Water Testing Process
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">01</div>
-              <h4 className="font-semibold mb-2">Sample Collection</h4>
-              <p className="text-gray-600 text-sm">
-                Collect water samples following proper procedures.
+
+            <div className="p-6">
+              <ClipboardCheck className="mx-auto text-blue-600 mb-4" size={36}/>
+              <h3 className="font-semibold mb-2">Sample Collection</h3>
+              <p className="text-sm text-gray-600">
+                Water samples are collected carefully following proper
+                laboratory sampling procedures.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">02</div>
-              <h4 className="font-semibold mb-2">Laboratory Analysis</h4>
-              <p className="text-gray-600 text-sm">
-                Perform chemical and microbiological testing.
+
+            <div className="p-6">
+              <Beaker className="mx-auto text-blue-600 mb-4" size={36}/>
+              <h3 className="font-semibold mb-2">Laboratory Analysis</h3>
+              <p className="text-sm text-gray-600">
+                Samples are tested using advanced laboratory equipment and
+                standardized testing methods.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">03</div>
-              <h4 className="font-semibold mb-2">Quality Evaluation</h4>
-              <p className="text-gray-600 text-sm">
-                Compare results with standard safety guidelines.
+
+            <div className="p-6">
+              <CheckCircle className="mx-auto text-blue-600 mb-4" size={36}/>
+              <h3 className="font-semibold mb-2">Quality Verification</h3>
+              <p className="text-sm text-gray-600">
+                Test results are verified by experienced laboratory experts
+                ensuring accuracy.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">04</div>
-              <h4 className="font-semibold mb-2">Certified Report</h4>
-              <p className="text-gray-600 text-sm">
-                Provide detailed and certified laboratory reports.
+
+            <div className="p-6">
+              <ShieldCheck className="mx-auto text-blue-600 mb-4" size={36}/>
+              <h3 className="font-semibold mb-2">Report Delivery</h3>
+              <p className="text-sm text-gray-600">
+                Detailed laboratory reports are delivered to clients with
+                quality assessment results.
               </p>
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-red-400 py-16 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">
-          Need Professional Water Testing?
-        </h2>
-        <p className="mb-6">
-          Contact our laboratory experts for accurate and certified water testing services.
-        </p>
-        <Link
-          href="/contact-us"
-          className="bg-white text-red-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-        >
-          Contact Us
-        </Link>
+      {/* INDUSTRIES */}
+      <section className="py-20">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Industries We Serve
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+
+            <div className="bg-gray-50 p-8 rounded-xl">
+              Construction & Infrastructure
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-xl">
+              Food & Beverage Industry
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-xl">
+              Pharmaceutical Industry
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-xl">
+              Environmental Monitoring
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-xl">
+              Manufacturing Plants
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-xl">
+              Municipal Water Supply
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
-    </div>
+      {/* CTA */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
+
+        <div className="max-w-4xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Professional Water Testing?
+          </h2>
+
+          <p className="text-gray-300 mb-8">
+            Contact our laboratory experts to schedule water testing and
+            receive accurate laboratory reports for your project or industry.
+          </p>
+
+          <Link
+            href="/contact-us"
+            className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition"
+          >
+            Contact Laboratory
+          </Link>
+
+        </div>
+
+      </section>
+
+    </main>
   );
-};
-
-export default page;
+}
