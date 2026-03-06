@@ -1,46 +1,76 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ArrowRight,
+  ShieldCheck,
+  ClipboardCheck,
+  Beaker,
+  CheckCircle,
+} from "lucide-react";
 
 const services = [
   {
-    title: "Bonding Strength Test",
+    title: "Static & Bending Strength Test",
     description:
-      "Evaluates glue bond performance between layers to ensure durability and structural stability of polywood materials.",
+      "Measures plywood strength and durability under static load and wet conditions.",
+    link: "#",
   },
   {
     title: "Moisture Content Testing",
     description:
-      "Measures moisture levels in polywood to prevent swelling, warping, and dimensional instability.",
+      "Measures moisture levels in plywood to prevent swelling and dimensional instability.",
+    link: "#",
   },
   {
-    title: "Bending & Load Test",
+    title: "Flexure & Edge Load Test",
     description:
-      "Determines flexural strength and load-bearing capacity of polywood sheets.",
+      "Evaluates plywood flexural strength and resistance to edge loading stresses.",
+    link: "#",
   },
   {
     title: "Water Resistance Test",
     description:
-      "Assesses resistance against water penetration and delamination under wet conditions.",
+      "Assesses resistance against water penetration and delamination.",
+    link: "#",
   },
   {
-    title: "Thickness & Dimensional Accuracy",
+    title: "Timber & Adhesive Test",
     description:
-      "Ensures uniform thickness and compliance with manufacturing standards.",
+      "Testing timber strength and adhesive bonding quality for durability.",
+    link: "#",
   },
   {
-    title: "Termite & Borer Resistance",
+    title: "Mycological Test",
     description:
-      "Tests polywood resistance against termites and wood-boring insects.",
+      "Checks plywood resistance against fungal growth and biological decay.",
+    link: "#",
+  },
+  {
+    title: "Tensile Strength Test",
+    description:
+      "Measures material strength, elongation, and resistance under pulling force.",
+    link: "#",
+  },
+  {
+    title: "Shock & Buckling Resistance",
+    description:
+      "Evaluates plywood resistance to impact shocks and buckling deformation.",
+    link: "#",
+  },
+  {
+    title: "End Immersion Test",
+    description:
+      "Assesses plywood resistance to water absorption through end-grain immersion.",
+    link: "#",
   },
 ];
 
 const page = () => {
   return (
-    <div className="bg-gray-50">
-
-      {/* Hero Section */}
-      <section className="relative h-[35vh] flex items-center justify-center">
+    <main className="bg-gray-50">
+      {/* HERO */}
+      <section className="relative h-[45vh] flex items-center justify-center">
         <Image
           src="/polywood-testing-service.jpeg"
           alt="Polywood Testing"
@@ -48,112 +78,197 @@ const page = () => {
           className="object-cover brightness-50"
           priority
         />
-        <div className="relative text-center text-white px-6">
+
+        <div className="relative text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Polywood Testing Services
           </h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Certified laboratory testing to ensure strength, bonding quality,
-            durability, and industry compliance of polywood products.
+
+          <p className="text-lg text-gray-200">
+            Certified laboratory testing ensuring durability, bonding strength,
+            moisture resistance, and structural reliability of polywood
+            products.
           </p>
         </div>
       </section>
 
-      {/* About Section
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center mb-6">
-          About Our Polywood Testing Laboratory
-        </h2>
-        <p className="text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
-          Our advanced laboratory provides comprehensive polywood testing
-          services following national and international standards. We evaluate
-          bonding strength, moisture resistance, structural integrity, and
-          dimensional accuracy to ensure high product performance. Our services
-          support manufacturers, suppliers, and construction professionals in
-          delivering safe and reliable polywood materials.
-        </p>
-      </section> */}
+      {/* ABOUT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative h-80">
+            <Image
+              src="/polywood-testing-service.jpeg"
+              alt="Polywood Testing Laboratory"
+              fill
+              className="object-cover rounded-xl shadow-lg"
+            />
+          </div>
 
-      {/* Services Grid */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <h2 className="text-3xl font-bold text-center m-12">
-          Our Polywood Testing Services
-        </h2>
+          <div>
+            <h2 className="text-3xl font-bold mb-6">
+              Professional Polywood Testing Laboratory
+            </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Our laboratory performs comprehensive polywood testing to evaluate
+              mechanical strength, bonding quality, moisture resistance, and
+              dimensional accuracy.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              These tests ensure that polywood materials meet required quality
+              standards and perform reliably in construction, furniture
+              manufacturing, and industrial applications.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Testing Process */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Testing Process
+      {/* SERVICES */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Polywood Testing Services
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">01</div>
-              <h4 className="font-semibold mb-2">Sample Submission</h4>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link href={service.link} key={index}>
+                <div className="group bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                  <ShieldCheck size={34} className="text-red-500 mb-4" />
+
+                  <h3 className="text-lg font-semibold mb-3">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm mb-4">
+                    {service.description}
+                  </p>
+
+                  <span className="flex items-center gap-2 text-black font-medium text-sm group-hover:text-red-500 transition">
+                    Read More
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition"
+                    />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY POLYWOOD TESTING */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Why Polywood Testing is Important
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+            <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Structural Strength
+              </h3>
               <p className="text-gray-600 text-sm">
-                Receive polywood samples for laboratory evaluation.
+                Ensures polywood materials have sufficient strength and
+                durability for construction and furniture applications.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">02</div>
-              <h4 className="font-semibold mb-2">Mechanical Testing</h4>
+
+            <div className="p-8 rounded-xl bg-blue-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-blue-500 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">Quality Assurance</h3>
               <p className="text-gray-600 text-sm">
-                Perform strength, bonding, and durability analysis.
+                Verifies bonding quality, moisture resistance and dimensional
+                stability according to testing standards.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">03</div>
-              <h4 className="font-semibold mb-2">Quality Evaluation</h4>
+
+            <div className="p-8 rounded-xl bg-green-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-green-600 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Long-Term Durability
+              </h3>
               <p className="text-gray-600 text-sm">
-                Analyze results as per standard specifications.
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">04</div>
-              <h4 className="font-semibold mb-2">Certified Report</h4>
-              <p className="text-gray-600 text-sm">
-                Deliver detailed and authenticated testing reports.
+                Helps manufacturers and builders ensure polywood products
+                perform reliably over long periods of use.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-red-400 py-16 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">
-          Need Professional Polywood Testing?
-        </h2>
-        <p className="mb-6">
-          Contact our experts today for certified polywood testing services.
-        </p>
-        <Link
-          href="/contact-us"
-          className="bg-white text-red-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-        >
-          Contact Us
-        </Link>
+      {/* POLYWOOD TESTING PROCESS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Polywood Testing Process
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Sample Collection</h3>
+              <p className="text-sm text-gray-600">
+                Polywood samples are collected and registered according to
+                standardized laboratory procedures.
+              </p>
+            </div>
+
+            <div>
+              <Beaker className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Laboratory Testing</h3>
+              <p className="text-sm text-gray-600">
+                Mechanical strength, bonding quality and moisture resistance
+                tests are performed.
+              </p>
+            </div>
+
+            <div>
+              <CheckCircle className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Result Evaluation</h3>
+              <p className="text-sm text-gray-600">
+                Test data is carefully evaluated according to national and
+                international quality standards.
+              </p>
+            </div>
+
+            <div>
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Certified Report</h3>
+              <p className="text-sm text-gray-600">
+                Clients receive detailed laboratory reports with verified
+                testing results.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-    </div>
+      {/* CTA */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Professional Polywood Testing?
+          </h2>
+
+          <p className="text-gray-300 mb-8">
+            Contact our laboratory experts to schedule polywood testing and
+            receive certified laboratory reports.
+          </p>
+
+          <Link
+            href="/contact-us"
+            className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition"
+          >
+            Contact Laboratory
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 };
 
