@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 text-center">
 
           <h1 className="text-4xl md:text-6xl font-bold text-white mt-6 mb-6">
-            About Minu Quality Testing Laboratory
+            About Minu Quality Testing Laboratory Pvt. Ltd.
           </h1>
 
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">

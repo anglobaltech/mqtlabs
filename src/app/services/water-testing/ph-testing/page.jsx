@@ -20,7 +20,7 @@ export default function PhTesting() {
     <main className="bg-gray-50">
 
       {/* HERO */}
-      <section className="bg-linear-to-r from-blue-700 to-cyan-500 py-24">
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
           <div>
@@ -45,7 +45,7 @@ export default function PhTesting() {
 
           <div className="relative h-80">
             <Image
-              src="/phTesting.png"
+              src="/waterTesting1.jpg"
               alt="Water pH testing laboratory"
               fill
               className="object-cover rounded-xl shadow-lg"
@@ -61,7 +61,7 @@ export default function PhTesting() {
 
           <div className="relative h-87.5">
             <Image
-              src="/phTesting.png"
+              src="/waterTesting1.jpg"
               alt="Water laboratory testing"
               fill
               className="object-cover rounded-xl shadow"

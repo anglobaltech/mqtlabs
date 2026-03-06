@@ -147,7 +147,7 @@ const page = () => {
           href="/contact-us"
           className="bg-white text-red-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
         >
-          Contact Us
+          Contact Laboratory
         </Link>
       </section>
 

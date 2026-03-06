@@ -14,7 +14,7 @@ const services = [
     description:
       "Comprehensive testing of solid wood to evaluate strength, durability, moisture content and performance according to industry standards.",
     image: "/wood-testing-service.jpeg",
-    link: "/services/woodTesting",
+    link: "/services/wood-testing",
     icon: Trees,
   },
   {
@@ -22,7 +22,7 @@ const services = [
     description:
       "Professional plywood testing including bonding strength, water resistance and durability evaluation.",
     image: "/polywood-testing-service.jpeg",
-    link: "/services/polyWoodTesting",
+    link: "/services/polywood-testing",
     icon: Layers,
   },
   {
@@ -30,7 +30,7 @@ const services = [
     description:
       "Laboratory analysis of water quality including pH, TDS and chemical parameters to ensure safe industrial and domestic usage.",
     image: "/waterTesting.jpg",
-    link: "/services/waterTesting",
+    link: "/services/water-testing",
     icon: Beaker,
   },
   {
@@ -38,7 +38,7 @@ const services = [
     description:
       "Furniture durability and load testing to ensure safety, stability and structural strength.",
     image: "/Furniture Testing.jpg",
-    link: "/services/furnitureTesting",
+    link: "/services/furniture-testing",
     icon: Sofa,
   },
   {
@@ -46,7 +46,7 @@ const services = [
     description:
       "Evaluation of hinge durability, corrosion resistance and load capacity for long-term performance.",
     image: "/Hinges Testing.jpg",
-    link: "/services/hingesTesting",
+    link: "/services/hinges-testing",
     icon: Wrench,
   },
   {
@@ -54,7 +54,7 @@ const services = [
     description:
       "Cement testing including compressive strength, setting time and consistency for construction quality assurance.",
     image: "/Cement Testing.jpg",
-    link: "/services/cementTesting",
+    link: "/services/cement-testing",
     icon: Building2,
   },
   {
@@ -62,7 +62,7 @@ const services = [
     description:
       "Testing aggregates for size distribution, strength and durability to ensure construction reliability.",
     image: "/Aggregates Testing.jpg",
-    link: "/services/aggregatesTesting",
+    link: "/services/aggregates-testing",
     icon: Mountain,
   },
   {
@@ -70,7 +70,7 @@ const services = [
     description:
       "Soil analysis for construction suitability including bearing capacity and composition testing.",
     image: "/Soil Testing.jpg",
-    link: "/services/soilTesting",
+    link: "/services/soil-testing",
     icon: Box,
   },
   {
@@ -78,7 +78,7 @@ const services = [
     description:
       "Testing compressive strength, durability and water absorption of concrete paver blocks.",
     image: "/paverBlockTesting.jpg",
-    link: "/services/concretePaverBlockTesting",
+    link: "/services/concrete-paver-block-testing",
     icon: Building2,
   },
 ];
@@ -88,7 +88,7 @@ export default function ServicesPage() {
     <main className="bg-white">
 
       {/* HERO SECTION */}
-      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-24">
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-15">
         <div className="max-w-6xl mx-auto px-6 text-center">
 
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">

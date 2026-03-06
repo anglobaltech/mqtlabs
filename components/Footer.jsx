@@ -19,7 +19,7 @@ const Footer = () => {
                 className="object-contain"
               />
               <div>
-                <h1 className="text-lg font-bold text-white">MQT Laboratory <br /> Pvt. Ltd.</h1>
+                <h1 className="text-md font-bold text-white">MQT Laboratory Pvt. Ltd.</h1>
                 <p className="text-xs text-gray-400">Quality & Testing</p>
               </div>
             </Link>

@@ -12,15 +12,15 @@ import {
 export const metadata = {
   title: "TDS Water Testing Services | Minu Quality Testing Laboratory",
   description:
-    "Professional laboratory TDS water testing services to measure total dissolved solids in water ensuring quality and safety standards.",
+    "Professional laboratory TDS water testing services to measure Total Dissolved Solids in drinking water, industrial water, and environmental monitoring.",
 };
 
-export default function TdsTesting() {
+export default function TDSTesting() {
   return (
     <main className="bg-gray-50">
 
       {/* HERO */}
-      <section className="bg-linear-to-r from-blue-700 to-cyan-500 py-24">
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
           <div>
@@ -30,9 +30,9 @@ export default function TdsTesting() {
 
             <p className="text-blue-100 text-lg mb-6">
               Our laboratory provides accurate TDS testing to measure the
-              concentration of dissolved substances in water. Monitoring TDS
-              levels helps ensure safe drinking water and proper industrial
-              water quality.
+              concentration of dissolved minerals, salts, and substances in
+              water. Monitoring TDS levels ensures water safety, taste quality,
+              and suitability for industrial and domestic use.
             </p>
 
             <Link
@@ -45,8 +45,8 @@ export default function TdsTesting() {
 
           <div className="relative h-80">
             <Image
-              src="/tdsTesting.jpg"
-              alt="TDS Water Testing Laboratory"
+              src="/waterTesting1.jpg"
+              alt="TDS water testing laboratory"
               fill
               className="object-cover rounded-xl shadow-lg"
             />
@@ -61,8 +61,8 @@ export default function TdsTesting() {
 
           <div className="relative h-87.5">
             <Image
-              src="/tdsTesting.jpg"
-              alt="Water laboratory testing"
+              src="/waterTesting1.jpg"
+              alt="Water TDS laboratory testing"
               fill
               className="object-cover rounded-xl shadow"
             />
@@ -74,15 +74,15 @@ export default function TdsTesting() {
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Total Dissolved Solids (TDS) testing measures the combined
-              concentration of dissolved substances such as minerals, salts,
-              metals, and organic matter present in water.
+              Total Dissolved Solids (TDS) represents the combined content of
+              all inorganic and organic substances dissolved in water. These
+              include minerals, salts, metals, and other dissolved particles.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              Monitoring TDS levels helps evaluate water purity and determine
-              whether the water is suitable for drinking, industrial use,
-              agriculture, and environmental safety.
+              Monitoring TDS levels helps maintain water quality, improves
+              taste, prevents equipment damage, and ensures water is suitable
+              for drinking, industrial use, and agricultural applications.
             </p>
           </div>
 
@@ -102,9 +102,9 @@ export default function TdsTesting() {
 
             <div className="bg-blue-50 p-6 rounded-xl text-center shadow">
               <Droplets className="mx-auto text-blue-600 mb-3" size={40} />
-              <h3 className="font-semibold mb-2">Water Purity</h3>
+              <h3 className="font-semibold mb-2">Water Quality</h3>
               <p className="text-gray-600 text-sm">
-                Determines overall water quality and purity.
+                Ensures drinking water purity and taste.
               </p>
             </div>
 
@@ -112,7 +112,7 @@ export default function TdsTesting() {
               <ShieldCheck className="mx-auto text-green-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Health Safety</h3>
               <p className="text-gray-600 text-sm">
-                Ensures drinking water is safe for consumption.
+                Prevents harmful mineral concentrations.
               </p>
             </div>
 
@@ -120,15 +120,15 @@ export default function TdsTesting() {
               <Beaker className="mx-auto text-yellow-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Industrial Use</h3>
               <p className="text-gray-600 text-sm">
-                Maintains proper water quality for industrial processes.
+                Maintains proper water quality for processes.
               </p>
             </div>
 
             <div className="bg-purple-50 p-6 rounded-xl text-center shadow">
               <CheckCircle className="mx-auto text-purple-600 mb-3" size={40} />
-              <h3 className="font-semibold mb-2">Environmental Safety</h3>
+              <h3 className="font-semibold mb-2">Equipment Protection</h3>
               <p className="text-gray-600 text-sm">
-                Protects aquatic ecosystems and groundwater quality.
+                Prevents scaling and damage in machinery.
               </p>
             </div>
 
@@ -151,31 +151,29 @@ export default function TdsTesting() {
 
             <div className="bg-green-50 border border-green-200 p-8 rounded-xl shadow">
               <h3 className="text-green-600 font-semibold mb-3">
-                Low TDS (0–150 mg/L)
+                Low TDS (50–150 ppm)
               </h3>
               <p className="text-gray-600">
-                Indicates highly purified water often used in laboratories and
-                industrial applications.
+                Considered excellent drinking water with balanced mineral
+                content.
               </p>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 p-8 rounded-xl shadow">
-              <h3 className="text-blue-600 font-semibold mb-3">
-                Moderate TDS (150–500 mg/L)
+            <div className="bg-yellow-50 border border-yellow-200 p-8 rounded-xl shadow">
+              <h3 className="text-yellow-600 font-semibold mb-3">
+                Moderate TDS (150–300 ppm)
               </h3>
               <p className="text-gray-600">
-                Considered acceptable for drinking water according to many
-                water quality standards.
+                Acceptable for drinking and most household uses.
               </p>
             </div>
 
             <div className="bg-red-50 border border-red-200 p-8 rounded-xl shadow">
               <h3 className="text-red-600 font-semibold mb-3">
-                High TDS (500+ mg/L)
+                High TDS (Above 500 ppm)
               </h3>
               <p className="text-gray-600">
-                High mineral content may affect taste and could require water
-                treatment before consumption.
+                May affect taste and may require water treatment.
               </p>
             </div>
 
@@ -200,7 +198,7 @@ export default function TdsTesting() {
               <FlaskConical className="mx-auto text-blue-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Sample Collection</h3>
               <p className="text-gray-600 text-sm">
-                Proper water sampling to avoid contamination.
+                Water samples collected using sterile containers.
               </p>
             </div>
 
@@ -208,7 +206,7 @@ export default function TdsTesting() {
               <Beaker className="mx-auto text-blue-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Laboratory Analysis</h3>
               <p className="text-gray-600 text-sm">
-                Digital TDS meters ensure precise measurement.
+                Digital TDS meters provide precise readings.
               </p>
             </div>
 
@@ -224,7 +222,7 @@ export default function TdsTesting() {
               <FileText className="mx-auto text-blue-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Report Delivery</h3>
               <p className="text-gray-600 text-sm">
-                Clients receive detailed laboratory testing reports.
+                Detailed laboratory report provided to clients.
               </p>
             </div>
 
@@ -244,8 +242,8 @@ export default function TdsTesting() {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Contact our laboratory today to schedule water testing and receive
-            reliable laboratory analysis reports.
+            Contact our laboratory today to schedule TDS testing and receive
+            accurate laboratory analysis reports.
           </p>
 
           <Link

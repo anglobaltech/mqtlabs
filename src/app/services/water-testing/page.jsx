@@ -20,15 +20,15 @@ const waterServices = [
     title: "pH Water Testing",
     description:
       "Measurement of acidity and alkalinity level of water to ensure safe usage.",
-    image: "/phTesting.png",
-    link: "/services/waterTesting/phTesting",
+    image: "/waterTesting1.jpg",
+    link: "/services/water-testing/ph-testing",
   },
   {
     title: "TDS Water Testing",
     description:
       "Testing total dissolved solids present in water for quality evaluation.",
-    image: "/tdsTesting.jpg",
-    link: "/services/waterTesting/tdsTesting",
+    image: "/waterTesting1.jpg",
+    link: "/services/water-testing/tds-testing",
   },
 ];
 

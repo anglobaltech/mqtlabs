@@ -39,33 +39,33 @@ const HomePage = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   useEffect(() => {
-  const submitted = sessionStorage.getItem("popupSubmitted");
-  if (submitted === "true") {
-    setHasSubmitted(true);
-    return; // agar already submit hua hai, popup show nahi hoga
-  }
+    const submitted = sessionStorage.getItem("popupSubmitted");
+    if (submitted === "true") {
+      setHasSubmitted(true);
+      return; // agar already submit hua hai, popup show nahi hoga
+    }
 
-  const showPopup = () => {
-    if (!hasSubmitted) setIsModalOpen(true);
-  };
+    const showPopup = () => {
+      if (!hasSubmitted) setIsModalOpen(true);
+    };
 
-  // First popup after 10 sec
-  const firstTimer = setTimeout(() => {
-    showPopup();
+    // First popup after 10 sec
+    const firstTimer = setTimeout(() => {
+      showPopup();
 
-    // Repeat every 2 min if popup is not submitted
-    const repeatInterval = setInterval(() => {
-      if (!hasSubmitted) showPopup();
-      else clearInterval(repeatInterval); // agar submit ho gaya to interval stop
-    }, 120000);
+      // Repeat every 2 min if popup is not submitted
+      const repeatInterval = setInterval(() => {
+        if (!hasSubmitted) showPopup();
+        else clearInterval(repeatInterval); // agar submit ho gaya to interval stop
+      }, 120000);
 
-    // Clean interval on unmount
-    return () => clearInterval(repeatInterval);
-  }, 10000);
+      // Clean interval on unmount
+      return () => clearInterval(repeatInterval);
+    }, 10000);
 
-  // Clean timeout on unmount
-  return () => clearTimeout(firstTimer);
-}, [hasSubmitted]);
+    // Clean timeout on unmount
+    return () => clearTimeout(firstTimer);
+  }, [hasSubmitted]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -104,47 +104,46 @@ const HomePage = () => {
     return newErrors;
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const validationErrors = validateForm();
-  setErrors(validationErrors);
-  if (Object.keys(validationErrors).length !== 0) return;
+    const validationErrors = validateForm();
+    setErrors(validationErrors);
+    if (Object.keys(validationErrors).length !== 0) return;
 
-  setStatus("loading");
+    setStatus("loading");
 
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    if (!res.ok) throw new Error("Server Error");
+      if (!res.ok) throw new Error("Server Error");
 
-    setStatus("success");
-    setHasSubmitted(true);
-    sessionStorage.setItem("popupSubmitted", "true"); // ✅ permanently block future popups
-    setIsModalOpen(false); // ✅ close popup
+      setStatus("success");
+      setHasSubmitted(true);
+      sessionStorage.setItem("popupSubmitted", "true"); // ✅ permanently block future popups
+      setIsModalOpen(false); // ✅ close popup
 
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
 
-    // 🔥 Close popup after 2 sec
-    setTimeout(() => {
-      setIsModalOpen(false);
-      setStatus("");
-    }, 2000);
-
-  } catch (error) {
-    console.error(error);
-    setStatus("error");
-  }
-};
+      // 🔥 Close popup after 2 sec
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setStatus("");
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
+  };
 
   //   try {
   //     setStatus("loading");
@@ -542,9 +541,9 @@ const handleSubmit = async (e) => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="bg-red-500 hover:bg-red-600 transition duration-300 text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2">
+                <button className="group bg-red-500 hover:bg-red-600 hover:scale-105 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-xl">
                   Request Consultation
-                  <span className="transition-transform group-hover:translate-x-1">
+                  <span className="transition-transform duration-300 group-hover:translate-x-2">
                     ➤
                   </span>
                 </button>
@@ -742,7 +741,6 @@ const handleSubmit = async (e) => {
           </div>
         </div>
       </section>  */}
-
     </div>
   );
 };
