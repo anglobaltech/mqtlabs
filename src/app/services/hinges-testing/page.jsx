@@ -1,46 +1,52 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ArrowRight,
+  ShieldCheck,
+  ClipboardCheck,
+  Beaker,
+  CheckCircle,
+} from "lucide-react";
 
 const services = [
   {
-    title: "Load Bearing Test",
+    title: "Material Testing",
     description:
-      "Evaluates the load capacity of hinges to ensure strength and durability under operational stress.",
+      "Analyzes the material composition of hinges to verify metal quality, strength, and compliance with manufacturing standards.",
+    link: "#",
   },
   {
-    title: "Cycle Testing",
+    title: "Dimensions Testing",
     description:
-      "Measures hinge performance through repeated opening and closing cycles to determine lifespan.",
+      "Measures hinge dimensions including length, width, thickness, and hole placement to ensure accurate manufacturing.",
+    link: "#",
   },
   {
-    title: "Corrosion Resistance Test",
+    title: "Tolerance Testing",
     description:
-      "Analyzes resistance to rust and environmental exposure for long-term reliability.",
+      "Checks manufacturing tolerances to confirm hinges meet specified dimensional accuracy and fitting standards.",
+    link: "#",
   },
   {
-    title: "Salt Spray Test",
+    title: "Manufacture Testing",
     description:
-      "Tests hinge resistance against corrosion in high-humidity and saline conditions.",
+      "Evaluates manufacturing quality including assembly accuracy, joint alignment, and structural integrity.",
+    link: "#",
   },
   {
-    title: "Material Composition Analysis",
+    title: "Finish Testing",
     description:
-      "Verifies the quality and composition of metal alloys used in hinge manufacturing.",
-  },
-  {
-    title: "Torque & Alignment Testing",
-    description:
-      "Ensures proper movement, alignment, and torque performance of hinge mechanisms.",
+      "Examines hinge surface finish, coating quality, and resistance to corrosion, scratches, and environmental exposure.",
+    link: "#",
   },
 ];
 
 const page = () => {
   return (
-    <div className="bg-gray-50">
-
-      {/* Hero Section */}
-      <section className="relative h-[35vh] flex items-center justify-center">
+    <main className="bg-gray-50">
+      {/* HERO */}
+      <section className="relative h-[45vh] flex items-center justify-center">
         <Image
           src="/Hinges Testing.jpg"
           alt="Hinges Testing"
@@ -48,97 +54,198 @@ const page = () => {
           className="object-cover brightness-50"
           priority
         />
-        <div className="relative text-center text-white px-6">
+
+        <div className="relative text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hinges Testing Services
           </h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Certified laboratory testing to ensure durability, corrosion resistance,
-            and performance of hinge components.
+
+          <p className="text-lg text-gray-200">
+            Certified laboratory testing to evaluate hinge material quality,
+            dimensional accuracy, manufacturing standards, and surface finish.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Our Hinges Testing Services
-        </h2>
+      {/* ABOUT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative h-80">
+            <Image
+              src="/Hinges Testing.jpg"
+              alt="Hinges Testing Laboratory"
+              fill
+              className="object-cover rounded-xl shadow-lg"
+            />
+          </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
+          <div>
+            <h2 className="text-3xl font-bold mb-6">
+              Professional Hinges Testing Laboratory
+            </h2>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Our laboratory provides professional hinges testing to evaluate
+              material strength, dimensional accuracy, manufacturing quality,
+              and finishing standards.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              These tests help manufacturers ensure that hinges meet required
+              industry standards for durability, precision, and long-term
+              performance in furniture, doors, and industrial applications.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Testing Process */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Testing Process
+      {/* SERVICES */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Hinges Testing Services
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">01</div>
-              <h4 className="font-semibold mb-2">Sample Inspection</h4>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link href={service.link} key={index}>
+                <div className="group bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                  <ShieldCheck size={34} className="text-red-500 mb-4" />
+
+                  <h3 className="text-lg font-semibold mb-3">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm mb-4">
+                    {service.description}
+                  </p>
+
+                  <span className="flex items-center gap-2 text-black font-medium text-sm group-hover:text-red-500 transition">
+                    Read More
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition"
+                    />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY TESTING */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Why Hinges Testing is Important
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+            <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Material Reliability
+              </h3>
               <p className="text-gray-600 text-sm">
-                Receive and inspect hinge samples for testing.
+                Ensures hinge materials have the required strength and quality
+                for reliable performance.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">02</div>
-              <h4 className="font-semibold mb-2">Mechanical Testing</h4>
+
+            <div className="p-8 rounded-xl bg-blue-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-blue-500 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Manufacturing Accuracy
+              </h3>
               <p className="text-gray-600 text-sm">
-                Conduct load, torque, and cycle performance testing.
+                Confirms hinges are manufactured with correct dimensions and
+                tolerances.
               </p>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">03</div>
-              <h4 className="font-semibold mb-2">Environmental Testing</h4>
+
+            <div className="p-8 rounded-xl bg-green-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-green-600 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Long-Term Durability
+              </h3>
               <p className="text-gray-600 text-sm">
-                Perform corrosion and salt spray resistance analysis.
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">04</div>
-              <h4 className="font-semibold mb-2">Certified Report</h4>
-              <p className="text-gray-600 text-sm">
-                Deliver detailed laboratory-certified testing reports.
+                Evaluates finishing quality and resistance to corrosion and
+                wear.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-red-400 py-16 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">
-          Need Professional Hinges Testing?
-        </h2>
-        <p className="mb-6">
-          Contact our experts today for certified hinges testing services.
-        </p>
-        <Link
-          href="/contact-us"
-          className="bg-white text-red-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-        >
-          Contact Us
-        </Link>
+      {/* TESTING PROCESS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Hinges Testing Process
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Sample Collection</h3>
+              <p className="text-sm text-gray-600">
+                Hinges samples are collected and registered according to
+                laboratory testing procedures.
+              </p>
+            </div>
+
+            <div>
+              <Beaker className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Laboratory Testing</h3>
+              <p className="text-sm text-gray-600">
+                Material, dimensions, tolerance, and manufacturing quality
+                tests are performed.
+              </p>
+            </div>
+
+            <div>
+              <CheckCircle className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Result Evaluation</h3>
+              <p className="text-sm text-gray-600">
+                Test data is analyzed according to industry standards and
+                quality requirements.
+              </p>
+            </div>
+
+            <div>
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Certified Report</h3>
+              <p className="text-sm text-gray-600">
+                Clients receive detailed laboratory reports with verified test
+                results.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-    </div>
+      {/* CTA */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Professional Hinges Testing?
+          </h2>
+
+          <p className="text-gray-300 mb-8">
+            Contact our laboratory experts to schedule hinges testing and
+            receive certified laboratory reports.
+          </p>
+
+          <Link
+            href="/contact-us"
+            className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition"
+          >
+            Contact Laboratory
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 };
 
