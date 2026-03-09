@@ -109,17 +109,17 @@ export default function GlobalPopup() {
     <>
       {isOpen && !hasSubmitted && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 relative animate-fadeIn">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn">
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl"
+              className="absolute top-4 right-4 font-extrabold text-gray-500 hover:text-red-500 text-lg"
             >
               ✕
             </button>
 
             <div className="text-center mb-3">
-              <h1 className="text-2xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-blue-900 via-blue-500 to-indigo-600">
+              <h1 className="text-xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-blue-900 via-blue-500 to-indigo-600">
                 Minu Quality Testing Lab
               </h1>
               <h2 className="text-lg font-bold text-gray-600 tracking-widest uppercase mt-1">
@@ -127,18 +127,18 @@ export default function GlobalPopup() {
               </h2>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
+            {/* <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
               Get In Touch
-            </h2>
+            </h2> */}
             <p className="text-gray-600 mb-6 text-sm">
               Fill the form and our team will contact you shortly.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-2">
               <input
                 type="text"
                 name="fullName"
-                placeholder="Full Name *"
+                placeholder="Full Name"
                 value={formData.fullName}
                 onChange={handleChange}
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
@@ -150,7 +150,7 @@ export default function GlobalPopup() {
               <input
                 type="email"
                 name="email"
-                placeholder="Email Address *"
+                placeholder="Email Address"
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
@@ -162,7 +162,7 @@ export default function GlobalPopup() {
               <input
                 type="tel"
                 name="phone"
-                placeholder="Phone Number *"
+                placeholder="Phone Number"
                 maxLength={10}
                 value={formData.phone}
                 onChange={handleChange}
@@ -174,7 +174,7 @@ export default function GlobalPopup() {
 
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder="Tell us which service you are interested in..."
                 rows="3"
                 value={formData.message}
                 onChange={handleChange}

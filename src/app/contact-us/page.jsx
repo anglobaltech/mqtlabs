@@ -181,7 +181,7 @@ export default function ContactPage() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Your Message..."
+                    placeholder="Tell us which service you are interested in..."
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-red-400"
                   />
                   {errors.message && (

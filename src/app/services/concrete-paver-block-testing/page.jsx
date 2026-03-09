@@ -1,46 +1,107 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ArrowRight,
+  ShieldCheck,
+  ClipboardCheck,
+  Beaker,
+  CheckCircle,
+} from "lucide-react";
 
 const services = [
   {
-    title: "Compressive Strength Test",
+    title: "Cement Testing",
     description:
-      "Determines the load-bearing capacity of concrete paver blocks to ensure structural durability.",
+      "Evaluates cement quality used in concrete paver blocks to ensure proper bonding strength and durability.",
+    link: "#",
+  },
+  {
+    title: "Mineral & Chemical Admixture Testing",
+    description:
+      "Analyzes admixtures used in concrete paver block production to verify performance and compatibility.",
+    link: "#",
+  },
+  {
+    title: "Coarse and Fine Aggregate Testing",
+    description:
+      "Tests aggregates used in concrete paver blocks for grading, strength, and quality compliance.",
+    link: "#",
+  },
+  {
+    title: "Pigment Testing",
+    description:
+      "Evaluates pigments used for coloring concrete paver blocks to ensure durability and color stability.",
+    link: "#",
+  },
+  {
+    title: "General Quality Testing",
+    description:
+      "Assesses overall manufacturing quality and compliance with construction standards.",
+    link: "#",
+  },
+  {
+    title: "Visual Inspection",
+    description:
+      "Checks surface defects such as cracks, chips, irregular shapes, and surface imperfections.",
+    link: "#",
+  },
+  {
+    title: "Colour and Texture Testing",
+    description:
+      "Evaluates surface colour consistency and texture quality of concrete paver blocks.",
+    link: "#",
+  },
+  {
+    title: "Dimension and Tolerance Testing",
+    description:
+      "Ensures accurate size, shape, and dimensional tolerances as per standard specifications.",
+    link: "#",
+  },
+  {
+    title: "Thickness of Wearing Layer",
+    description:
+      "Measures the thickness of the wearing layer to ensure durability under traffic loads.",
+    link: "#",
   },
   {
     title: "Water Absorption Test",
     description:
-      "Measures the water absorption rate to evaluate durability and long-term performance.",
+      "Determines the water absorption rate which affects durability and resistance to weathering.",
+    link: "#",
+  },
+  {
+    title: "Compressive & Tensile Splitting Strength",
+    description:
+      "Measures compressive and tensile splitting strength to determine structural performance.",
+    link: "#",
   },
   {
     title: "Abrasion Resistance Test",
     description:
-      "Assesses resistance to surface wear caused by traffic and environmental exposure.",
+      "Evaluates resistance to wear caused by traffic, friction, and environmental conditions.",
+    link: "#",
   },
   {
-    title: "Dimensional Accuracy Test",
+    title: "Flexural Strength / Breaking Load",
     description:
-      "Ensures uniform size, shape, and thickness as per specified standards.",
+      "Measures bending strength and breaking load capacity of concrete paver blocks.",
+    link: "#",
   },
   {
-    title: "Flexural Strength Test",
+    title: "Freeze-Thaw Durability Test",
     description:
-      "Evaluates the bending strength of paver blocks under applied loads.",
-  },
-  {
-    title: "Visual & Surface Quality Inspection",
-    description:
-      "Checks for cracks, chips, surface defects, and overall finish quality.",
+      "Assesses resistance to freeze-thaw cycles which can cause cracking and structural damage.",
+    link: "#",
   },
 ];
 
 const page = () => {
   return (
-    <div className="bg-gray-50">
+    <main className="bg-gray-50">
 
-      {/* Hero Section */}
-      <section className="relative h-[35vh] flex items-center justify-center">
+      {/* HERO */}
+      <section className="relative h-[45vh] flex items-center justify-center">
         <Image
           src="/paverBlockTesting.jpg"
           alt="Concrete Paver Block Testing"
@@ -48,97 +109,204 @@ const page = () => {
           className="object-cover brightness-50"
           priority
         />
-        <div className="relative text-center text-white px-6">
+
+        <div className="relative text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Concrete Paver Block Testing Services
           </h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Certified laboratory testing to ensure strength, durability,
-            and quality of concrete paver blocks for infrastructure projects.
+
+          <p className="text-lg text-gray-200">
+            Certified laboratory testing to evaluate strength, durability,
+            dimensional accuracy, and quality of concrete paver blocks used in
+            infrastructure and construction projects.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Our Concrete Paver Block Testing Services
-        </h2>
+      {/* ABOUT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
+          <div className="relative h-80">
+            <Image
+              src="/paverBlockTesting.jpg"
+              alt="Concrete Paver Block Testing Laboratory"
+              fill
+              className="object-cover rounded-xl shadow-lg"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold mb-6">
+              Professional Concrete Paver Block Testing Laboratory
+            </h2>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Our laboratory performs comprehensive testing of concrete paver
+              blocks to ensure they meet required standards for strength,
+              durability, and long-term performance.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              These tests verify the quality of materials, structural strength,
+              wear resistance, and dimensional accuracy required for roads,
+              pavements, parking areas, and industrial flooring.
+            </p>
+          </div>
+
         </div>
       </section>
 
-      {/* Testing Process */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Testing Process
+      {/* SERVICES */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Concrete Paver Block Testing Services
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">01</div>
-              <h4 className="font-semibold mb-2">Sample Collection</h4>
-              <p className="text-gray-600 text-sm">
-                Collection and verification of paver block samples from site or manufacturer.
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">02</div>
-              <h4 className="font-semibold mb-2">Laboratory Testing</h4>
-              <p className="text-gray-600 text-sm">
-                Conduct strength, absorption, and durability testing as per standards.
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">03</div>
-              <h4 className="font-semibold mb-2">Quality Evaluation</h4>
-              <p className="text-gray-600 text-sm">
-                Analyze results to verify compliance with construction specifications.
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">04</div>
-              <h4 className="font-semibold mb-2">Certified Report</h4>
-              <p className="text-gray-600 text-sm">
-                Deliver detailed laboratory-certified testing reports.
-              </p>
-            </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link href={service.link} key={index}>
+                <div className="group bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                  <ShieldCheck size={34} className="text-red-500 mb-4" />
+
+                  <h3 className="text-lg font-semibold mb-3">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm mb-4">
+                    {service.description}
+                  </p>
+
+                  <span className="flex items-center gap-2 text-black font-medium text-sm group-hover:text-red-500 transition">
+                    Read More
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition"
+                    />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-red-400 py-16 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">
-          Need Professional Paver Block Testing?
-        </h2>
-        <p className="mb-6">
-          Contact our experts today for reliable and certified concrete paver block testing services.
-        </p>
-        <Link
-          href="/contact-us"
-          className="bg-white text-red-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-        >
-          Contact Us
-        </Link>
+      {/* WHY TESTING */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Why Concrete Paver Block Testing is Important
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+
+            <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Structural Strength
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Ensures concrete paver blocks have sufficient strength to withstand heavy
+                loads and traffic conditions.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-blue-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-blue-500 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Durability & Wear Resistance
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Evaluates abrasion resistance and environmental durability for
+                long-term performance.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-green-50 hover:shadow-lg transition">
+              <ShieldCheck className="mx-auto text-green-600 mb-4" size={40} />
+              <h3 className="font-semibold text-lg mb-2">
+                Quality Assurance
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Verifies manufacturing quality, dimensional accuracy, and
+                compliance with construction standards.
+              </p>
+            </div>
+
+          </div>
+        </div>
       </section>
 
-    </div>
+      {/* TESTING PROCESS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Concrete Paver Block Testing Process
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+
+            <div>
+              <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Sample Collection</h3>
+              <p className="text-sm text-gray-600">
+                Concrete Paver block samples are collected and registered according to
+                laboratory procedures.
+              </p>
+            </div>
+
+            <div>
+              <Beaker className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Laboratory Testing</h3>
+              <p className="text-sm text-gray-600">
+                Strength, water absorption, abrasion resistance, and dimensional
+                tests are conducted.
+              </p>
+            </div>
+
+            <div>
+              <CheckCircle className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Result Evaluation</h3>
+              <p className="text-sm text-gray-600">
+                Test results are analyzed according to standard specifications.
+              </p>
+            </div>
+
+            <div>
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Certified Report</h3>
+              <p className="text-sm text-gray-600">
+                Detailed laboratory test reports are provided to clients.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Professional Concrete Paver Block Testing?
+          </h2>
+
+          <p className="text-gray-300 mb-8">
+            Contact our laboratory experts to schedule concrete paver block testing and
+            receive certified laboratory reports.
+          </p>
+
+          <Link
+            href="/contact-us"
+            className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition"
+          >
+            Contact Laboratory
+          </Link>
+        </div>
+      </section>
+
+    </main>
   );
 };
 

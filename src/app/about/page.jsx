@@ -18,11 +18,9 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="bg-white">
-
       {/* HERO */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
-
           <h1 className="text-4xl md:text-6xl font-bold text-white mt-6 mb-6">
             About Minu Quality Testing Laboratory Pvt. Ltd.
           </h1>
@@ -32,17 +30,13 @@ export default function AboutPage() {
             industrial, and manufacturing materials to ensure quality,
             durability, and compliance with industry standards.
           </p>
-
         </div>
       </section>
-
 
       {/* INTRO */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
           <div>
-
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Who We Are
             </h2>
@@ -57,38 +51,28 @@ export default function AboutPage() {
 
             <p className="text-gray-600 leading-relaxed">
               Our laboratory is equipped with modern testing equipment and
-              experienced professionals who ensure accurate testing,
-              transparent reporting, and dependable technical support for our
-              clients.
+              experienced professionals who ensure accurate testing, transparent
+              reporting, and dependable technical support for our clients.
             </p>
-
           </div>
 
           <div className="bg-gray-50 p-10 rounded-2xl shadow">
-
             <Factory className="w-12 h-12 text-red-500 mb-4" />
 
-            <h3 className="text-xl font-semibold mb-3">
-              Our Purpose
-            </h3>
+            <h3 className="text-xl font-semibold mb-3">Our Purpose</h3>
 
             <p className="text-gray-600 leading-relaxed">
               To provide reliable laboratory testing services that support
-              industries in maintaining product quality, improving
-              manufacturing consistency, and ensuring compliance with
-              regulatory standards.
+              industries in maintaining product quality, improving manufacturing
+              consistency, and ensuring compliance with regulatory standards.
             </p>
-
           </div>
-
         </div>
       </section>
-
 
       {/* STATS */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
-
           <div className="bg-white p-8 rounded-xl shadow">
             <FlaskConical className="mx-auto text-blue-600 mb-3" size={36} />
             <h3 className="text-3xl font-bold text-gray-900">9+</h3>
@@ -112,15 +96,12 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold text-gray-900">ISO</h3>
             <p className="text-gray-600">Standard Procedures</p>
           </div>
-
         </div>
       </section>
-
 
       {/* MISSION */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our Mission & Values
@@ -131,11 +112,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-
           <div className="grid md:grid-cols-3 gap-10">
-
             <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-
               <Target className="text-red-500 mb-4" size={40} />
 
               <h3 className="text-xl font-semibold mb-2">
@@ -143,16 +121,12 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-gray-600">
-                Our testing procedures ensure precise and dependable
-                laboratory results to support real-world industrial
-                requirements.
+                Our testing procedures ensure precise and dependable laboratory
+                results to support real-world industrial requirements.
               </p>
-
             </div>
 
-
             <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-
               <ShieldCheck className="text-red-500 mb-4" size={40} />
 
               <h3 className="text-xl font-semibold mb-2">
@@ -160,15 +134,12 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-gray-600">
-                We follow recognized quality systems and testing standards
-                to ensure regulatory compliance and product reliability.
+                We follow recognized quality systems and testing standards to
+                ensure regulatory compliance and product reliability.
               </p>
-
             </div>
 
-
             <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-
               <Globe className="text-red-500 mb-4" size={40} />
 
               <h3 className="text-xl font-semibold mb-2">
@@ -177,35 +148,26 @@ export default function AboutPage() {
 
               <p className="text-gray-600">
                 Our work supports responsible manufacturing by helping
-                industries validate performance, safety, and durability
-                of materials.
+                industries validate performance, safety, and durability of
+                materials.
               </p>
-
             </div>
-
           </div>
-
         </div>
       </section>
-
 
       {/* WHAT WE TEST */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              Materials We Test
-            </h2>
+            <h2 className="text-4xl font-bold mb-4">Materials We Test</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Our laboratory provides testing services across multiple
-              product categories used in construction and manufacturing.
+              Our laboratory provides testing services across multiple product
+              categories used in construction and manufacturing.
             </p>
           </div>
 
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
             {[
               "Wood Testing",
               "Plywood Testing",
@@ -225,18 +187,13 @@ export default function AboutPage() {
                 <p className="font-medium text-gray-700">{item}</p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 
-
       {/* CTA */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-24 text-center">
-
         <div className="max-w-4xl mx-auto px-6">
-
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Need Professional Testing Services?
           </h2>
@@ -252,11 +209,8 @@ export default function AboutPage() {
           >
             Contact Laboratory
           </a>
-
         </div>
-
       </section>
-
     </main>
   );
 }

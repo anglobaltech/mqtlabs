@@ -1,144 +1,265 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  ShieldCheck,
+  ClipboardCheck,
+  Beaker,
+  CheckCircle,
+} from "lucide-react";
 
-const services = [
+const chemicalTests = [
   {
-    title: "Compressive Strength Test",
+    title: "LFS Test",
     description:
-      "Determines the compressive strength of cement to ensure structural stability and durability.",
+      "Determines Lime Saturation Factor (LFS) to evaluate cement composition balance.",
   },
+  {
+    title: "Alumina-Iron Ratio (AF Ratio)",
+    description:
+      "Measures the alumina to iron oxide ratio to ensure proper clinker composition.",
+  },
+  {
+    title: "Insoluble Residue",
+    description:
+      "Determines non-reactive material present in cement affecting its performance.",
+  },
+  {
+    title: "Magnesia Content",
+    description:
+      "Measures magnesium oxide content to prevent expansion and structural issues.",
+  },
+  {
+    title: "Loss on Ignition",
+    description:
+      "Evaluates weight loss during heating to determine moisture and volatile content.",
+  },
+  {
+    title: "Chloride & Alkali Content",
+    description:
+      "Checks chloride and alkali levels which may cause corrosion in reinforced concrete.",
+  },
+];
+
+const physicalTests = [
   {
     title: "Fineness Test",
     description:
-      "Measures the particle size of cement to evaluate setting time and strength development.",
-  },
-  {
-    title: "Initial & Final Setting Time Test",
-    description:
-      "Assesses the time required for cement to begin and complete the setting process.",
+      "Determines particle size of cement which affects hydration rate and strength development.",
   },
   {
     title: "Soundness Test",
     description:
-      "Evaluates the expansion properties of cement to prevent cracking and structural damage.",
+      "Evaluates the ability of cement to retain its volume after setting.",
   },
   {
-    title: "Consistency Test",
+    title: "Setting Time Test",
     description:
-      "Determines the standard water requirement for preparing cement paste.",
+      "Measures initial and final setting time to ensure proper workability.",
   },
   {
-    title: "Heat of Hydration Test",
+    title: "Compressive Strength Test",
     description:
-      "Analyzes heat generated during cement hydration to assess performance in mass concrete works.",
+      "Determines cement strength under compression for structural reliability.",
+  },
+  {
+    title: "Transverse Strength Test",
+    description:
+      "Evaluates bending strength of cement mortar specimens.",
   },
 ];
 
 const page = () => {
   return (
-    <div className="bg-gray-50">
+    <main className="bg-gray-50">
 
-      {/* Hero Section */}
-      <section className="relative h-[35vh] flex items-center justify-center">
+      {/* HERO */}
+      <section className="relative h-[45vh] flex items-center justify-center">
         <Image
           src="/Cement Testing.jpg"
           alt="Cement Testing"
           fill
           className="object-cover brightness-50"
-          priority
         />
-        <div className="relative text-center text-white px-6">
+
+        <div className="relative text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Cement Testing Services
           </h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Certified laboratory testing to ensure quality, strength, and durability
-            of cement materials for construction applications.
+
+          <p className="text-lg text-gray-200">
+            Professional laboratory testing for cement to evaluate chemical
+            composition, physical properties, strength, and durability according
+            to industry standards.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Our Cement Testing Services
-        </h2>
+      {/* ABOUT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          
+          <div className="relative h-80">
+            <Image
+              src="/Cement Testing.jpg"
+              alt="Cement Testing Laboratory"
+              fill
+              className="object-cover rounded-xl shadow-lg"
+            />
+          </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
+          <div>
+            <h2 className="text-3xl font-bold mb-6">
+              Professional Cement Testing Laboratory
+            </h2>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Our laboratory provides advanced cement testing services to
+              evaluate chemical composition, strength properties, and
+              durability.
+            </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              These tests ensure cement quality, compliance with construction
+              standards, and reliable performance in structural and industrial
+              applications.
+            </p>
+          </div>
+
         </div>
       </section>
 
-      {/* Testing Process */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our Testing Process
+      {/* SERVICES */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Cement Testing Services
+          </h2>
+
+          {/* Chemical Tests */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-8 text-center">
+              Chemical Requirement Tests
+            </h3>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {chemicalTests.map((test, index) => (
+                <div
+                  key={index}
+                  className="bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl transition"
+                >
+                  <ShieldCheck size={34} className="text-red-500 mb-4" />
+
+                  <h4 className="text-lg font-semibold mb-3">
+                    {test.title}
+                  </h4>
+
+                  <p className="text-gray-600 text-sm">
+                    {test.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Physical Tests */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-8 text-center">
+              Physical Requirement Tests
+            </h3>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {physicalTests.map((test, index) => (
+                <div
+                  key={index}
+                  className="bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl transition"
+                >
+                  <ShieldCheck size={34} className="text-red-500 mb-4" />
+
+                  <h4 className="text-lg font-semibold mb-3">
+                    {test.title}
+                  </h4>
+
+                  <p className="text-gray-600 text-sm">
+                    {test.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* TESTING PROCESS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-center mb-14">
+            Our Cement Testing Process
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
+
             <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">01</div>
-              <h4 className="font-semibold mb-2">Sample Collection</h4>
-              <p className="text-gray-600 text-sm">
-                Collection and verification of cement samples for laboratory analysis.
+              <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Sample Collection</h3>
+              <p className="text-sm text-gray-600">
+                Cement samples are collected and registered for laboratory testing.
               </p>
             </div>
+
             <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">02</div>
-              <h4 className="font-semibold mb-2">Laboratory Testing</h4>
-              <p className="text-gray-600 text-sm">
-                Conduct mechanical and physical property testing as per standards.
+              <Beaker className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Laboratory Testing</h3>
+              <p className="text-sm text-gray-600">
+                Chemical and physical tests are conducted according to standards.
               </p>
             </div>
+
             <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">03</div>
-              <h4 className="font-semibold mb-2">Quality Evaluation</h4>
-              <p className="text-gray-600 text-sm">
-                Analyze results to ensure compliance with construction quality norms.
+              <CheckCircle className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Result Evaluation</h3>
+              <p className="text-sm text-gray-600">
+                Test data is analyzed to ensure compliance with quality standards.
               </p>
             </div>
+
             <div>
-              <div className="text-3xl font-bold text-red-400 mb-2">04</div>
-              <h4 className="font-semibold mb-2">Certified Report</h4>
-              <p className="text-gray-600 text-sm">
-                Issue detailed and certified laboratory testing reports.
+              <ShieldCheck className="mx-auto text-red-500 mb-4" size={36} />
+              <h3 className="font-semibold mb-2">Certified Report</h3>
+              <p className="text-sm text-gray-600">
+                Detailed certified laboratory reports are provided to clients.
               </p>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-red-400 py-16 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">
-          Need Professional Cement Testing?
-        </h2>
-        <p className="mb-6">
-          Contact our experts today for reliable and certified cement testing services.
-        </p>
-        <Link
-          href="/contact-us"
-          className="bg-white text-red-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-        >
-          Contact Us
-        </Link>
+      {/* CTA */}
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Professional Cement Testing?
+          </h2>
+
+          <p className="text-gray-300 mb-8">
+            Contact our laboratory experts to schedule cement testing and
+            receive certified laboratory reports.
+          </p>
+
+          <Link
+            href="/contact-us"
+            className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition"
+          >
+            Contact Laboratory
+          </Link>
+        </div>
       </section>
 
-    </div>
+    </main>
   );
 };
 
