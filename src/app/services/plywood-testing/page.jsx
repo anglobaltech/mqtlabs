@@ -13,55 +13,55 @@ const services = [
   {
     title: "Static & Bending Strength Test",
     description:
-      "Measures plywood strength and durability under static load and wet conditions.",
+      "Measures the bending strength and load-bearing capacity of plywood under static load conditions.",
     link: "#",
   },
   {
     title: "Moisture Content Testing",
     description:
-      "Measures moisture levels in plywood to prevent swelling and dimensional instability.",
+      "Determines the moisture level present in plywood sheets to ensure dimensional stability and durability.",
     link: "#",
   },
   {
-    title: "Flexure & Edge Load Test",
+    title: "Flexural Strength Test",
     description:
-      "Evaluates plywood flexural strength and resistance to edge loading stresses.",
+      "Evaluates the flexural strength and stiffness of plywood panels when subjected to bending forces.",
     link: "#",
   },
   {
     title: "Water Resistance Test",
     description:
-      "Assesses resistance against water penetration and delamination.",
+      "Checks plywood resistance to water exposure and verifies bonding performance under wet conditions.",
     link: "#",
   },
   {
-    title: "Timber & Adhesive Test",
+    title: "Adhesive Bonding Test",
     description:
-      "Testing timber strength and adhesive bonding quality for durability.",
+      "Assesses the bonding strength between veneer layers to ensure strong and durable plywood construction.",
     link: "#",
   },
   {
     title: "Mycological Test",
     description:
-      "Checks plywood resistance against fungal growth and biological decay.",
+      "Tests plywood resistance against fungal attack and biological deterioration.",
     link: "#",
   },
   {
     title: "Tensile Strength Test",
     description:
-      "Measures material strength, elongation, and resistance under pulling force.",
+      "Measures the resistance of plywood to tensile forces and evaluates elongation before failure.",
     link: "#",
   },
   {
-    title: "Shock & Buckling Resistance",
+    title: "Impact Resistance Test",
     description:
-      "Evaluates plywood resistance to impact shocks and buckling deformation.",
+      "Evaluates the ability of plywood panels to withstand sudden impact loads and shocks.",
     link: "#",
   },
   {
     title: "End Immersion Test",
     description:
-      "Assesses plywood resistance to water absorption through end-grain immersion.",
+      "Measures water absorption and durability when plywood edges are immersed in water.",
     link: "#",
   },
 ];
@@ -70,10 +70,10 @@ const page = () => {
   return (
     <main className="bg-gray-50">
       {/* HERO */}
-      <section className="relative h-[45vh] flex items-center justify-center">
+      <section className="relative h-[35vh] flex items-center justify-center">
         <Image
-          src="/polywood-testing-service.jpeg"
-          alt="Polywood Testing"
+          src="/plywood-testing-service.jpeg"
+          alt="Plywood Testing"
           fill
           className="object-cover brightness-50"
           priority
@@ -81,12 +81,12 @@ const page = () => {
 
         <div className="relative text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Polywood Testing Services
+            Plywood Testing Services
           </h1>
 
           <p className="text-lg text-gray-200">
             Certified laboratory testing ensuring durability, bonding strength,
-            moisture resistance, and structural reliability of polywood
+            moisture resistance, and structural reliability of plywood
             products.
           </p>
         </div>
@@ -97,8 +97,8 @@ const page = () => {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-80">
             <Image
-              src="/polywood-testing-service.jpeg"
-              alt="Polywood Testing Laboratory"
+              src="/plywood-testing-service.jpeg"
+              alt="Plywood Testing Laboratory"
               fill
               className="object-cover rounded-xl shadow-lg"
             />
@@ -106,17 +106,17 @@ const page = () => {
 
           <div>
             <h2 className="text-3xl font-bold mb-6">
-              Professional Polywood Testing Laboratory
+              Professional Plywood Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory performs comprehensive polywood testing to evaluate
-              mechanical strength, bonding quality, moisture resistance, and
-              dimensional accuracy.
+              Our laboratory performs comprehensive plywood testing to evaluate
+              mechanical strength, bonding quality, moisture resistance, durability,
+              and dimensional stability of plywood panels.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests ensure that polywood materials meet required quality
+              These tests ensure that plywood materials meet required quality
               standards and perform reliably in construction, furniture
               manufacturing, and industrial applications.
             </p>
@@ -128,7 +128,7 @@ const page = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
-            Our Polywood Testing Services
+            Our Plywood Testing Services
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,18 +163,17 @@ const page = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
-            Why Polywood Testing is Important
+            Why Plywood Testing is Important
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10 text-center">
+          <div className="grid md:grid-cols-3 gap-10 text-center cursor-pointer">
             <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
               <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
               <h3 className="font-semibold text-lg mb-2">
                 Structural Strength
               </h3>
               <p className="text-gray-600 text-sm">
-                Ensures polywood materials have sufficient strength and
-                durability for construction and furniture applications.
+                Ensures plywood panels meet required strength and durability standards for construction, furniture, and industrial use.
               </p>
             </div>
 
@@ -193,7 +192,7 @@ const page = () => {
                 Long-Term Durability
               </h3>
               <p className="text-gray-600 text-sm">
-                Helps manufacturers and builders ensure polywood products
+                Helps manufacturers and builders ensure plywood products
                 perform reliably over long periods of use.
               </p>
             </div>
@@ -201,11 +200,11 @@ const page = () => {
         </div>
       </section>
 
-      {/* POLYWOOD TESTING PROCESS */}
+      {/* PLYWOOD TESTING PROCESS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
-            Our Polywood Testing Process
+            Our Plywood Testing Process
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
@@ -213,7 +212,7 @@ const page = () => {
               <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Sample Collection</h3>
               <p className="text-sm text-gray-600">
-                Polywood samples are collected and registered according to
+                Plywood samples are collected and registered according to
                 standardized laboratory procedures.
               </p>
             </div>
@@ -252,11 +251,11 @@ const page = () => {
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Need Professional Polywood Testing?
+            Need Certified Plywood Testing Services?
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Contact our laboratory experts to schedule polywood testing and
+            Contact our laboratory experts to schedule plywood testing and
             receive certified laboratory reports.
           </p>
 

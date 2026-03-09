@@ -38,7 +38,7 @@ export default function WaterTesting() {
   return (
     <main className="bg-gray-50">
       {/* HERO SECTION */}
-      <section className="relative h-[45vh] flex items-center justify-center">
+      <section className="relative h-[35vh] flex items-center justify-center">
         <Image
           src="/waterTesting1.jpg"
           alt="Water Testing Laboratory"
@@ -106,9 +106,9 @@ export default function WaterTesting() {
 
               return (
                 <Link href={service.link} key={index}>
-                  <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-500 hover:shadow-xl transition duration-300 group">
+                  <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition duration-300 group">
                     {/* ICON */}
-                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
                       <Icon size={26} />
                     </div>
 
@@ -136,7 +136,7 @@ export default function WaterTesting() {
 
       {/* WHY WATER TESTING */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 cursor-pointer">
           <h2 className="text-3xl font-bold text-center mb-14">
             Why Water Testing is Important
           </h2>
@@ -227,7 +227,7 @@ export default function WaterTesting() {
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Need Professional Water Testing?
+            Need Professional Water Testing Services?
           </h2>
 
           <p className="text-gray-300 mb-8">

@@ -210,7 +210,7 @@ const HomePage = () => {
               Trusted laboratory for comprehensive quality testing of
               <span className="font-semibold text-white">
                 {" "}
-                Wood, Polywood, Water, Furniture, Hinges, Cement, Aggregates,
+                Wood, Plywood, Water, Furniture, Hinges, Cement, Aggregates,
                 Soil & Concrete Paver Blocks
               </span>
               . Ensuring safety, durability, and compliance with national and
@@ -237,7 +237,7 @@ const HomePage = () => {
               </h2>
               <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
                 Delivering reliable and accurate testing services for wood,
-                polywood, water, furniture, cement, and construction materials.
+                plywood, water, furniture, cement, and construction materials.
                 We help manufacturers and builders meet quality, safety, and
                 compliance standards with complete confidence.
               </p>
@@ -282,7 +282,7 @@ const HomePage = () => {
                   safety, and regulatory requirements.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  We support industries involved in wood, polywood, furniture,
+                  We support industries involved in wood, plywood, furniture,
                   water, soil, cement, hinges, aggregates and concrete paver
                   block with equipment and testing methods aligned to national
                   and international standards.
@@ -363,13 +363,13 @@ const HomePage = () => {
                 <li>Wood Strength Analyzer</li>
               </ul>
             </div>
-            {/* Polywood Testing */}
+            {/* Plywood Testing */}
             <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
               <div className="w-14 h-14 bg-gray-600 rounded-full flex items-center justify-center mb-6">
                 <TreeDeciduous className="w-7 h-7 text-green-100" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Polywood Testing Equipment
+                Plywood Testing Equipment
               </h3>
               <ul className="space-y-2 text-gray-700">
                 <li>Plywood Testing</li>
@@ -503,11 +503,11 @@ const HomePage = () => {
               "Plywood Bonding & Strength Testing",
               "Wood Moisture & Density Analysis",
               "Furniture Load & Durability Tests",
-              "Formaldehyde Emission Testing",
-              "Water Chemical Analysis, Water Sample Testing",
-              "Abrasion & Pilling Resistance",
-              "Color Fastness Testing",
-              "Compliance & Test Reports",
+              "soil Compaction And Density Testing",
+              "Water Testing Measurement",
+              "Concrete paver Block Testing",
+              "Aggregates Impact And Crushing Testing",
+              "Cement Fineness And Soundness Testing",
             ].map((service, idx) => (
               <div
                 key={idx}
@@ -541,7 +541,7 @@ const HomePage = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button className="group bg-red-500 hover:bg-red-600 hover:scale-105 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-xl">
+                <button className="group bg-red-500 hover:bg-red-600 hover:scale-105 transition-all duration-300 text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-xl cursor-pointer">
                   Request Consultation
                   <span className="transition-transform duration-300 group-hover:translate-x-2">
                     ➤
@@ -641,11 +641,11 @@ const HomePage = () => {
                     type="submit"
                     disabled={status === "loading"}
                     className={`px-10 py-2.5 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center gap-2
-        ${
-          status === "loading"
-            ? "bg-red-300 cursor-not-allowed"
-            : "bg-red-400 hover:bg-red-500"
-        }`}
+                ${
+                  status === "loading"
+                    ? "bg-red-300 cursor-not-allowed"
+                    : "bg-red-400 hover:bg-red-500"
+                }`}
                   >
                     {status === "loading" && (
                       <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>

@@ -113,13 +113,13 @@ export default function GlobalPopup() {
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 font-extrabold text-gray-500 hover:text-red-500 text-lg"
+              className="absolute top-4 right-4 font-extrabold text-gray-500 hover:text-red-500 text-lg cursor-pointer"
             >
               ✕
             </button>
 
             <div className="text-center mb-3">
-              <h1 className="text-xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-blue-900 via-blue-500 to-indigo-600">
+              <h1 className="text-xl md:text-3xl font-extrabold bg-clip-text text-[#05526e]">
                 Minu Quality Testing Lab
               </h1>
               <h2 className="text-lg font-bold text-gray-600 tracking-widest uppercase mt-1">

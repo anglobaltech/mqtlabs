@@ -4,15 +4,16 @@ import Link from "next/link";
 
 const Footer = () => {
   const services = [
-    { name: "Wood Testing", link: "/services/wood-testing" },
-    { name: "Polywood Testing", link: "/services/polywood-testing" },
-    { name: "Furniture Testing", link: "/services/furniture-testing" },
-    { name: "Water Testing", link: "/services/water-testing" },
-    { name: "Hinges Testing", link: "/services/hinges-testing" },
-    { name: "Cement Testing", link: "/services/cement-testing" },
-    { name: "Soil Testing", link: "/services/soil-testing" },
-    { name: "Concrete Paver Block Testing", link: "/services/concrete-paver-block-testing" },
-  ];
+  { name: "Wood Testing", link: "/services/wood-testing" },
+  { name: "Plywood Testing", link: "/services/plywood-testing" },
+  { name: "Furniture Testing", link: "/services/furniture-testing" },
+  { name: "Water Testing", link: "/services/water-testing" },
+  { name: "Hinges Testing", link: "/services/hinges-testing" },
+  { name: "Cement Testing", link: "/services/cement-testing" },
+  { name: "Soil Testing", link: "/services/soil-testing" },
+  { name: "Aggregates Testing", link: "/services/aggregates-testing" },
+  { name: "Concrete Paver Block Testing", link: "/services/concrete-paver-block-testing" },
+];
 
   const quickLinks = [
     { name: "Home", link: "/" },

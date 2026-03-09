@@ -191,21 +191,23 @@ export default function ContactPage() {
                   )}
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className={`w-full px-6 py-2 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center justify-center gap-2
-                  ${
+                <div className="flex justify-center mt-4">
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className={`w-fit px-6 py-2 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center justify-center gap-2
+                ${
                     status === "loading"
-                      ? "bg-red-300 cursor-not-allowed"
-                      : "bg-red-400 hover:bg-red-500"
-                  }`}
-                >
-                  {status === "loading" && (
-                    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                  )}
-                  {status === "loading" ? "Sending..." : "Submit Enquiry"}
-                </button>
+                    ? "bg-red-300 cursor-not-allowed"
+                    : "bg-red-400 hover:bg-red-500"
+                }`}
+                  >
+                    {status === "loading" && (
+                      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                    )}
+                    {status === "loading" ? "Sending..." : "Submit Enquiry"}
+                  </button>
+                </div>
 
                 {status === "success" && (
                   <div className="mt-3 bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm">

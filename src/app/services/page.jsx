@@ -21,8 +21,8 @@ const services = [
     title: "Plywood Testing Services",
     description:
       "Professional plywood testing including bonding strength, water resistance and durability evaluation.",
-    image: "/polywood-testing-service.jpeg",
-    link: "/services/polywood-testing",
+    image: "/plywood-testing-service.jpeg",
+    link: "/services/plywood-testing",
     icon: Layers,
   },
   {

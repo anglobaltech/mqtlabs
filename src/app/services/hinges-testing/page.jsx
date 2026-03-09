@@ -46,7 +46,7 @@ const page = () => {
   return (
     <main className="bg-gray-50">
       {/* HERO */}
-      <section className="relative h-[45vh] flex items-center justify-center">
+      <section className="relative h-[35vh] flex items-center justify-center">
         <Image
           src="/Hinges Testing.jpg"
           alt="Hinges Testing"
@@ -136,7 +136,7 @@ const page = () => {
 
       {/* WHY TESTING */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 cursor-pointer">
           <h2 className="text-3xl font-bold text-center mb-14">
             Why Hinges Testing is Important
           </h2>
@@ -229,7 +229,7 @@ const page = () => {
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Need Professional Hinges Testing?
+            Need Professional Hinges Testing Services?
           </h2>
 
           <p className="text-gray-300 mb-8">
