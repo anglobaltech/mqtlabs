@@ -119,12 +119,9 @@ export default function GlobalPopup() {
             </button>
 
             <div className="text-center mb-3">
-              <h1 className="text-xl md:text-3xl font-extrabold bg-clip-text text-[#05526e]">
+              <h1 className="text-xl md:text-4xl font-extrabold bg-clip-text text-[#05526e]">
                 Minu Quality Testing Lab
               </h1>
-              <h2 className="text-lg font-bold text-gray-600 tracking-widest uppercase mt-1">
-                Pvt. Ltd.
-              </h2>
             </div>
 
             {/* <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
