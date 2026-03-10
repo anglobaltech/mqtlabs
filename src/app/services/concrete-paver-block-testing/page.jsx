@@ -124,8 +124,8 @@ const page = () => {
       </section>
 
       {/* ABOUT */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div className="relative h-80">
             <Image
@@ -158,7 +158,7 @@ const page = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Concrete Paver Block Testing Services
@@ -193,7 +193,7 @@ const page = () => {
       </section>
 
       {/* WHY TESTING */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 cursor-pointer">
           <h2 className="text-3xl font-bold text-center mb-14">
             Why Concrete Paver Block Testing is Important
@@ -239,7 +239,7 @@ const page = () => {
       </section>
 
       {/* TESTING PROCESS */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Concrete Paver Block Testing Process

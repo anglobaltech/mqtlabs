@@ -61,8 +61,8 @@ export default function WaterTesting() {
       </section>
 
       {/* ABOUT WATER TESTING */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-80">
             <Image
               src="/waterTesting1.jpg"
@@ -94,7 +94,7 @@ export default function WaterTesting() {
       </section>
 
       {/* SERVICES GRID */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Water Testing Services
@@ -135,7 +135,7 @@ export default function WaterTesting() {
       </section>
 
       {/* WHY WATER TESTING */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 cursor-pointer">
           <h2 className="text-3xl font-bold text-center mb-14">
             Why Water Testing is Important
@@ -178,7 +178,7 @@ export default function WaterTesting() {
       </section>
 
       {/* TESTING PROCESS */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-10 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Water Testing Process

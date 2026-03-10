@@ -34,7 +34,7 @@ export default function AboutPage() {
       </section>
 
       {/* INTRO */}
-      <section className="py-24">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       {/* STATS */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
           <div className="bg-white p-8 rounded-xl shadow">
             <FlaskConical className="mx-auto text-blue-600 mb-3" size={36} />
@@ -100,7 +100,7 @@ export default function AboutPage() {
       </section>
 
       {/* MISSION */}
-      <section className="py-24">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* WHAT WE TEST */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Materials We Test</h2>
