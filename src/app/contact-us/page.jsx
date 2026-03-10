@@ -90,7 +90,7 @@ export default function ContactPage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="bg-gray-900 py-16">
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-15">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
             Contact Us

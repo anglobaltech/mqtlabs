@@ -19,9 +19,9 @@ export default function AboutPage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-24">
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mt-6 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-6 mb-6">
             About Minu Quality Testing Laboratory Pvt. Ltd.
           </h1>
 

@@ -88,14 +88,14 @@ export default function ServicesPage() {
     <main className="bg-white">
 
       {/* HERO SECTION */}
-      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-15">
+      <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-6xl mx-auto px-6 text-center">
 
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Professional Laboratory Testing Services
           </h1>
 
-          <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+          <p className="text-gray-300 text-md leading-relaxed max-w-4xl mx-auto">
             Minu Quality Testing Laboratory provides reliable and accurate
             testing services for various materials used in construction,
             manufacturing and industrial applications. Our laboratory follows

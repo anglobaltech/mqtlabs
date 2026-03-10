@@ -161,13 +161,13 @@ const page = () => {
                     {service.description}
                   </p>
 
-                  <span className="flex items-center gap-2 text-black font-medium text-sm group-hover:text-red-500 transition">
+                  {/* <span className="flex items-center gap-2 text-black font-medium text-sm group-hover:text-red-500 transition">
                     Read More
                     <ArrowRight
                       size={16}
                       className="group-hover:translate-x-1 transition"
                     />
-                  </span>
+                  </span> */}
 
                 </div>
               </Link>
