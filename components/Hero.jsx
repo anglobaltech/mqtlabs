@@ -18,9 +18,16 @@ import {
   Target,
   Users,
   TrendingUp,
-  Trees,
   Armchair,
   TreeDeciduous,
+  Trees,
+  Layers,
+  Droplet,
+  Mountain,
+  Building2,
+  Settings,
+  Blocks,
+  Sofa,
 } from "lucide-react";
 
 const HomePage = () => {
@@ -486,59 +493,69 @@ const HomePage = () => {
 
       {/* ================= SERVICES SECTION ================= */}
       <section id="services" className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Testing Services
-            </h2>
-            <div className="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Reliable laboratory testing services for wooden products, plywood,
-              furniture, and construction materials ensuring quality and safety.
-            </p>
-          </div>
+  <div className="max-w-7xl mx-auto px-6">
+    
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Testing Services
+      </h2>
+      <div className="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        Reliable laboratory testing services for wooden products, plywood,
+        furniture, and construction materials ensuring quality and safety.
+      </p>
+    </div>
 
-          {/* Grid */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[
-              { name: "Wood Testing", link: "/services/wood-testing" },
-              { name: "Plywood Testing", link: "/services/plywood-testing" },
-              { name: "Water Testing", link: "/services/water-testing" },
-              { name: "Soil Testing", link: "/services/soil-testing" },
-              { name: "Cement Testing", link: "/services/cement-testing" },
-              { name: "Hinges Testing", link: "/services/hinges-testing" },
-              {
-                name: "Concrete Paver Block Testing",
-                link: "/services/concrete-paver-block-testing",
-              },
-              {
-                name: "Furniture Testing",
-                link: "/services/furniture-testing",
-              },
-            ].map((service, idx) => (
-              <Link key={idx} href={service.link}>
-                <div className="group relative h-40 flex items-center justify-center bg-white/70 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer hover:-translate-y-1">
-                  {/* Default Content */}
-                  <div className="relative z-10 flex flex-col items-center text-center px-4">
-                    <CheckCircle className="w-8 h-8 text-red-500 mb-3 transition group-hover:scale-110" />
-                    <h3 className="text-sm font-semibold text-gray-900">
-                      {service.name}
-                    </h3>
-                  </div>
+    {/* Grid */}
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {[
+        { name: "Wood Testing", link: "/services/wood-testing", icon: Trees },
+        { name: "Plywood Testing", link: "/services/plywood-testing", icon: Layers },
+        { name: "Water Testing", link: "/services/water-testing", icon: Droplet },
+        { name: "Soil Testing", link: "/services/soil-testing", icon: Mountain },
+        { name: "Cement Testing", link: "/services/cement-testing", icon: Building2 },
+        { name: "Hinges Testing", link: "/services/hinges-testing", icon: Settings },
+        {
+          name: "Concrete Paver Block Testing",
+          link: "/services/concrete-paver-block-testing",
+          icon: Blocks,
+        },
+        {
+          name: "Furniture Testing",
+          link: "/services/furniture-testing",
+          icon: Sofa,
+        },
+      ].map((service, idx) => {
+        const Icon = service.icon;
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 flex items-end justify-end p-4 backdrop-blur-3xl bg-gray-200/70 opacity-0 group-hover:opacity-100 transition duration-300">
-                    <span className="flex items-center gap-1 text-sm font-semibold text-red-500">
-                      Read More →
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+        return (
+          <Link key={idx} href={service.link}>
+            <div className="group relative h-40 flex items-center justify-center bg-white/70 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer hover:-translate-y-1">
+
+              {/* Default Content */}
+              <div className="relative z-10 flex flex-col items-center text-center px-4">
+                <Icon className="w-8 h-8 text-red-500 mb-3 transition group-hover:scale-110" />
+                <h3 className="text-sm font-semibold text-gray-900">
+                  {service.name}
+                </h3>
+              </div>
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 flex items-end justify-end p-4 backdrop-blur-3xl bg-gray-200/70 opacity-0 group-hover:opacity-100 transition duration-300">
+                <span className="flex items-center gap-1 text-sm font-semibold text-red-500">
+                  Read More →
+                </span>
+              </div>
+
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
       <section className="py-12 bg-linear-to-r from-[#0f3c5f] via-[#154c79] to-[#1b5d8f]">
         <div className="max-w-7xl  mx-auto ">
           <div className="grid md:grid-cols-2 gap-15 items-start">
