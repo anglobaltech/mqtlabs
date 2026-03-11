@@ -10,9 +10,12 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Minu Quality Testing Laboratory",
+  title:
+    "About Minu Quality Testing Laboratory Pvt. Ltd. | Construction Materials Testing Laboratory Experts",
   description:
-    "Learn about Minu Quality Testing Laboratory providing reliable testing services for construction and industrial materials with accuracy and certified testing procedures.",
+    "Minu Quality Testing Laboratory Pvt. Ltd. is a professional material testing laboratory offering reliable testing services for water, wood, plywood, soil, aggregates, cement, hinges, furniture, and concrete paver blocks in Delhi NCR, Noida, and Greater Noida.",
+  keywords:
+    "About Minu Quality Testing Laboratory, Material Testing Laboratory, Water Testing Lab, Wood Testing Lab, Plywood Testing Lab, Soil Testing Laboratory, Construction Materials Testing, Minu Quality Testing Laboratory",
 };
 
 export default function AboutPage() {

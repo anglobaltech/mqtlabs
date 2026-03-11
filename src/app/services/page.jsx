@@ -3,9 +3,12 @@ import Link from "next/link";
 import { Beaker, Trees, Sofa, Wrench, Building2, Layers, Mountain, Box } from "lucide-react";
 
 export const metadata = {
-  title: "Testing Services | Minu Quality Testing Laboratory",
+  title:
+    "Construction Materials Testing Laboratory Services | Minu Quality Testing Laboratory Pvt. Ltd.",
   description:
-    "Professional laboratory testing services including wood, plywood, water, furniture, hinges, cement, aggregates, soil and concrete paver block testing.",
+    "Minu Quality Testing Laboratory Pvt. Ltd. offers certified construction material testing services including water, wood, plywood, soil, aggregates, cement, furniture, hinges, and concrete paver block testing.",
+  keywords:
+    "Material Testing Laboratory, Water Testing, Wood Testing, Plywood Testing, Soil Testing, Aggregates Testing, Cement Testing, Furniture Testing, Hinges Testing, Concrete Paver Block Testing, Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
 };
 
 const services = [
