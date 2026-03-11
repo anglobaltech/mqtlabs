@@ -41,7 +41,7 @@ const Footer = () => {
               />
 
               <div>
-                <h1 className="text-md font-bold text-white">
+                <h1 className="text-base font-bold text-white">
                   MQT Laboratory Pvt. Ltd.
                 </h1>
                 <p className="text-xs text-gray-400">Quality & Testing</p>
@@ -133,7 +133,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-500">
+        <div className="border-t border-gray-700 mt-5 pt-6 text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Minu Quality Testing Laboratory Pvt. Ltd.
           All rights reserved.
         </div>
