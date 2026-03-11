@@ -9,6 +9,12 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+export const metadata = {
+  title: "Concrete Paver Block Testing Labaratory | Minu Quality Testing Laboratory",
+  description:
+    "Certified Concrete Paver Block Testing laboratory offering cement testing, aggregate testing, pigment testing, compressive strength, abrasion resistance, flexural strength, and water absorption tests for construction materials in Delhi NCR, Noida, and Greater Noida.",
+};
+
 const services = [
   {
     title: "Cement Testing",
@@ -99,7 +105,6 @@ const services = [
 const page = () => {
   return (
     <main className="bg-gray-50">
-
       {/* HERO */}
       <section className="relative h-[35vh] flex items-center justify-center">
         <Image
@@ -126,7 +131,6 @@ const page = () => {
       {/* ABOUT */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
           <div className="relative h-80">
             <Image
               src="/paverBlockTesting.jpg"
@@ -153,7 +157,6 @@ const page = () => {
               pavements, parking areas, and industrial flooring.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -200,15 +203,14 @@ const page = () => {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10 text-center">
-
             <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
               <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
               <h3 className="font-semibold text-lg mb-2">
                 Structural Strength
               </h3>
               <p className="text-gray-600 text-sm">
-                Ensures concrete paver blocks have sufficient strength to withstand heavy
-                loads and traffic conditions.
+                Ensures concrete paver blocks have sufficient strength to
+                withstand heavy loads and traffic conditions.
               </p>
             </div>
 
@@ -225,15 +227,12 @@ const page = () => {
 
             <div className="p-8 rounded-xl bg-green-50 hover:shadow-lg transition">
               <ShieldCheck className="mx-auto text-green-600 mb-4" size={40} />
-              <h3 className="font-semibold text-lg mb-2">
-                Quality Assurance
-              </h3>
+              <h3 className="font-semibold text-lg mb-2">Quality Assurance</h3>
               <p className="text-gray-600 text-sm">
                 Verifies manufacturing quality, dimensional accuracy, and
                 compliance with construction standards.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -246,13 +245,12 @@ const page = () => {
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
-
             <div>
               <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Sample Collection</h3>
               <p className="text-sm text-gray-600">
-                Concrete Paver block samples are collected and registered according to
-                laboratory procedures.
+                Concrete Paver block samples are collected and registered
+                according to laboratory procedures.
               </p>
             </div>
 
@@ -280,7 +278,6 @@ const page = () => {
                 Detailed laboratory test reports are provided to clients.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -293,8 +290,8 @@ const page = () => {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Contact our laboratory experts to schedule concrete paver block testing and
-            receive certified laboratory reports.
+            Contact our laboratory experts to schedule concrete paver block
+            testing and receive certified laboratory reports.
           </p>
 
           <Link
@@ -305,7 +302,6 @@ const page = () => {
           </Link>
         </div>
       </section>
-
     </main>
   );
 };

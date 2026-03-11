@@ -8,6 +8,14 @@ import {
   Beaker,
   CheckCircle,
 } from "lucide-react";
+export const metadata = {
+  title:
+    "Soil Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  description:
+    "Certified soil testing laboratory offering soil analysis, bearing capacity testing, compaction tests, moisture content testing, and geotechnical evaluation at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+  keywords:
+    "Soil Testing Laboratory, Soil Analysis Test, Geotechnical Soil Testing, Bearing Capacity Test, Soil Compaction Test, Soil Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+};
 
 const services = [
   {

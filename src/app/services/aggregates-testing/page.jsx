@@ -9,6 +9,15 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+export const metadata = {
+  title:
+    "Aggregates Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  description:
+    "Certified aggregates testing laboratory offering sieve analysis, aggregate crushing value test, impact value test, flakiness index, elongation index, and water absorption testing at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+  keywords:
+    "Aggregates Testing Laboratory, Aggregate Crushing Value Test, Impact Value Test, Sieve Analysis, Construction Material Testing, Aggregate Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+};
+
 const services = [
   {
     title: "Sieve Analysis Test",

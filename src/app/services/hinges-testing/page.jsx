@@ -9,6 +9,15 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+export const metadata = {
+  title:
+    "Hinges Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  description:
+    "Certified hinges testing laboratory offering durability tests, load capacity testing, corrosion resistance testing, and performance evaluation of door and furniture hinges at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+  keywords:
+    "Hinges Testing Laboratory, Door Hinges Testing, Furniture Hinges Testing, Hardware Fittings Testing, Hinges Durability Test, Hinges Load Test, Hinges Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+};
+
 const services = [
   {
     title: "Material Testing",

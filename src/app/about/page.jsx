@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
           <div className="bg-white p-8 rounded-xl shadow">
             <FlaskConical className="mx-auto text-blue-600 mb-3" size={36} />
-            <h3 className="text-3xl font-bold text-gray-900">9+</h3>
+            <h3 className="text-3xl font-bold text-gray-900">10+</h3>
             <p className="text-gray-600">Testing Services</p>
           </div>
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
           <div className="bg-white p-8 rounded-xl shadow">
             <Award className="mx-auto text-blue-600 mb-3" size={36} />
-            <h3 className="text-3xl font-bold text-gray-900">100%</h3>
+            <h3 className="text-3xl font-bold text-gray-900">99%</h3>
             <p className="text-gray-600">Accurate Reports</p>
           </div>
 

@@ -9,6 +9,15 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+export const metadata = {
+  title:
+    "Plywood Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  description:
+    "Certified plywood testing laboratory offering bonding strength tests, moisture content analysis, durability testing, and quality inspection of plywood sheets at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+  keywords:
+    "Plywood Testing Laboratory, Bonding Strength Test, Plywood Quality Testing, Moisture Content Test, Plywood Durability Testing, Plywood Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+};
+
 const services = [
   {
     title: "Static & Bending Strength Test",

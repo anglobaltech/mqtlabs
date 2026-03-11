@@ -9,6 +9,15 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+export const metadata = {
+  title:
+    "Cement Testing Laboratory in Delhi NCR | Minu Quality Testing Laboratory Pvt. Ltd.",
+  description:
+    "Certified cement testing laboratory offering compressive strength testing, initial and final setting time test, fineness test, soundness test, and cement quality analysis at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+  keywords:
+    "Cement Testing Laboratory, Cement Compressive Strength Test, Cement Fineness Test, Setting Time Test Cement, Cement Quality Testing, Construction Material Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+};
+
 const services = [
   {
     title: "LFS Test",
