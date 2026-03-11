@@ -9,8 +9,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 export const metadata = {
-  title:
-    "Soil Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  title: "Soil Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
   description:
     "Certified soil testing laboratory offering soil analysis, bearing capacity testing, compaction tests, moisture content testing, and geotechnical evaluation at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
@@ -83,8 +82,9 @@ const page = () => {
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/Soil Testing.jpg"
               alt="Soil Testing Laboratory"
@@ -93,26 +93,33 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Soil Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory provides professional soil testing services to
-              evaluate soil strength, composition, and engineering properties
-              required for construction and infrastructure development.
+              Our laboratory provides reliable soil testing services to analyze
+              soil composition, strength, and engineering properties required
+              for construction and infrastructure development projects.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We perform various laboratory tests including soil classification,
+              moisture content analysis, compaction testing, and bearing
+              capacity evaluation to determine the suitability of soil for
+              construction purposes.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests help engineers determine soil stability, load-bearing
-              capacity, and drainage characteristics to ensure safe and durable
-              construction projects.
+              These tests help engineers and builders understand soil stability,
+              load-bearing capacity, and drainage characteristics to ensure
+              safe, durable, and long-lasting construction foundations.
             </p>
           </div>
         </div>
       </section>
-
       {/* SERVICES */}
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">

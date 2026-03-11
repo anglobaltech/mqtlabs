@@ -18,11 +18,9 @@ export const metadata = {
 export default function TDSTesting() {
   return (
     <main className="bg-gray-50">
-
       {/* HERO */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               TDS Water Testing Services
@@ -51,55 +49,58 @@ export default function TDSTesting() {
               className="object-cover rounded-xl shadow-lg"
             />
           </div>
-
         </div>
       </section>
 
       {/* ABOUT TDS */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14">
-
-          <div className="relative h-87.5">
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/waterTesting1.jpg"
               alt="Water TDS laboratory testing"
               fill
-              className="object-cover rounded-xl shadow"
+              className="object-cover rounded-xl shadow-lg"
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               What is TDS Water Testing?
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Total Dissolved Solids (TDS) represents the combined content of
-              all inorganic and organic substances dissolved in water. These
-              include minerals, salts, metals, and other dissolved particles.
+              Total Dissolved Solids (TDS) represents the combined concentration
+              of inorganic salts, minerals, metals, and organic substances
+              dissolved in water. These substances may include calcium,
+              magnesium, sodium, potassium, chlorides, and sulfates.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Measuring TDS levels helps determine overall water quality and
+              indicates whether water is suitable for drinking, industrial
+              processes, or agricultural use.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              Monitoring TDS levels helps maintain water quality, improves
-              taste, prevents equipment damage, and ensures water is suitable
-              for drinking, industrial use, and agricultural applications.
+              Regular monitoring of TDS helps improve taste, prevent scaling and
+              corrosion in pipelines and equipment, and ensures compliance with
+              water quality standards.
             </p>
           </div>
-
         </div>
       </section>
 
       {/* IMPORTANCE */}
-      <section className="py-20 bg-white">
-
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-12">
             Importance of TDS Testing
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8">
-
             <div className="bg-blue-50 p-6 rounded-xl text-center shadow">
               <Droplets className="mx-auto text-blue-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Water Quality</h3>
@@ -131,24 +132,18 @@ export default function TDSTesting() {
                 Prevents scaling and damage in machinery.
               </p>
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* TDS LEVELS */}
-      <section className="py-20 bg-gray-100">
-
+      <section className="py-10 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-12">
             Understanding TDS Levels
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-
             <div className="bg-green-50 border border-green-200 p-8 rounded-xl shadow">
               <h3 className="text-green-600 font-semibold mb-3">
                 Low TDS (50–150 ppm)
@@ -176,24 +171,18 @@ export default function TDSTesting() {
                 May affect taste and may require water treatment.
               </p>
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* PROCESS */}
-      <section className="py-20 bg-white">
-
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Testing Process
           </h2>
 
           <div className="grid md:grid-cols-4 gap-10 text-center">
-
             <div>
               <FlaskConical className="mx-auto text-blue-600 mb-3" size={40} />
               <h3 className="font-semibold mb-2">Sample Collection</h3>
@@ -225,18 +214,13 @@ export default function TDSTesting() {
                 Detailed laboratory report provided to clients.
               </p>
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* CTA */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-20 text-center">
-
         <div className="max-w-4xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-white mb-4">
             Need Professional TDS Water Testing?
           </h2>
@@ -252,11 +236,8 @@ export default function TDSTesting() {
           >
             Contact Laboratory
           </Link>
-
         </div>
-
       </section>
-
     </main>
   );
 }

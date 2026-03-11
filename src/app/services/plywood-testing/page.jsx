@@ -95,16 +95,16 @@ const page = () => {
 
           <p className="text-lg text-gray-200">
             Certified laboratory testing ensuring durability, bonding strength,
-            moisture resistance, and structural reliability of plywood
-            products.
+            moisture resistance, and structural reliability of plywood products.
           </p>
         </div>
       </section>
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/plywood-testing-service.jpeg"
               alt="Plywood Testing Laboratory"
@@ -113,21 +113,30 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Plywood Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory performs comprehensive plywood testing to evaluate
-              mechanical strength, bonding quality, moisture resistance, durability,
-              and dimensional stability of plywood panels.
+              Our laboratory provides reliable plywood testing services to
+              evaluate the strength, bonding quality, moisture resistance, and
+              durability of plywood sheets used in construction and furniture
+              manufacturing.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We conduct various laboratory tests including glue bond testing,
+              bending strength testing, water resistance testing, and
+              dimensional stability testing to ensure plywood meets required
+              quality standards.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests ensure that plywood materials meet required quality
-              standards and perform reliably in construction, furniture
-              manufacturing, and industrial applications.
+              These tests help manufacturers maintain product quality and ensure
+              plywood performs reliably in structural applications, interior
+              furniture, and industrial uses.
             </p>
           </div>
         </div>
@@ -182,7 +191,8 @@ const page = () => {
                 Structural Strength
               </h3>
               <p className="text-gray-600 text-sm">
-                Ensures plywood panels meet required strength and durability standards for construction, furniture, and industrial use.
+                Ensures plywood panels meet required strength and durability
+                standards for construction, furniture, and industrial use.
               </p>
             </div>
 
@@ -201,8 +211,8 @@ const page = () => {
                 Long-Term Durability
               </h3>
               <p className="text-gray-600 text-sm">
-                Helps manufacturers and builders ensure plywood products
-                perform reliably over long periods of use.
+                Helps manufacturers and builders ensure plywood products perform
+                reliably over long periods of use.
               </p>
             </div>
           </div>

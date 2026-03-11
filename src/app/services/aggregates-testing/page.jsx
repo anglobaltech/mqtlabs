@@ -60,66 +60,55 @@ const services = [
 const page = () => {
   return (
     <main className="bg-gray-50">
-
       {/* HERO */}
-      <section className="relative h-[35vh] flex items-center justify-center">
-        <Image
-          src="/Aggregates Testing.jpg"
-          alt="Aggregates Testing"
-          fill
-          className="object-cover brightness-50"
-        />
-
-        <div className="relative text-center text-white px-6 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Aggregates Testing Services
-          </h1>
-
-          <p className="text-lg text-gray-200">
-            Professional laboratory testing for aggregates to evaluate grading,
-            strength, durability, and suitability for construction projects.
-          </p>
-        </div>
-      </section>
-
-      {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
 
-          <div className="relative h-80 w-">
-            <Image
-              src="/Aggregates Testing.jpg"
-              alt="Aggregates Testing Laboratory"
-              fill
-              className="object-cover rounded-xl shadow-lg"
-            />
-          </div>
+    {/* Image - 45% */}
+    <div className="relative h-80 md:col-span-5">
+      <Image
+        src="/Aggregates Testing.jpg"
+        alt="Aggregates Testing Laboratory"
+        fill
+        className="object-cover rounded-xl shadow-lg"
+      />
+    </div>
 
-          <div>
-            <h2 className="text-3xl font-bold mb-6">
-              Professional Aggregates Testing Laboratory
-            </h2>
+    {/* Content - 55% */}
+    <div className="md:col-span-6">
 
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory provides reliable aggregates testing services to
-              evaluate particle size distribution, strength, and durability of
-              aggregates used in construction.
-            </p>
+      {/* Heading Top Right */}
+      <h2 className="text-3xl font-bold mb-6">
+        Professional Aggregates Testing Laboratory
+      </h2>
 
-            <p className="text-gray-600 leading-relaxed">
-              These tests ensure aggregates meet required construction standards
-              and contribute to the strength, stability, and long-term
-              performance of concrete structures.
-            </p>
-          </div>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        Our laboratory provides reliable aggregates testing services to
+        evaluate particle size distribution, strength, and durability of
+        aggregates used in construction projects.
+      </p>
 
-        </div>
-      </section>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        Aggregates play a vital role in determining the strength and
+        durability of concrete structures. Through advanced laboratory
+        testing methods, we analyze grading, crushing strength, water
+        absorption, and overall quality of aggregates.
+      </p>
+
+      <p className="text-gray-600 leading-relaxed">
+        Our testing procedures ensure that aggregates comply with
+        construction standards and are suitable for use in roads,
+        buildings, bridges, and infrastructure projects.
+      </p>
+
+    </div>
+
+  </div>
+</section>
 
       {/* SERVICES */}
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Aggregates Testing Services
           </h2>
@@ -128,7 +117,6 @@ const page = () => {
             {services.map((service, index) => (
               <Link href={service.link} key={index}>
                 <div className="group bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-
                   <ShieldCheck
                     size={34}
                     className="text-red-500 mb-4 transition group-hover:scale-110"
@@ -149,28 +137,26 @@ const page = () => {
                       className="group-hover:translate-x-1 transition"
                     />
                   </span> */}
-
                 </div>
               </Link>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* WHY AGGREGATES TESTING */}
       <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 cursor-pointer">
-
           <h2 className="text-3xl font-bold text-center mb-14">
             Why Aggregates Testing is Important
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10 text-center">
-
             <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
               <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
-              <h3 className="font-semibold text-lg mb-2">Structural Strength</h3>
+              <h3 className="font-semibold text-lg mb-2">
+                Structural Strength
+              </h3>
               <p className="text-gray-600 text-sm">
                 Ensures aggregates provide the required strength for concrete
                 structures and construction stability.
@@ -194,27 +180,24 @@ const page = () => {
                 mechanical stress over time.
               </p>
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* PROCESS */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Aggregates Testing Process
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
-
             <div>
               <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Sample Collection</h3>
               <p className="text-sm text-gray-600">
-                Aggregate samples are collected and registered for laboratory testing.
+                Aggregate samples are collected and registered for laboratory
+                testing.
               </p>
             </div>
 
@@ -222,7 +205,8 @@ const page = () => {
               <Beaker className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Laboratory Testing</h3>
               <p className="text-sm text-gray-600">
-                Mechanical and physical tests are performed using modern equipment.
+                Mechanical and physical tests are performed using modern
+                equipment.
               </p>
             </div>
 
@@ -241,7 +225,6 @@ const page = () => {
                 Clients receive detailed certified laboratory test reports.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -266,7 +249,6 @@ const page = () => {
           </Link>
         </div>
       </section>
-
     </main>
   );
 };

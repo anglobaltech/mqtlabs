@@ -84,8 +84,9 @@ const page = () => {
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/Furniture Testing.jpg"
               alt="Furniture Testing Laboratory"
@@ -94,21 +95,29 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Furniture Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory provides professional furniture testing services to
-              evaluate durability, structural strength, and safety performance
-              of furniture products.
+              Our laboratory provides reliable furniture testing services to
+              evaluate the structural strength, durability, and safety
+              performance of various furniture products used in residential,
+              commercial, and industrial environments.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We conduct a range of tests including load capacity testing,
+              stability testing, joint strength testing, and durability testing
+              to ensure furniture products meet required industry standards.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests help manufacturers ensure furniture meets industry
-              standards for load capacity, stability, and long-term durability
-              in residential, commercial, and industrial environments.
+              These tests help manufacturers maintain quality control and ensure
+              furniture products provide long-term safety, stability, and
+              reliable performance for end users.
             </p>
           </div>
         </div>

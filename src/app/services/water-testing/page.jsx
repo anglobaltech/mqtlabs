@@ -12,8 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title:
-    "Water Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  title: "Water Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
   description:
     "Certified water testing laboratory offering drinking water testing, chemical analysis, microbiological testing, and water quality assessment at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
@@ -65,32 +64,41 @@ export default function WaterTesting() {
 
       {/* ABOUT WATER TESTING */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/waterTesting1.jpg"
-              alt="Water laboratory testing"
+              alt="Water Quality Testing Laboratory"
               fill
               className="object-cover rounded-xl shadow-lg"
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Water Quality Testing
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Water quality testing is essential for maintaining safety, health,
-              and compliance with environmental standards. Our laboratory
-              performs advanced testing to detect chemical, physical, and
-              biological contaminants.
+              Our laboratory provides reliable water quality testing services to
+              analyze chemical, physical, and biological parameters of water
+              used in industrial, environmental, and domestic applications.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We conduct various tests including pH level analysis, total
+              dissolved solids (TDS), hardness testing, microbial analysis, and
+              contamination detection to ensure water safety and regulatory
+              compliance.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              We provide certified reports for industries, construction
-              companies, environmental agencies, and water treatment plants. Our
-              modern laboratory equipment ensures accurate and reliable results.
+              These tests help industries, construction companies, and
+              environmental organizations maintain water quality standards and
+              ensure safe usage for drinking, manufacturing, and environmental
+              protection.
             </p>
           </div>
         </div>

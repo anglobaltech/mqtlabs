@@ -10,8 +10,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title:
-    "Wood Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  title: "Wood Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
   description:
     "Certified wood testing laboratory offering timber testing, moisture content analysis, strength testing, durability testing, and quality inspection of wood products at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
@@ -101,8 +100,9 @@ const page = () => {
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/wood-testing-service.jpeg"
               alt="Wood Testing Laboratory"
@@ -111,20 +111,31 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Wood Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory provides advanced wood testing services to evaluate
-              mechanical properties, durability, and moisture content of timber
-              and wood-based materials.
+              Our laboratory provides reliable wood testing services to evaluate
+              the physical and mechanical properties of timber and wood-based
+              materials used in construction, furniture manufacturing, and
+              industrial applications.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We conduct various tests including moisture content analysis,
+              bending strength testing, density measurement, and durability
+              assessment to determine the quality and performance of wood
+              products.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests ensure quality, safety, and compliance with
-              construction and industrial standards for wood products.
+              These tests help manufacturers and builders ensure wood materials
+              meet required quality standards and provide long-term strength,
+              stability, and reliability in structural and furniture
+              applications.
             </p>
           </div>
         </div>

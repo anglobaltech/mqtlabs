@@ -78,8 +78,9 @@ const page = () => {
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/Hinges Testing.jpg"
               alt="Hinges Testing Laboratory"
@@ -88,21 +89,30 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Hinges Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory provides professional hinges testing to evaluate
-              material strength, dimensional accuracy, manufacturing quality,
-              and finishing standards.
+              Our laboratory provides reliable hinges testing services to
+              evaluate the mechanical strength, dimensional accuracy, and
+              manufacturing quality of hinges used in furniture, doors, and
+              industrial applications.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We perform various laboratory tests including load testing,
+              corrosion resistance testing, dimensional inspection, and
+              durability testing to ensure hinges meet required performance
+              standards.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests help manufacturers ensure that hinges meet required
-              industry standards for durability, precision, and long-term
-              performance in furniture, doors, and industrial applications.
+              These tests help manufacturers maintain product quality and ensure
+              hinges provide long-term durability, smooth functionality, and
+              reliable performance in everyday use.
             </p>
           </div>
         </div>
@@ -208,8 +218,8 @@ const page = () => {
               <Beaker className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Laboratory Testing</h3>
               <p className="text-sm text-gray-600">
-                Material, dimensions, tolerance, and manufacturing quality
-                tests are performed.
+                Material, dimensions, tolerance, and manufacturing quality tests
+                are performed.
               </p>
             </div>
 

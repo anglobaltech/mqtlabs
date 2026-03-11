@@ -10,7 +10,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Concrete Paver Block Testing Labaratory | Minu Quality Testing Laboratory",
+  title:
+    "Concrete Paver Block Testing Labaratory | Minu Quality Testing Laboratory",
   description:
     "Certified Concrete Paver Block Testing laboratory offering cement testing, aggregate testing, pigment testing, compressive strength, abrasion resistance, flexural strength, and water absorption tests for construction materials in Delhi NCR, Noida, and Greater Noida.",
 };
@@ -130,8 +131,9 @@ const page = () => {
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/paverBlockTesting.jpg"
               alt="Concrete Paver Block Testing Laboratory"
@@ -140,21 +142,30 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Concrete Paver Block Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory performs comprehensive testing of concrete paver
-              blocks to ensure they meet required standards for strength,
-              durability, and long-term performance.
+              Our laboratory provides reliable concrete paver block testing
+              services to evaluate the strength, durability, and performance of
+              paver blocks used in construction and infrastructure projects.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We conduct various tests including compressive strength testing,
+              water absorption testing, abrasion resistance testing, and
+              dimensional accuracy checks to ensure paver blocks meet required
+              quality standards.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests verify the quality of materials, structural strength,
-              wear resistance, and dimensional accuracy required for roads,
-              pavements, parking areas, and industrial flooring.
+              These tests help ensure that concrete paver blocks are suitable
+              for use in roads, pavements, parking areas, industrial flooring,
+              and landscaping applications while maintaining long-term
+              durability and structural stability.
             </p>
           </div>
         </div>

@@ -81,8 +81,7 @@ const services = [
   },
   {
     title: "Transverse Strength Test",
-    description:
-      "Evaluates bending strength of cement mortar specimens.",
+    description: "Evaluates bending strength of cement mortar specimens.",
     link: "#",
   },
 ];
@@ -90,7 +89,6 @@ const services = [
 const page = () => {
   return (
     <main className="bg-gray-50">
-
       {/* HERO */}
       <section className="relative h-[35vh] flex items-center justify-center">
         <Image
@@ -114,9 +112,9 @@ const page = () => {
 
       {/* ABOUT */}
       <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-          <div className="relative h-80">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-11 gap-12 items-center">
+          {/* Image - 45% */}
+          <div className="relative h-80 md:col-span-5">
             <Image
               src="/Cement Testing.jpg"
               alt="Cement Testing Laboratory"
@@ -125,29 +123,38 @@ const page = () => {
             />
           </div>
 
-          <div>
+          {/* Content - 55% */}
+          <div className="md:col-span-6">
             <h2 className="text-3xl font-bold mb-6">
               Professional Cement Testing Laboratory
             </h2>
 
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our laboratory provides advanced cement testing services to
-              evaluate chemical composition, strength properties, and durability.
+              Our laboratory provides reliable cement testing services to
+              evaluate the physical and chemical properties of cement used in
+              construction. Cement quality plays a crucial role in determining
+              the strength, durability, and long-term performance of concrete
+              structures.
+            </p>
+
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We perform various laboratory tests including setting time,
+              compressive strength, fineness, soundness, and consistency tests
+              to verify the quality and performance of cement materials.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              These tests ensure cement quality, compliance with construction
-              standards, and reliable performance in structural applications.
+              These tests ensure compliance with construction standards and help
+              engineers, builders, and contractors maintain proper quality
+              control for safe and durable infrastructure projects.
             </p>
           </div>
-
         </div>
       </section>
 
       {/* SERVICES */}
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Cement Testing Services
           </h2>
@@ -156,7 +163,6 @@ const page = () => {
             {services.map((service, index) => (
               <Link href={service.link} key={index}>
                 <div className="group bg-white border border-gray-200 rounded-xl p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-
                   <ShieldCheck
                     size={34}
                     className="text-red-500 mb-4 transition group-hover:scale-110"
@@ -177,28 +183,26 @@ const page = () => {
                       className="group-hover:translate-x-1 transition"
                     />
                   </span> */}
-
                 </div>
               </Link>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* WHY CEMENT TESTING */}
       <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 cursor-pointer">
-
           <h2 className="text-3xl font-bold text-center mb-14">
             Why Cement Testing is Important
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10 text-center">
-
             <div className="p-8 rounded-xl bg-red-50 hover:shadow-lg transition">
               <ShieldCheck className="mx-auto text-red-500 mb-4" size={40} />
-              <h3 className="font-semibold text-lg mb-2">Structural Strength</h3>
+              <h3 className="font-semibold text-lg mb-2">
+                Structural Strength
+              </h3>
               <p className="text-gray-600 text-sm">
                 Ensures cement provides the required compressive strength for
                 safe and reliable construction.
@@ -209,7 +213,8 @@ const page = () => {
               <ShieldCheck className="mx-auto text-blue-500 mb-4" size={40} />
               <h3 className="font-semibold text-lg mb-2">Quality Control</h3>
               <p className="text-gray-600 text-sm">
-                Verifies chemical composition and manufacturing quality of cement.
+                Verifies chemical composition and manufacturing quality of
+                cement.
               </p>
             </div>
 
@@ -221,27 +226,24 @@ const page = () => {
                 and long-term structural loads.
               </p>
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* PROCESS */}
       <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-
           <h2 className="text-3xl font-bold text-center mb-14">
             Our Cement Testing Process
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
-
             <div>
               <ClipboardCheck className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Sample Collection</h3>
               <p className="text-sm text-gray-600">
-                Cement samples are collected and registered for laboratory testing.
+                Cement samples are collected and registered for laboratory
+                testing.
               </p>
             </div>
 
@@ -249,7 +251,8 @@ const page = () => {
               <Beaker className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Laboratory Testing</h3>
               <p className="text-sm text-gray-600">
-                Chemical and physical tests are conducted according to standards.
+                Chemical and physical tests are conducted according to
+                standards.
               </p>
             </div>
 
@@ -257,7 +260,8 @@ const page = () => {
               <CheckCircle className="mx-auto text-red-500 mb-4" size={36} />
               <h3 className="font-semibold mb-2">Result Evaluation</h3>
               <p className="text-sm text-gray-600">
-                Test data is analyzed to ensure compliance with quality standards.
+                Test data is analyzed to ensure compliance with quality
+                standards.
               </p>
             </div>
 
@@ -268,7 +272,6 @@ const page = () => {
                 Detailed certified laboratory reports are provided to clients.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -281,7 +284,8 @@ const page = () => {
           </h2>
 
           <p className="text-gray-300 mb-8">
-            Contact our laboratory experts to schedule cement testing and receive certified reports.
+            Contact our laboratory experts to schedule cement testing and
+            receive certified reports.
           </p>
 
           <Link
@@ -292,7 +296,6 @@ const page = () => {
           </Link>
         </div>
       </section>
-
     </main>
   );
 };
