@@ -255,7 +255,7 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-green-400" />
                   <p className="text-gray-700 text-sm">
-                    Plot No. 79, Sector 155, Noida, Uttar Pradesh 201304
+                   PLOT NO. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh 201310, India
                   </p>
                 </div>
               </div>
