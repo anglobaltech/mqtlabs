@@ -31,20 +31,22 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="flex flex-col space-y-5">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt="MQT Laboratory Pvt. Ltd."
-                width={60}
-                height={40}
-                className="object-contain"
-              />
-
+            <Link href="/" className="flex items-center gap-2">
               <div>
-                <h1 className="text-base font-bold text-white">
-                  MQT Laboratory Pvt. Ltd.
+                <Image
+                  src="/logo.png"
+                  alt="MQTL Laboratory"
+                  width={70}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="leading-tight">
+                <h1 className="text-xl font-bold text-white">
+                  MQT Laboratory
                 </h1>
-                <p className="text-xs text-gray-400">Quality & Testing</p>
+                <p className="text-sm text-gray-400">Precision & Integrity</p>
               </div>
             </Link>
 
