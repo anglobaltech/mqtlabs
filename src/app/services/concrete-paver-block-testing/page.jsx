@@ -11,7 +11,7 @@ import {
 
 export const metadata = {
   title:
-    "Concrete Paver Block Testing Labaratory | Minu Quality Testing Laboratory",
+    "Concrete Paver Block Testing Laboratory | Minu Quality Testing Laboratories Private Limited",
   description:
     "Certified Concrete Paver Block Testing laboratory offering cement testing, aggregate testing, pigment testing, compressive strength, abrasion resistance, flexural strength, and water absorption tests for construction materials in Delhi NCR, Noida, and Greater Noida.",
 };

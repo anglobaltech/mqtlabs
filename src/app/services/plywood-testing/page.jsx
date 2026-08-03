@@ -11,11 +11,11 @@ import {
 
 export const metadata = {
   title:
-    "Plywood Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+    "Plywood Testing Laboratory | Minu Quality Testing Laboratories Private Limited",
   description:
-    "Certified plywood testing laboratory offering bonding strength tests, moisture content analysis, durability testing, and quality inspection of plywood sheets at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+    "Certified plywood testing laboratory offering bonding strength tests, moisture content analysis, durability testing, and quality inspection of plywood sheets at Minu Quality Testing Laboratories Private Limited serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
-    "Plywood Testing Laboratory, Bonding Strength Test, Plywood Quality Testing, Moisture Content Test, Plywood Durability Testing, Plywood Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+    "Plywood Testing Laboratory, Bonding Strength Test, Plywood Quality Testing, Moisture Content Test, Plywood Durability Testing, Plywood Testing Lab Delhi NCR, Minu Quality Testing Laboratories Private Limited",
 };
 
 const services = [
@@ -177,7 +177,7 @@ const page = () => {
         </div>
       </section>
 
-      {/* WHY POLYWOOD TESTING */}
+      {/* WHY PLYWOOD TESTING */}
       <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">

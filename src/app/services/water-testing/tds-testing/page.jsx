@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "TDS Water Testing Services | Minu Quality Testing Laboratory",
+  title: "TDS Water Testing Services | Minu Quality Testing Laboratories Private Limited",
   description:
     "Professional laboratory TDS water testing services to measure Total Dissolved Solids in drinking water, industrial water, and environmental monitoring.",
 };

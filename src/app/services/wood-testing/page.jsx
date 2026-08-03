@@ -10,11 +10,11 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Wood Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  title: "Wood Testing Laboratory | Minu Quality Testing Laboratories Private Limited",
   description:
-    "Certified wood testing laboratory offering timber testing, moisture content analysis, strength testing, durability testing, and quality inspection of wood products at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+    "Certified wood testing laboratory offering timber testing, moisture content analysis, strength testing, durability testing, and quality inspection of wood products at Minu Quality Testing Laboratories Private Limited serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
-    "Wood Testing Laboratory, Timber Testing, Moisture Content Test, Wood Strength Test, Timber Quality Testing, Wood Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+    "Wood Testing Laboratory, Timber Testing, Moisture Content Test, Wood Strength Test, Timber Quality Testing, Wood Testing Lab Delhi NCR, Minu Quality Testing Laboratories Private Limited",
 };
 
 const services = [

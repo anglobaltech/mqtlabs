@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "pH Water Testing Services | Minu Quality Testing Laboratory",
+  title: "pH Water Testing Services | Minu Quality Testing Laboratories Private Limited",
   description:
     "Professional laboratory pH water testing services for drinking water, industrial water, and environmental monitoring using advanced testing methods.",
 };

@@ -206,7 +206,7 @@ const HomePage = () => {
         {/* Content */}
         <div className="relative z-10 mx-auto w-full px-6 md:px-12 lg:px-20">
           <div className="max-w-5xl">
-            <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            <h1 className="text-white text-3xl sm:text-4xl pt-5 lg:text-5xl font-extrabold leading-tight mb-6">
               Precision Testing for
               <span className="block bg-linear-to-r from-red-500 to-orange-400 bg-clip-text text-transparent mt-2">
                 Construction Materials
@@ -238,9 +238,9 @@ const HomePage = () => {
               </Link>
             </div>
 
-            <div className=" backdrop-blur-xs p-6  rounded-2xl border border-white/20 max-w-2xl shadow-xl">
-              <h2 className="text-red-400 text-xl sm:text-2xl font-semibold mb-3">
-                Minu Quality Testing Laboratory Pvt. Ltd.
+            <div className=" backdrop-blur-xs p-5  rounded-2xl border border-white/20 max-w-2xl shadow-xl">
+              <h2 className="text-red-400 text-xl font-semibold mb-3">
+                Minu Quality Testing Laboratories Private Limited
               </h2>
               <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
                 Delivering reliable and accurate testing services for wood,
@@ -261,7 +261,7 @@ const HomePage = () => {
                 About Us
               </h2>
               <p className="text-md text-gray-600 max-w-6xl mx-auto">
-                <b>Minu Quality Testing Laboratory</b> is an independent testing
+                <b>Minu Quality Testing Laboratories Private Limited</b> is an independent testing
                 lab in Noida, Uttar Pradesh, India, that provides quality
                 testing and evaluation services for{" "}
                 <b>
@@ -342,7 +342,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Testing Equipdment */}
+      {/* Testing Equipment */}
       
 
       {/* ================= SERVICES SECTION ================= */}
@@ -415,7 +415,7 @@ const HomePage = () => {
           <div className="grid md:grid-cols-2 gap-15 items-start">
             {/* LEFT SIDE CTA CONTENT (UNCHANGED) */}
             <div className="text-white pt-2 pb-12 max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
                 Ready to Ensure Quality & Compliance?
               </h2>
 

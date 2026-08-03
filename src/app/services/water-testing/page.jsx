@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Water Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+  title: "Water Testing Laboratory | Minu Quality Testing Laboratories Private Limited",
   description:
-    "Certified water testing laboratory offering drinking water testing, chemical analysis, microbiological testing, and water quality assessment at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+    "Certified water testing laboratory offering drinking water testing, chemical analysis, microbiological testing, and water quality assessment at Minu Quality Testing Laboratories Private Limited serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
-    "Water Testing Laboratory, Drinking Water Testing, Water Quality Testing, Chemical Water Analysis, Microbiological Water Testing, Water Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+    "Water Testing Laboratory, Drinking Water Testing, Water Quality Testing, Chemical Water Analysis, Microbiological Water Testing, Water Testing Lab Delhi NCR, Minu Quality Testing Laboratories Private Limited",
 };
 
 const waterServices = [

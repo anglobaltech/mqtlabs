@@ -11,11 +11,11 @@ import {
 
 export const metadata = {
   title:
-    "Furniture Testing Laboratory | Minu Quality Testing Laboratory Pvt. Ltd.",
+    "Furniture Testing Laboratory | Minu Quality Testing Laboratories Private Limited",
   description:
-    "Certified furniture testing laboratory offering load testing, durability testing, stability testing, and quality inspection of wooden and metal furniture at Minu Quality Testing Laboratory Pvt. Ltd. serving Delhi NCR, Noida, and Greater Noida.",
+    "Certified furniture testing laboratory offering load testing, durability testing, stability testing, and quality inspection of wooden and metal furniture at Minu Quality Testing Laboratories Private Limited serving Delhi NCR, Noida, and Greater Noida.",
   keywords:
-    "Furniture Testing Laboratory, Furniture Load Test, Furniture Durability Testing, Wooden Furniture Testing, Furniture Stability Test, Furniture Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+    "Furniture Testing Laboratory, Furniture Load Test, Furniture Durability Testing, Wooden Furniture Testing, Furniture Stability Test, Furniture Testing Lab Delhi NCR, Minu Quality Testing Laboratories Private Limited",
 };
 
 const services = [

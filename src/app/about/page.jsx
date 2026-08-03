@@ -11,11 +11,11 @@ import {
 
 export const metadata = {
   title:
-    "About Minu Quality Testing Laboratory Pvt. Ltd. | Construction Materials Testing Laboratory Experts",
+    "About Minu Quality Testing Laboratories Private Limited | Construction Materials Testing Laboratory Experts",
   description:
-    "Minu Quality Testing Laboratory Pvt. Ltd. is a professional material testing laboratory offering reliable testing services for water, wood, plywood, soil, aggregates, cement, hinges, furniture, and concrete paver blocks in Delhi NCR, Noida, and Greater Noida.",
+    "Minu Quality Testing Laboratories Private Limited is a professional material testing laboratory offering reliable testing services for water, wood, plywood, soil, aggregates, cement, hinges, furniture, and concrete paver blocks in Delhi NCR, Noida, and Greater Noida.",
   keywords:
-    "About Minu Quality Testing Laboratory, Material Testing Laboratory, Water Testing Lab, Wood Testing Lab, Plywood Testing Lab, Soil Testing Laboratory, Construction Materials Testing, Minu Quality Testing Laboratory",
+    "About Minu Quality Testing Laboratories Private Limited, Material Testing Laboratory, Water Testing Lab, Wood Testing Lab, Plywood Testing Lab, Soil Testing Laboratory, Construction Materials Testing, Minu Quality Testing Laboratories Private Limited",
 };
 
 export default function AboutPage() {
@@ -24,8 +24,8 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-6 mb-6">
-            About Minu Quality Testing Laboratory Pvt. Ltd.
+          <h1 className="text-4xl font-bold text-white mt-6 mb-6">
+            About Minu Quality Testing Laboratories Private Limited
           </h1>
 
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -45,7 +45,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-4">
-              Minu Quality Testing Laboratory is an independent material testing
+              Minu Quality Testing Laboratories Private Limited is an independent material testing
               laboratory offering professional testing services for construction
               and industrial materials. Our goal is to help manufacturers,
               builders, and suppliers maintain product quality and ensure

@@ -133,7 +133,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-gray-700 mt-5 pt-6 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Minu Quality Testing Laboratory Pvt. Ltd.
+          © {new Date().getFullYear()} Minu Quality Testing Laboratories Private Limited
           All rights reserved.
         </div>
 

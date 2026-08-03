@@ -4,11 +4,11 @@ import { Beaker, Trees, Sofa, Wrench, Building2, Layers, Mountain, Box } from "l
 
 export const metadata = {
   title:
-    "Construction Materials Testing Laboratory Services | Minu Quality Testing Laboratory Pvt. Ltd.",
+    "Construction Materials Testing Laboratory Services | Minu Quality Testing Laboratories Private Limited",
   description:
-    "Minu Quality Testing Laboratory Pvt. Ltd. offers certified construction material testing services including water, wood, plywood, soil, aggregates, cement, furniture, hinges, and concrete paver block testing.",
+    "Minu Quality Testing Laboratories Private Limited offers certified construction material testing services including water, wood, plywood, soil, aggregates, cement, furniture, hinges, and concrete paver block testing.",
   keywords:
-    "Material Testing Laboratory, Water Testing, Wood Testing, Plywood Testing, Soil Testing, Aggregates Testing, Cement Testing, Furniture Testing, Hinges Testing, Concrete Paver Block Testing, Testing Lab Delhi NCR, Minu Quality Testing Laboratory",
+    "Material Testing Laboratory, Water Testing, Wood Testing, Plywood Testing, Soil Testing, Aggregates Testing, Cement Testing, Furniture Testing, Hinges Testing, Concrete Paver Block Testing, Testing Lab Delhi NCR, Minu Quality Testing Laboratories Private Limited",
 };
 
 const services = [
@@ -94,12 +94,12 @@ export default function ServicesPage() {
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
         <div className="max-w-6xl mx-auto px-6 text-center">
 
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl  font-bold text-white mb-6">
             Professional Laboratory Testing Services
           </h1>
 
           <p className="text-gray-300 text-md leading-relaxed max-w-4xl mx-auto">
-            Minu Quality Testing Laboratory provides reliable and accurate
+            Minu Quality Testing Laboratories Private Limited provides reliable and accurate
             testing services for various materials used in construction,
             manufacturing and industrial applications. Our laboratory follows
             certified testing standards and modern analytical techniques to

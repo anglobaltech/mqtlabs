@@ -120,7 +120,7 @@ export default function GlobalPopup() {
 
             <div className="text-center mb-3">
               <h1 className="text-xl md:text-4xl font-extrabold bg-clip-text text-[#05526e]">
-                Minu Quality Testing Lab
+                Minu Quality Testing Laboratories Private Limited
               </h1>
             </div>
 
