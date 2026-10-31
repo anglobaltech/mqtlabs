@@ -145,7 +145,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Minu Quality Testing Laboratories Private Limited. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-slate-500">
-            <span>Certified Material Testing Laboratory</span>
+            <span>Material Testing Laboratory</span>
           </div>
         </div>
 

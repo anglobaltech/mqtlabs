@@ -129,7 +129,7 @@ export default function ConsultationBanner() {
             <div className="flex items-center gap-2 mb-2.5">
               <span className="w-8 h-0.5 bg-[#ff4d5a] rounded-full shadow-[0_0_8px_rgba(255,77,90,0.6)]" />
               <span className="text-[11px] sm:text-xs font-bold text-[#ff949f] tracking-widest uppercase">
-                CERTIFIED MATERIAL TESTING
+                MATERIAL TESTING SERVICES
               </span>
             </div>
 
@@ -143,7 +143,7 @@ export default function ConsultationBanner() {
 
             {/* Subtitle */}
             <p className="text-teal-50/90 text-xs sm:text-[13.5px] leading-relaxed mb-5 max-w-md">
-              Submit your test specimens to our accredited testing facility in Noida. Get accurate test parameters, verified digital quality reports, and rapid turnaround for timber, panels, and construction materials.
+              Submit your test specimens to our laboratory testing facility in Noida. Get accurate test parameters, verified digital quality reports, and prompt turnaround for timber, panels, and construction materials.
             </p>
 
             {/* Compact 3D Phone Sphere Badge */}
