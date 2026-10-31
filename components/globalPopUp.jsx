@@ -1,5 +1,7 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
+import { X } from "lucide-react";
 
 export default function GlobalPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,56 +20,70 @@ export default function GlobalPopup() {
   const firstTimerRef = useRef(null);
   const repeatTimerRef = useRef(null);
 
-  // ✅ Check if form was already submitted
+  // Check if form was already submitted in this session
   useEffect(() => {
     const submitted = sessionStorage.getItem("popupSubmitted");
-    if (submitted === "true") setHasSubmitted(true);
+    if (submitted === "true") {
+      setHasSubmitted(true);
+    }
   }, []);
 
-  // ✅ Timer logic
+  // Show popup after 10 seconds
   useEffect(() => {
-    if (hasSubmitted) return; // already submitted, no popup
+    if (hasSubmitted) return;
 
-    // Show first popup after 10 sec
     firstTimerRef.current = setTimeout(() => {
       setIsOpen(true);
+    }, 10000);
 
-      // Repeat every 2 min if popup is closed and not submitted
-      repeatTimerRef.current = setInterval(() => {
-        if (!isOpen && !hasSubmitted) {
-          setIsOpen(true);
-        }
-      }, 120000);
+    repeatTimerRef.current = setInterval(() => {
+      if (!hasSubmitted) {
+        setIsOpen((prev) => (!prev ? true : prev));
+      }
     }, 120000);
 
     return () => {
-      clearTimeout(firstTimerRef.current);
-      clearInterval(repeatTimerRef.current);
+      if (firstTimerRef.current) clearTimeout(firstTimerRef.current);
+      if (repeatTimerRef.current) clearInterval(repeatTimerRef.current);
     };
-  }, [hasSubmitted, isOpen]);
+  }, [hasSubmitted]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [name]: name === "phone" ? value.replace(/\D/g, "") : value,
-    });
+    }));
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
   };
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.fullName) newErrors.fullName = "Full Name is required";
-    if (!formData.email) {
+    if (!formData.fullName.trim()) newErrors.fullName = "Full Name is required";
+    if (!formData.email.trim()) {
       newErrors.email = "Email is required";
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email.trim())) {
       newErrors.email = "Invalid email format";
     }
-    if (!formData.phone) {
+    if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
-    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+    } else if (!/^[0-9]{10}$/.test(formData.phone.trim())) {
       newErrors.phone = "Phone must be 10 digits";
     }
-    if (!formData.message) newErrors.message = "Message is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
     return newErrors;
   };
 
@@ -76,7 +92,7 @@ export default function GlobalPopup() {
 
     const validationErrors = validateForm();
     setErrors(validationErrors);
-    if (Object.keys(validationErrors).length !== 0) return;
+    if (Object.keys(validationErrors).length > 0) return;
 
     setStatus("loading");
 
@@ -84,7 +100,10 @@ export default function GlobalPopup() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          source: "Popup Enquiry Form",
+        }),
       });
 
       const data = await res.json();
@@ -93,9 +112,12 @@ export default function GlobalPopup() {
         setStatus("success");
         setHasSubmitted(true);
         sessionStorage.setItem("popupSubmitted", "true");
-        setIsOpen(false);
-        setFormData({ fullName: "", email: "", phone: "", message: "" });
-        setTimeout(() => setStatus(""), 2000);
+
+        setTimeout(() => {
+          setIsOpen(false);
+          setStatus("");
+          setFormData({ fullName: "", email: "", phone: "", message: "" });
+        }, 1500);
       } else {
         setStatus("error");
       }
@@ -105,108 +127,138 @@ export default function GlobalPopup() {
     }
   };
 
+  if (!isOpen || hasSubmitted) return null;
+
   return (
-    <>
-      {isOpen && !hasSubmitted && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative animate-fadeIn">
-            {/* Close Button */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 font-extrabold text-gray-500 hover:text-red-500 text-lg cursor-pointer"
-            >
-              ✕
-            </button>
+    <div
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+      onClick={(e) => {
+        if (e.target === e.currentTarget && status !== "loading") {
+          setIsOpen(false);
+        }
+      }}
+    >
+      <div className="bg-white rounded-xl shadow-xl w-full max-w-md p-6 relative">
+        {/* Close Button */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(false)}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition p-1"
+          aria-label="Close"
+        >
+          <X className="w-5 h-5" />
+        </button>
 
-            <div className="text-center mb-3">
-              <h1 className="text-xl md:text-4xl font-extrabold bg-clip-text text-[#05526e]">
-                Minu Quality Testing Laboratories Private Limited
-              </h1>
-            </div>
+        {/* Title */}
+        <h3 className="text-xl font-bold text-gray-900">
+          Get in Touch
+        </h3>
+        <p className="text-sm text-gray-500 mt-1 mb-5">
+          Fill the form below and our testing team will contact you.
+        </p>
 
-            {/* <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
-              Get In Touch
-            </h2> */}
-            <p className="text-gray-600 mb-6 text-sm">
-              Fill the form and our team will contact you shortly.
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-2">
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-              {errors.fullName && (
-                <p className="text-red-500 text-xs">{errors.fullName}</p>
-              )}
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-              {errors.email && (
-                <p className="text-red-500 text-xs">{errors.email}</p>
-              )}
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                maxLength={10}
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-              {errors.phone && (
-                <p className="text-red-500 text-xs">{errors.phone}</p>
-              )}
-
-              <textarea
-                name="message"
-                placeholder="Tell us which service you are interested in..."
-                rows="3"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-400 outline-none"
-              />
-              {errors.message && (
-                <p className="text-red-500 text-xs">{errors.message}</p>
-              )}
-
-              {status === "success" && (
-                <div className="bg-green-100 text-green-700 px-4 py-2 rounded text-sm text-center">
-                  ✅ Your Enquiry Sent Successfully. We will connect you soon.
-                </div>
-              )}
-              {status === "error" && (
-                <div className="bg-red-100 text-red-700 px-4 py-2 rounded text-sm text-center">
-                  ❌ Something went wrong.
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className={`w-full py-3 rounded-lg font-semibold cursor-pointer text-white transition ${
-                  status === "loading"
-                    ? "bg-red-300 cursor-not-allowed"
-                    : "bg-red-500 hover:bg-red-600"
-                }`}
-              >
-                {status === "loading" ? "Sending..." : "Submit Enquiry"}
-              </button>
-            </form>
+        {/* Success Alert */}
+        {status === "success" && (
+          <div className="bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3 rounded-lg mb-4 text-center font-medium">
+            Enquiry sent successfully! We will connect soon.
           </div>
-        </div>
-      )}
-    </>
+        )}
+
+        {/* Error Alert */}
+        {status === "error" && (
+          <div className="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-lg mb-4 text-center">
+            Something went wrong. Please try again.
+          </div>
+        )}
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <div>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name *"
+              value={formData.fullName}
+              onChange={handleChange}
+              className={`w-full border rounded-lg px-3.5 py-2.5 text-sm outline-none transition ${
+                errors.fullName
+                  ? "border-red-400 focus:border-red-500"
+                  : "border-gray-300 focus:border-[#05526e]"
+              }`}
+            />
+            {errors.fullName && (
+              <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>
+            )}
+          </div>
+
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address *"
+              value={formData.email}
+              onChange={handleChange}
+              className={`w-full border rounded-lg px-3.5 py-2.5 text-sm outline-none transition ${
+                errors.email
+                  ? "border-red-400 focus:border-red-500"
+                  : "border-gray-300 focus:border-[#05526e]"
+              }`}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+            )}
+          </div>
+
+          <div>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="10-Digit Phone Number *"
+              maxLength={10}
+              value={formData.phone}
+              onChange={handleChange}
+              className={`w-full border rounded-lg px-3.5 py-2.5 text-sm outline-none transition ${
+                errors.phone
+                  ? "border-red-400 focus:border-red-500"
+                  : "border-gray-300 focus:border-[#05526e]"
+              }`}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+            )}
+          </div>
+
+          <div>
+            <textarea
+              name="message"
+              placeholder="Tell us which testing service you need... *"
+              rows="3"
+              value={formData.message}
+              onChange={handleChange}
+              className={`w-full border rounded-lg px-3.5 py-2.5 text-sm outline-none transition resize-none ${
+                errors.message
+                  ? "border-red-400 focus:border-red-500"
+                  : "border-gray-300 focus:border-[#05526e]"
+              }`}
+            />
+            {errors.message && (
+              <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className={`w-full py-2.5 rounded-lg font-medium text-sm text-white transition ${
+              status === "loading"
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-[#05526e] hover:bg-[#043e53]"
+            }`}
+          >
+            {status === "loading" ? "Submitting..." : "Submit Enquiry"}
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }

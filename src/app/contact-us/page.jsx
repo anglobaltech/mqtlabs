@@ -13,6 +13,7 @@ export default function ContactPage() {
 
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null);
+  const [submittedLeadId, setSubmittedLeadId] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,13 +65,17 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          source: "Contact Page Form",
+        }),
       });
 
       const data = await res.json();
 
       if (data.success) {
         setStatus("success");
+        setSubmittedLeadId(data.leadId || "");
         setFormData({
           fullName: "",
           email: "",
@@ -78,7 +83,7 @@ export default function ContactPage() {
           message: "",
         });
         setErrors({});
-        setTimeout(() => setStatus(null), 5000);
+        setTimeout(() => setStatus(null), 7000);
       } else {
         setStatus("error");
       }
@@ -210,8 +215,15 @@ export default function ContactPage() {
                 </div>
 
                 {status === "success" && (
-                  <div className="mt-3 bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm">
-                    ✅ Your Enquiry Send Successfully. We will connect you soon.
+                  <div className="mt-3 bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-3 rounded-lg text-sm">
+                    <p className="font-bold">✅ Enquiry Submitted Successfully!</p>
+                    <p className="text-xs text-emerald-700 mt-1">
+                      Your registered Lead ID is{" "}
+                      <span className="font-mono font-bold bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded border border-emerald-300">
+                        {submittedLeadId || "Generated"}
+                      </span>
+                      . Our laboratory team will connect with you soon.
+                    </p>
                   </div>
                 )}
 
@@ -255,7 +267,7 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-green-400" />
                   <p className="text-gray-700 text-sm">
-                   PLOT NO. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh 201310, India
+                    Plot No. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh 201310, India
                   </p>
                 </div>
               </div>

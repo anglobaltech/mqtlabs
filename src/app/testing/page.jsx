@@ -9,6 +9,9 @@ export const metadata = {
     "Minu Quality Testing Laboratories Private Limited offers certified construction material testing services including water, wood, plywood, soil, aggregates, cement, furniture, hinges, and concrete paver block testing.",
   keywords:
     "Material Testing Laboratory, Water Testing, Wood Testing, Plywood Testing, Soil Testing, Aggregates Testing, Cement Testing, Furniture Testing, Hinges Testing, Concrete Paver Block Testing, Testing Lab Delhi NCR, Minu Quality Testing Laboratories Private Limited",
+  alternates: {
+    canonical: "https://mqtlab.com/testing",
+  },
 };
 
 const services = [
@@ -17,7 +20,7 @@ const services = [
     description:
       "Comprehensive testing of solid wood to evaluate strength, durability, moisture content and performance according to industry standards.",
     image: "/wood-testing-service.jpeg",
-    link: "/services/wood-testing",
+    link: "/testing/wood-testing",
     icon: Trees,
   },
   {
@@ -25,7 +28,7 @@ const services = [
     description:
       "Professional plywood testing including bonding strength, water resistance and durability evaluation.",
     image: "/plywood-testing-service.jpeg",
-    link: "/services/plywood-testing",
+    link: "/testing/plywood-testing",
     icon: Layers,
   },
   {
@@ -33,7 +36,7 @@ const services = [
     description:
       "Laboratory analysis of water quality including pH, TDS and chemical parameters to ensure safe industrial and domestic usage.",
     image: "/waterTesting.jpg",
-    link: "/services/water-testing",
+    link: "/testing/water-testing",
     icon: Beaker,
   },
   {
@@ -41,7 +44,7 @@ const services = [
     description:
       "Furniture durability and load testing to ensure safety, stability and structural strength.",
     image: "/Furniture Testing.jpg",
-    link: "/services/furniture-testing",
+    link: "/testing/furniture-testing",
     icon: Sofa,
   },
   {
@@ -49,7 +52,7 @@ const services = [
     description:
       "Evaluation of hinge durability, corrosion resistance and load capacity for long-term performance.",
     image: "/Hinges Testing.jpg",
-    link: "/services/hinges-testing",
+    link: "/testing/hinges-testing",
     icon: Wrench,
   },
   {
@@ -57,7 +60,7 @@ const services = [
     description:
       "Cement testing including compressive strength, setting time and consistency for construction quality assurance.",
     image: "/Cement Testing.jpg",
-    link: "/services/cement-testing",
+    link: "/testing/cement-testing",
     icon: Building2,
   },
   {
@@ -65,7 +68,7 @@ const services = [
     description:
       "Testing aggregates for size distribution, strength and durability to ensure construction reliability.",
     image: "/Aggregates Testing.jpg",
-    link: "/services/aggregates-testing",
+    link: "/testing/aggregates-testing",
     icon: Mountain,
   },
   {
@@ -73,7 +76,7 @@ const services = [
     description:
       "Soil analysis for construction suitability including bearing capacity and composition testing.",
     image: "/Soil Testing.jpg",
-    link: "/services/soil-testing",
+    link: "/testing/soil-testing",
     icon: Box,
   },
   {
@@ -81,7 +84,7 @@ const services = [
     description:
       "Testing compressive strength, durability and water absorption of concrete paver blocks.",
     image: "/paverBlockTesting.jpg",
-    link: "/services/concrete-paver-block-testing",
+    link: "/testing/concrete-paver-block-testing",
     icon: Building2,
   },
 ];

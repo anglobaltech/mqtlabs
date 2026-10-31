@@ -231,7 +231,7 @@ const HomePage = () => {
                 </button>
               </Link>
 
-              <Link href="/services">
+              <Link href="/testing">
                 <button className="px-8 py-3 border border-white text-white font-semibold cursor-pointer rounded-xl hover:bg-white hover:text-black transition duration-300 w-full sm:w-auto">
                   View Services
                 </button>
@@ -364,20 +364,20 @@ const HomePage = () => {
     {/* Grid */}
     <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {[
-        { name: "Wood Testing", link: "/services/wood-testing", icon: Trees },
-        { name: "Plywood Testing", link: "/services/plywood-testing", icon: Layers },
-        { name: "Water Testing", link: "/services/water-testing", icon: Droplet },
-        { name: "Soil Testing", link: "/services/soil-testing", icon: Mountain },
-        { name: "Cement Testing", link: "/services/cement-testing", icon: Building2 },
-        { name: "Hinges Testing", link: "/services/hinges-testing", icon: Settings },
+        { name: "Wood Testing", link: "/testing/wood-testing", icon: Trees },
+        { name: "Plywood Testing", link: "/testing/plywood-testing", icon: Layers },
+        { name: "Water Testing", link: "/testing/water-testing", icon: Droplet },
+        { name: "Soil Testing", link: "/testing/soil-testing", icon: Mountain },
+        { name: "Cement Testing", link: "/testing/cement-testing", icon: Building2 },
+        { name: "Hinges Testing", link: "/testing/hinges-testing", icon: Settings },
         {
           name: "Concrete Paver Block Testing",
-          link: "/services/concrete-paver-block-testing",
+          link: "/testing/concrete-paver-block-testing",
           icon: Blocks,
         },
         {
           name: "Furniture Testing",
-          link: "/services/furniture-testing",
+          link: "/testing/furniture-testing",
           icon: Sofa,
         },
       ].map((service, idx) => {
@@ -444,7 +444,7 @@ const HomePage = () => {
               </h2>
               <p className="text-gray-600 text-sm mb-2">
                 Fill out the form and our team will contact you shortly.
-              </p>
+              </p> 
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* ROW 1 */}
