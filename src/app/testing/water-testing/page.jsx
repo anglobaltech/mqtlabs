@@ -412,25 +412,25 @@ export default function WaterTestingPage() {
 
       <main className="min-h-screen bg-white text-slate-800">
         {/* Hero Section */}
-        <section className="relative w-full bg-[#eef4f9] lg:bg-[#06182b] overflow-hidden">
+        <section className="relative w-full bg-[#07182b] overflow-hidden">
           {/* Mobile & Tablet */}
-          <div className="lg:hidden relative px-4 py-8 sm:px-6 sm:py-10 bg-gradient-to-b from-[#f3f7fa] via-[#e9f1f6] to-[#dfebf3] border-b border-slate-300/80">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500 via-blue-600 to-cyan-500" />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-sky-200/40 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
+          <div className="lg:hidden relative px-4 py-8 sm:px-6 sm:py-10 bg-gradient-to-br from-[#07182b] via-[#0b2440] to-[#07182b] text-white border-b border-white/10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 max-w-xl mx-auto sm:max-w-none">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-sky-200/80 shadow-xs mb-3 animate-fade-in-up">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" />
-                <span className="text-sky-800 font-bold tracking-wider text-[11px] uppercase">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white/90 shadow-xs mb-3 backdrop-blur-md animate-fade-in-up">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+                <span className="text-sky-300 font-bold tracking-wider text-[11px] uppercase">
                   WATER &amp; ENVIRONMENTAL QUALITY TESTING
                 </span>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight mb-2.5 animate-fade-in-up animation-delay-100">
+              <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight mb-2.5 animate-fade-in-up animation-delay-100">
                 Water Testing Services &amp; Quality Analysis Laboratory
               </h1>
 
-              <p className="text-slate-600 text-xs sm:text-[14px] leading-relaxed mb-5 animate-fade-in-up animation-delay-200">
+              <p className="text-slate-300 text-xs sm:text-[14px] leading-relaxed mb-5 animate-fade-in-up animation-delay-200">
                 Reliable laboratory testing to evaluate chemical parameters, physical purity,
                 microbiological safety, heavy metals, and potability of drinking water,
                 construction water, and industrial wastewater.
@@ -439,42 +439,42 @@ export default function WaterTestingPage() {
               <div className="flex flex-col sm:flex-row gap-3 mb-5 animate-fade-in-up animation-delay-300">
                 <Link
                   href="/contact-us"
-                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                  className="btn-shimmer bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
                 >
                   Request a Test
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/testing"
-                  className="bg-white hover:bg-slate-50 text-slate-900 border border-slate-300/90 font-semibold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center shadow-xs transition-all"
+                  className="bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center backdrop-blur-md transition-all"
                 >
                   Our Services
                 </Link>
               </div>
 
-              <div className="bg-white/90 backdrop-blur-xs rounded-xl p-3 sm:p-4 border border-slate-200/90 shadow-xs animate-fade-in-up animation-delay-400">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl p-3 sm:p-4 border border-white/10 shadow-xs animate-fade-in-up animation-delay-400">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-400/20 flex items-center justify-center text-sky-400 shrink-0">
                       <Shield className="w-4 h-4" />
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-slate-800">
+                    <span className="text-xs sm:text-[13px] font-bold text-white">
                       Reliable Methods
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-400/20 flex items-center justify-center text-sky-400 shrink-0">
                       <Settings className="w-4 h-4" />
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-slate-800">
+                    <span className="text-xs sm:text-[13px] font-bold text-white">
                       Modern Equipment
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-lg bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-400/20 flex items-center justify-center text-sky-400 shrink-0">
                       <FileText className="w-4 h-4" />
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-slate-800">
+                    <span className="text-xs sm:text-[13px] font-bold text-white">
                       Laboratory Reports
                     </span>
                   </div>
@@ -494,11 +494,11 @@ export default function WaterTestingPage() {
                 className="object-cover object-[center_center] transition-transform duration-700 hover:scale-[1.01]"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#051628]/95 via-[#051628]/85 via-35% to-transparent to-52% pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#051628]/95 via-[#051628]/85 via-42% to-transparent to-62% pointer-events-none" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-8 lg:py-10 w-full">
-              <div className="max-w-xl lg:max-w-[520px]">
+              <div className="max-w-2xl lg:max-w-[680px] xl:max-w-[740px]">
                 <p className="text-sky-400 font-bold tracking-widest text-xs sm:text-[13px] md:text-sm uppercase mb-2.5 animate-fade-in-up">
                   WATER &amp; ENVIRONMENTAL QUALITY TESTING
                 </p>
@@ -516,7 +516,7 @@ export default function WaterTestingPage() {
                 <div className="flex flex-wrap items-center gap-3.5 mb-6 animate-fade-in-up animation-delay-300">
                   <Link
                     href="/contact-us"
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm sm:text-[15px] px-6 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                    className="btn-shimmer bg-red-600 hover:bg-red-700 text-white font-bold text-sm sm:text-[15px] px-6 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
                   >
                     Request a Test
                     <ChevronRight className="w-4 h-4" />
@@ -555,41 +555,41 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Key Stats */}
-        <section className="bg-[#081e35] border-y border-white/10 text-white">
+        <section className="bg-[#081e35] border-y border-white/10 text-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   15+
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Testing Parameters
                 </span>
               </div>
 
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   500+
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Clients Served
                 </span>
               </div>
 
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   99%
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Accurate Reports
                 </span>
               </div>
 
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   Quality
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Controlled Testing
                 </span>
               </div>
@@ -598,7 +598,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Laboratory Overview */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
               <div className="relative h-[320px] sm:h-[380px] rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
@@ -678,7 +678,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Flagship Specializations: pH & TDS */}
-        <section className="py-14 sm:py-16 bg-gradient-to-b from-white to-[#f4f8fb] border-t border-slate-100">
+        <section className="py-14 sm:py-16 bg-gradient-to-b from-white to-[#f4f8fb] border-t border-slate-100 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-12">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 shadow-2xs mb-2.5">
@@ -795,7 +795,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Testing Services */}
-        <section className="py-16 sm:py-20 bg-[#f0f5fa] border-y border-slate-200/70">
+        <section className="py-16 sm:py-20 bg-[#f0f5fa] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-14">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -862,7 +862,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Real-World Applications */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="relative h-[250px] sm:h-[350px] md:col-span-5 rounded-2xl overflow-hidden shadow-md border border-gray-100">
@@ -914,7 +914,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Testing Process */}
-        <section className="py-16 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70">
+        <section className="py-16 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-14">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -957,7 +957,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Water Sources & Categories */}
-        <section className="py-16 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -999,7 +999,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* Why Choose MQTL */}
-        <section className="py-16 sm:py-20 bg-gradient-to-br from-[#06182b] via-[#09223e] to-[#0d2d50] text-white">
+        <section className="py-16 sm:py-20 bg-gradient-to-br from-[#06182b] via-[#09223e] to-[#0d2d50] text-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-wider text-red-400 bg-red-500/15 border border-red-500/30 px-3.5 py-1 rounded-full">
@@ -1093,7 +1093,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-[#07192d] via-[#092544] to-[#0d345e] py-14 sm:py-16">
+        <section className="relative overflow-hidden bg-gradient-to-r from-[#07192d] via-[#092544] to-[#0d345e] py-14 sm:py-16 reveal-scale">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left max-w-2xl">
@@ -1108,7 +1108,7 @@ export default function WaterTestingPage() {
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact-us"
-                  className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-[15px] px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all"
+                  className="btn-shimmer bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-[15px] px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] transition-all"
                 >
                   Request a Test
                   <ArrowRight className="w-4 h-4" />
@@ -1125,7 +1125,7 @@ export default function WaterTestingPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 sm:py-20 bg-white" id="faqs">
+        <section className="py-16 sm:py-20 bg-white reveal-on-scroll" id="faqs">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mt-3">

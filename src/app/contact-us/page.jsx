@@ -96,7 +96,7 @@ export default function ContactPage() {
     <main className="bg-white">
       {/* HERO */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-15">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center animate-fade-in-up">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
             Contact Us
           </h1>
@@ -111,7 +111,7 @@ export default function ContactPage() {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
           {/* HOW WE CAN HELP - TOP */}
-          <div className="mb-10 max-w-6xl mx-auto">
+          <div className="mb-10 max-w-6xl mx-auto reveal-on-scroll">
             <h3 className="text-4xl font-bold text-center text-gray-900 mb-3 mt-1">
               How We Can Help
             </h3>
@@ -120,11 +120,10 @@ export default function ContactPage() {
               and quality-related queries. Responses are provided during
               business hours.
             </p>
-            <p className="text-gray-600 text-md leading-relaxed"></p>
           </div>
 
           {/* GRID */}
-          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto reveal-on-scroll">
             {/* LEFT - FORM */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-3">
@@ -200,7 +199,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className={`w-fit px-6 py-2 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center justify-center gap-2
+                    className={`btn-shimmer hover:scale-105 active:scale-95 shadow-md hover:shadow-lg w-fit px-6 py-2 text-white text-sm font-semibold cursor-pointer rounded-lg transition flex items-center justify-center gap-2
                 ${
                     status === "loading"
                     ? "bg-red-300 cursor-not-allowed"

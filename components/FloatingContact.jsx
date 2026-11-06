@@ -35,7 +35,7 @@ export default function FloatingContact() {
       {/* Phone Call Floating Button */}
       <a
         href={`tel:${phoneNumber}`}
-        className="group relative flex items-center justify-center w-12 h-12 sm:w-[52px] sm:h-[52px] rounded-full bg-[#05526e] hover:bg-[#033b50] text-white shadow-lg shadow-[#05526e]/30 hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300"
+        className="group relative flex items-center justify-center w-12 h-12 sm:w-[52px] sm:h-[52px] rounded-full bg-[#05526e] hover:bg-[#033b50] text-white shadow-lg shadow-[#05526e]/30 hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 animate-float"
         aria-label="Call MQTL Laboratory"
       >
         <Phone className="w-5 h-5 sm:w-6 sm:h-6 fill-white stroke-none" />

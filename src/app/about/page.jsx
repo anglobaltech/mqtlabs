@@ -23,7 +23,7 @@ export default function AboutPage() {
     <main className="bg-white">
       {/* HERO */}
       <section className="bg-linear-to-r from-gray-900 to-blue-900 py-10">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center animate-fade-in-up">
           <h1 className="text-4xl font-bold text-white mt-6 mb-6">
             About Minu Quality Testing Laboratories Private Limited
           </h1>
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
       {/* INTRO */}
       <section className="py-10">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center reveal-on-scroll">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Who We Are
@@ -59,7 +59,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="bg-gray-50 p-10 rounded-2xl shadow">
+          <div className="bg-gray-50 p-10 rounded-2xl shadow reveal-from-right">
             <Factory className="w-12 h-12 text-red-500 mb-4" />
 
             <h3 className="text-xl font-semibold mb-3">Our Purpose</h3>
@@ -75,26 +75,26 @@ export default function AboutPage() {
 
       {/* STATS */}
       <section className="py-10 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
-          <div className="bg-white p-8 rounded-xl shadow">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center reveal-on-scroll">
+          <div className="card-interactive bg-white p-8 rounded-xl shadow">
             <FlaskConical className="mx-auto text-blue-600 mb-3" size={36} />
             <h3 className="text-3xl font-bold text-gray-900">10+</h3>
             <p className="text-gray-600">Testing Services</p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow">
+          <div className="card-interactive bg-white p-8 rounded-xl shadow">
             <Users className="mx-auto text-blue-600 mb-3" size={36} />
             <h3 className="text-3xl font-bold text-gray-900">500+</h3>
             <p className="text-gray-600">Clients Served</p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow">
+          <div className="card-interactive bg-white p-8 rounded-xl shadow">
             <Award className="mx-auto text-blue-600 mb-3" size={36} />
             <h3 className="text-3xl font-bold text-gray-900">99%</h3>
             <p className="text-gray-600">Accurate Reports</p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow">
+          <div className="card-interactive bg-white p-8 rounded-xl shadow">
             <ShieldCheck className="mx-auto text-blue-600 mb-3" size={36} />
             <h3 className="text-3xl font-bold text-gray-900">ISO</h3>
             <p className="text-gray-600">Standard Procedures</p>
@@ -105,7 +105,7 @@ export default function AboutPage() {
       {/* MISSION */}
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal-on-scroll">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our Mission & Values
             </h2>
@@ -116,7 +116,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+            <div className="card-interactive bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
               <Target className="text-red-500 mb-4" size={40} />
 
               <h3 className="text-xl font-semibold mb-2">
@@ -129,7 +129,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+            <div className="card-interactive bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
               <ShieldCheck className="text-red-500 mb-4" size={40} />
 
               <h3 className="text-xl font-semibold mb-2">
@@ -142,7 +142,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+            <div className="card-interactive bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
               <Globe className="text-red-500 mb-4" size={40} />
 
               <h3 className="text-xl font-semibold mb-2">
@@ -162,7 +162,7 @@ export default function AboutPage() {
       {/* WHAT WE TEST */}
       <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 reveal-on-scroll">
             <h2 className="text-4xl font-bold mb-4">Materials We Test</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our laboratory provides testing services across multiple product

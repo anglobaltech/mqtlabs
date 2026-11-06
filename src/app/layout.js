@@ -4,6 +4,7 @@ import ConsultationBanner from "../../components/ConsultationBanner";
 import Footer from "../../components/Footer";
 import GlobalPopup from "../../components/globalPopUp";
 import FloatingContact from "../../components/FloatingContact";
+import ScrollObserver from "../../components/ScrollObserver";
 
 export const metadata = {
   metadataBase: new URL("https://mqtlab.com"),
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased">
+        <ScrollObserver />
         <Header />
         <main>
           {children}

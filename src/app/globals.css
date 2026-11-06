@@ -5,6 +5,10 @@
   --foreground: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .dark {
   --background: #0f172a;
   --foreground: #ffffff;
@@ -16,13 +20,24 @@ body {
 }
 
 /* ============================================================== */
-/* MQTL MODERN MICRO-ANIMATIONS & INTERACTION UTILITIES          */
+/* MQTL MODERN MICRO-ANIMATIONS & INTERACTION SUITE               */
 /* ============================================================== */
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
   }
   to {
     opacity: 1;
@@ -54,23 +69,40 @@ body {
     opacity: 1;
   }
   50% {
-    transform: scale(1.08);
-    opacity: 0.75;
+    transform: scale(1.06);
+    opacity: 0.8;
   }
 }
 
-@keyframes shineSweep {
-  0% {
-    background-position: -200% 0;
+@keyframes ambientPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.35;
   }
-  100% {
-    background-position: 200% 0;
+  50% {
+    transform: scale(1.12) translate(10px, -8px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes accordionSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Entry Animation Classes */
 .animate-fade-in-up {
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-fade-in {
@@ -85,8 +117,21 @@ body {
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
+.animate-ambient-glow {
+  animation: ambientPulse 7s ease-in-out infinite;
+}
+
+/* Animation Delays */
+.animation-delay-75 {
+  animation-delay: 75ms;
+}
+
 .animation-delay-100 {
   animation-delay: 100ms;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
 }
 
 .animation-delay-200 {
@@ -101,26 +146,200 @@ body {
   animation-delay: 400ms;
 }
 
-/* Smooth Interactive Card Lift & Hover */
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* ============================================================== */
+/* SCROLL REVEAL ANIMATION SYSTEM                                 */
+/* ============================================================== */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-from-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-from-left.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-from-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-from-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Transition Stagger Delays for Scroll Reveals */
+.delay-75 {
+  transition-delay: 75ms;
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-150 {
+  transition-delay: 150ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-250 {
+  transition-delay: 250ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-350 {
+  transition-delay: 350ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* ============================================================== */
+/* BUTTON LIGHT SHIMMER / GLEAM EFFECT                            */
+/* ============================================================== */
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: none;
+}
+
+.btn-shimmer:hover::after {
+  left: 130%;
+  transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================== */
+/* SMOOTH INTERACTIVE CARD LIFT & HOVER ACCENTS                   */
+/* ============================================================== */
+
 .card-interactive {
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.25s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.25s ease,
+              background-color 0.25s ease;
+  will-change: transform, box-shadow;
 }
 
 .card-interactive:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px -10px rgba(5, 82, 110, 0.12), 0 6px 14px -6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px -12px rgba(5, 82, 110, 0.14),
+              0 8px 16px -6px rgba(0, 0, 0, 0.05);
 }
 
 .card-interactive-red {
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.25s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.25s ease,
+              background-color 0.25s ease;
+  will-change: transform, box-shadow;
 }
 
 .card-interactive-red:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px -10px rgba(220, 38, 38, 0.16), 0 6px 14px -6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px -12px rgba(220, 38, 38, 0.18),
+              0 8px 16px -6px rgba(0, 0, 0, 0.05);
 }
 
-/* Smooth Accordion Chevron */
+/* Smooth Accordion Content Reveal */
+details[open] summary ~ * {
+  animation: accordionSlideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 details summary::-webkit-details-marker {
   display: none;
+}
+
+/* ============================================================== */
+/* ACCESSIBILITY: PREFERS REDUCED MOTION                          */
+/* ============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-on-scroll,
+  .reveal-from-left,
+  .reveal-from-right,
+  .reveal-scale,
+  .animate-fade-in-up,
+  .animate-fade-in-down,
+  .animate-fade-in,
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-ambient-glow,
+  .card-interactive,
+  .card-interactive-red {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .btn-shimmer::after {
+    display: none !important;
+  }
 }

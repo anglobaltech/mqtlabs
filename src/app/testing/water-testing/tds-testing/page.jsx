@@ -329,57 +329,57 @@ export default function TdsTestingPage() {
 
       <main className="min-h-screen bg-white text-slate-800">
         {/* Hero Section */}
-        <section className="relative w-full bg-[#eef4f9] lg:bg-[#06182b] overflow-hidden">
+        <section className="relative w-full bg-[#07182b] overflow-hidden">
           {/* Mobile & Tablet */}
-          <div className="lg:hidden relative px-4 py-8 sm:px-6 sm:py-10 bg-gradient-to-b from-[#f3f7fa] via-[#e9f1f6] to-[#dfebf3] border-b border-slate-300/80">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-sky-600 to-blue-500" />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-200/40 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
+          <div className="lg:hidden relative px-4 py-8 sm:px-6 sm:py-10 bg-gradient-to-br from-[#07182b] via-[#0b2440] to-[#07182b] text-white border-b border-white/10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 max-w-xl mx-auto sm:max-w-none">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-cyan-200/80 shadow-2xs mb-3 animate-fade-in-up">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-pulse" />
-                <span className="text-cyan-800 font-bold tracking-wider text-[11px] uppercase">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white/90 shadow-2xs mb-3 backdrop-blur-md animate-fade-in-up">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="text-cyan-300 font-bold tracking-wider text-[11px] uppercase">
                   WATER TESTING SPECIALIZATION
                 </span>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight mb-2.5 animate-fade-in-up animation-delay-100">
+              <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight mb-2.5 animate-fade-in-up animation-delay-100">
                 TDS Water Testing Services &amp; Total Dissolved Solids Analysis
               </h1>
 
-              <p className="text-slate-600 text-xs sm:text-[14px] leading-relaxed mb-5 animate-fade-in-up animation-delay-200">
+              <p className="text-slate-300 text-xs sm:text-[14px] leading-relaxed mb-5 animate-fade-in-up animation-delay-200">
                 MQTL provides laboratory testing to determine the total dissolved solids (TDS) concentration in water samples. Gravimetric analysis measures the mass of residue remaining after a filtered sample is evaporated and dried under specified conditions.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5 animate-fade-in-up animation-delay-300">
                 <Link
                   href="/contact-us"
-                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                  className="btn-shimmer bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
                 >
                   Request a Test
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/testing/water-testing"
-                  className="bg-white/85 hover:bg-white text-slate-700 hover:text-slate-900 border border-slate-300/80 font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center shadow-2xs transition-all"
+                  className="bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center backdrop-blur-md transition-all"
                 >
                   View All Water Testing Services
                 </Link>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/80 backdrop-blur-xs border border-white/90 shadow-2xs animate-fade-in-up animation-delay-400">
-                <div className="grid grid-cols-3 gap-2 text-center divide-x divide-slate-200">
+              <div className="p-3.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xs animate-fade-in-up animation-delay-400">
+                <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/10">
                   <div className="px-1">
                     <p className="text-[10px] uppercase font-bold text-slate-400">Method</p>
-                    <p className="text-xs font-bold text-slate-800">180°C Gravimetric</p>
+                    <p className="text-xs font-bold text-white">180°C Gravimetric</p>
                   </div>
                   <div className="px-1">
                     <p className="text-[10px] uppercase font-bold text-slate-400">Readability</p>
-                    <p className="text-xs font-bold text-slate-800">0.0001 g</p>
+                    <p className="text-xs font-bold text-white">0.0001 g</p>
                   </div>
                   <div className="px-1">
                     <p className="text-[10px] uppercase font-bold text-slate-400">Documentation</p>
-                    <p className="text-xs font-bold text-slate-800">Test Reports</p>
+                    <p className="text-xs font-bold text-white">Test Reports</p>
                   </div>
                 </div>
               </div>
@@ -395,10 +395,10 @@ export default function TdsTestingPage() {
               priority
               className="object-cover object-center transition-transform duration-700 hover:scale-[1.01]"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#051628]/95 via-[#051628]/85 via-42% to-transparent to-62% z-10" />
 
             <div className="relative z-20 h-full max-w-7xl mx-auto px-6 lg:px-8 flex items-center">
-              <div className="max-w-2xl py-6">
+              <div className="max-w-2xl lg:max-w-[680px] xl:max-w-[740px] py-6">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs mb-3 animate-fade-in-up">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                   <span className="text-cyan-300 font-bold tracking-wider text-[11px] uppercase">
@@ -410,14 +410,14 @@ export default function TdsTestingPage() {
                   TDS Water Testing Services &amp; Total Dissolved Solids Analysis
                 </h1>
 
-                <p className="text-slate-200 text-sm xl:text-[15px] leading-relaxed mb-6 max-w-xl animate-fade-in-up animation-delay-200">
+                <p className="text-slate-200 text-sm xl:text-[15px] leading-relaxed mb-6 animate-fade-in-up animation-delay-200">
                   Quality-controlled laboratory testing to assess dissolved mineral content, compare water sources, monitor RO treatment performance, and support residential and industrial water quality monitoring.
                 </p>
 
                 <div className="flex items-center gap-3.5 mb-6 animate-fade-in-up animation-delay-300">
                   <Link
                     href="/contact-us"
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                    className="btn-shimmer bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
                   >
                     Request a Test
                     <ChevronRight className="w-4 h-4" />
@@ -450,38 +450,38 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Key Stats */}
-        <section className="bg-[#081e35] border-y border-white/10 text-white">
+        <section className="bg-[#081e35] border-y border-white/10 text-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-2xl sm:text-3xl lg:text-[34px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-xl sm:text-2xl lg:text-[28px] font-bold text-red-500 mb-1 tracking-tight">
                   Up to 10k
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   mg/L Testing Range
                 </span>
               </div>
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-2xl sm:text-3xl lg:text-[34px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-xl sm:text-2xl lg:text-[28px] font-bold text-red-500 mb-1 tracking-tight">
                   0.0001 g
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Balance Readability
                 </span>
               </div>
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-2xl sm:text-3xl lg:text-[34px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-xl sm:text-2xl lg:text-[28px] font-bold text-red-500 mb-1 tracking-tight">
                   180°C
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Constant Mass Drying
                 </span>
               </div>
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-2xl sm:text-3xl lg:text-[34px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-xl sm:text-2xl lg:text-[28px] font-bold text-red-500 mb-1 tracking-tight">
                   Quality
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Controlled Testing
                 </span>
               </div>
@@ -490,7 +490,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Scientific Overview */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="md:col-span-5 relative h-[220px] sm:h-[300px] rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
@@ -550,7 +550,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Benchmarks Table */}
-        <section className="py-14 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70">
+        <section className="py-14 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -596,7 +596,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Testing Methodology */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -658,7 +658,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Industry Applications */}
-        <section className="py-14 sm:py-20 bg-[#f0f5fa] border-y border-slate-200/70">
+        <section className="py-14 sm:py-20 bg-[#f0f5fa] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -692,7 +692,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Testing Process */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -725,7 +725,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* Companion Service: pH */}
-        <section className="py-12 bg-gradient-to-r from-cyan-50 to-sky-50 border-y border-cyan-100">
+        <section className="py-12 bg-gradient-to-r from-cyan-50 to-sky-50 border-y border-cyan-100 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="card-interactive group bg-white rounded-2xl border border-cyan-200 hover:border-cyan-400 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs hover:shadow-md transition-all duration-300 cursor-default">
               <div className="max-w-2xl">
@@ -760,7 +760,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-[#07192d] via-[#092544] to-[#0d345e] py-14 sm:py-16">
+        <section className="relative overflow-hidden bg-gradient-to-r from-[#07192d] via-[#092544] to-[#0d345e] py-14 sm:py-16 reveal-scale">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left max-w-2xl">
@@ -775,7 +775,7 @@ export default function TdsTestingPage() {
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact-us"
-                  className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-[15px] px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all"
+                  className="btn-shimmer bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-[15px] px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] transition-all"
                 >
                   Request a Test
                   <ArrowRight className="w-4 h-4" />
@@ -792,7 +792,7 @@ export default function TdsTestingPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 sm:py-20 bg-white" id="faqs">
+        <section className="py-16 sm:py-20 bg-white reveal-on-scroll" id="faqs">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">

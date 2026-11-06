@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://mqtlab.com/about</loc><lastmod>2026-10-31T12:47:58.420Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/contact-us</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/aggregates-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/cement-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/concrete-paver-block-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/furniture-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/hinges-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/plywood-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/soil-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/water-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/water-testing/ph-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/water-testing/tds-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://mqtlab.com/testing/wood-testing</loc><lastmod>2026-10-31T12:47:58.422Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/about</loc><lastmod>2026-11-06T06:48:07.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/contact-us</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/privacy-policy</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/terms-and-conditions</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/aggregates-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/cement-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/concrete-paver-block-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/furniture-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/hinges-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/plywood-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/soil-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/water-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/water-testing/ph-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/water-testing/tds-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://mqtlab.com/testing/wood-testing</loc><lastmod>2026-11-06T06:48:07.631Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

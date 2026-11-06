@@ -20,6 +20,8 @@ const Footer = () => {
     { name: "About Us", link: "/about" },
     { name: "Our Services", link: "/testing" },
     { name: "Contact Us", link: "/contact-us" },
+    { name: "Terms & Conditions", link: "/terms-and-conditions" },
+    { name: "Privacy Policy", link: "/privacy-policy" },
   ];
 
   return (
@@ -144,8 +146,20 @@ const Footer = () => {
           <p>
             © {new Date().getFullYear()} Minu Quality Testing Laboratories Private Limited. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-xs text-slate-500">
-            <span>Material Testing Laboratory</span>
+          <div className="flex items-center gap-4 text-xs text-slate-400">
+            <Link
+              href="/terms-and-conditions"
+              className="hover:text-red-400 transition duration-200"
+            >
+              Terms &amp; Conditions
+            </Link>
+            <span className="text-slate-600">•</span>
+            <Link
+              href="/privacy-policy"
+              className="hover:text-red-400 transition duration-200"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
 

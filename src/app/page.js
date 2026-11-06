@@ -28,7 +28,7 @@ const faqSchema = {
           name: "What materials and industrial products does MQTL test?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Minu Quality Testing Laboratories (MQTL) provides comprehensive physical, mechanical, and chemical testing services across key manufacturing and construction sectors: Wood & Timber (IS 1708), Plywood & Panel Boards (IS 303, IS 710, IS 2202), Water Quality (IS 10500, IS 456), Furniture & Architectural Hardware (IS 363), and Civil Construction Materials including Cement (IS 4031), Paver Blocks (IS 15658), Aggregates (IS 2386, IS 383), and Soil (IS 2720).",
+            text: "Minu Quality Testing Laboratories (MQTL) provides comprehensive physical, mechanical, and chemical testing services across key manufacturing and construction sectors: Wood & Timber, Plywood & Panel Boards, Water Quality, Furniture & Architectural Hardware, and Civil Construction Materials including Cement, Concrete Paver Blocks, Aggregates, and Geotechnical Soil.",
           },
         },
         {
@@ -36,23 +36,23 @@ const faqSchema = {
           name: "Where is MQTL located and how can clients submit their samples?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our testing facility is conveniently located at Plot No. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh – 201310. Clients can submit samples directly at our laboratory intake desk or send them via reliable courier and cargo services.",
+            text: "Our testing facility is conveniently located at Plot No. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh – 201310. Clients can submit samples directly at our laboratory or send them via reliable courier and cargo services.",
           },
         },
         {
           "@type": "Question",
-          name: "What is the standard turnaround time for laboratory test reports?",
+          name: "How are laboratory test reports verified and delivered?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Standard turnaround time for routine physical, chemical, and dimensional analyses is typically 2 to 5 working days following sample receipt and verification. Tests with mandatory technical curing schedules (such as 7-day or 28-day concrete cube compressive strength tests) are concluded on their exact milestone dates.",
+            text: "Every laboratory test report undergoes multi-tier technical verification before release. Verified digital certificates with complete sample traceability are issued promptly upon completion of testing procedures.",
           },
         },
         {
           "@type": "Question",
-          name: "Are testing procedures aligned with applicable Indian Standards (IS)?",
+          name: "Are testing procedures aligned with national and industrial quality standards?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Testing at MQTL follows standard testing methods referencing published Indian Standards (IS), including IS 10500:2012 for drinking water, IS 456:2000 for concrete mixing water, IS 303 and IS 710 for plywood, IS 1708 for timber, and IS 4031 for cement.",
+            text: "Yes. Testing at MQTL follows standard testing methods referencing established national and industrial specifications for drinking water, concrete mixing water, plywood, timber, cement, and aggregates. Every verified laboratory test report clearly cites the applicable test method, observed parameters, and standard reference values.",
           },
         },
         {
@@ -60,7 +60,7 @@ const faqSchema = {
           name: "What are the recommended guidelines for sample collection and packaging?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Water samples should be collected in clean, sealed 1-2 liter containers with minimal air headspace; timber and plywood prepared to standard coupon dimensions; cement and aggregates packed in airtight heavy-duty polythene bags; and hardware/furniture submitted as complete unaltered production assemblies.",
+            text: "Water samples should be collected in clean, sealed 1-2 liter containers with minimal air headspace; timber and plywood prepared to standard coupon dimensions; cement and aggregates packed in airtight heavy-duty bags; and hardware/furniture submitted as complete unaltered production assemblies.",
           },
         },
         {
@@ -68,7 +68,7 @@ const faqSchema = {
           name: "How does drinking water testing differ from concrete mixing water testing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Drinking water testing follows IS 10500:2012 focusing on human safety with an acceptable pH of 6.5 to 8.5 alongside limits for TDS, hardness, and contaminants. Concrete mixing water follows IS 456:2000 with a minimum pH requirement of 6.0 and limits on sulfates, chlorides, and organic impurities to preserve concrete durability.",
+            text: "Drinking water testing focuses on human safety and potability with an acceptable pH of 6.5 to 8.5 alongside limits for TDS, hardness, and contaminants. Concrete mixing water focuses on cement hydration and durability with a minimum pH requirement of 6.0 and limits on sulfates, chlorides, and organic impurities to preserve concrete durability.",
           },
         },
         {
@@ -92,7 +92,7 @@ const faqSchema = {
           name: "Can MQTL conduct customized performance or non-standard endurance testing?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "In addition to standard testing as per Indian Standards, we perform custom mechanical load evaluations, cyclic durability testing, and tailored quality checks based on client engineering drawings and project requirements.",
+            text: "In addition to standard quality testing, we perform custom mechanical load evaluations, cyclic durability testing, and tailored quality checks based on client engineering drawings and project requirements.",
           },
         },
         {

@@ -124,7 +124,7 @@ export default function ConsultationBanner() {
         <div className="grid lg:grid-cols-12 gap-7 lg:gap-9 items-center">
           
           {/* Left Column: Headline, Copy & Compact Call Visual */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
+          <div className="lg:col-span-5 flex flex-col justify-center reveal-from-left">
             {/* Top Light Red Accent Line & Tag */}
             <div className="flex items-center gap-2 mb-2.5">
               <span className="w-8 h-0.5 bg-[#ff4d5a] rounded-full shadow-[0_0_8px_rgba(255,77,90,0.6)]" />
@@ -143,7 +143,7 @@ export default function ConsultationBanner() {
 
             {/* Subtitle */}
             <p className="text-teal-50/90 text-xs sm:text-[13.5px] leading-relaxed mb-5 max-w-md">
-              Submit your test specimens to our laboratory testing facility in Noida. Get accurate test parameters, verified digital quality reports, and prompt turnaround for timber, panels, and construction materials.
+              Submit your test specimens to our laboratory testing facility in Noida. Get accurate test parameters, verified digital quality reports, and dependable testing services for timber, panels, and construction materials.
             </p>
 
             {/* Compact 3D Phone Sphere Badge */}
@@ -172,7 +172,7 @@ export default function ConsultationBanner() {
           </div>
 
           {/* Right Column: Form Card with MQTL Deep Teal Glassmorphism */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 reveal-from-right">
             <div className="bg-[#022433]/85 backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.4)] relative">
               
               {/* Form Title with Light Red Accent Line */}
@@ -312,7 +312,7 @@ export default function ConsultationBanner() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full bg-gradient-to-r from-[#ff3b4e] via-[#ff4d5a] to-[#ff606e] hover:from-[#e82f42] hover:via-[#ff3b4e] hover:to-[#ff4d5a] text-white font-bold py-2.5 sm:py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_25px_rgba(255,77,90,0.35)] hover:shadow-[0_8px_30px_rgba(255,77,90,0.5)] hover:scale-[1.008] active:scale-[0.99] transition-all text-xs sm:text-sm tracking-wider uppercase cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group border border-white/15"
+                  className="btn-shimmer w-full bg-gradient-to-r from-[#ff3b4e] via-[#ff4d5a] to-[#ff606e] hover:from-[#e82f42] hover:via-[#ff3b4e] hover:to-[#ff4d5a] text-white font-bold py-2.5 sm:py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_25px_rgba(255,77,90,0.35)] hover:shadow-[0_8px_30px_rgba(255,77,90,0.5)] hover:scale-[1.008] active:scale-[0.99] transition-all text-xs sm:text-sm tracking-wider uppercase cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group border border-white/15"
                 >
                   {status === "loading" ? (
                     <>

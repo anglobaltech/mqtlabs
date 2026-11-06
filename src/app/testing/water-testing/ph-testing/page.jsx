@@ -91,13 +91,13 @@ export const metadata = {
 
 const standardsData = [
   {
-    application: "Potable Drinking Water (IS 10500:2012)",
+    application: "Potable Drinking Water Specifications",
     acceptable: "6.5 – 8.5",
     operational: "Acceptable limit (no relaxation permitted)",
     impact: "Values below 6.5 can increase corrosivity to plumbing and metal fixtures; values above 8.5 may promote mineral encrustation and reduce chlorine disinfection efficiency.",
   },
   {
-    application: "Concrete Mixing & Curing Water (IS 456:2000)",
+    application: "Concrete Mixing & Curing Water",
     acceptable: "Min 6.0",
     operational: "Not less than 6.0",
     impact: "Water with pH below 6.0 can interfere with cement hydration, retard setting times, and increase the risk of reinforcement steel corrosion.",
@@ -198,11 +198,11 @@ const phSteps = [
 const faqs = [
   {
     q: "What is the acceptable pH range for drinking water in India?",
-    a: "Under BIS IS 10500:2012, the acceptable pH range for drinking water is 6.5 to 8.5, with no relaxation permitted. Water with a pH below 6.5 is acidic and can increase plumbing corrosivity, while water above 8.5 is alkaline and may cause scaling or a bitter taste.",
+    a: "Under national drinking water quality standards, the acceptable pH range for drinking water is 6.5 to 8.5, with no relaxation permitted. Water with a pH below 6.5 is acidic and can increase plumbing corrosivity, while water above 8.5 is alkaline and may cause scaling or a bitter taste.",
   },
   {
     q: "Why is water pH testing important for concrete mixing and construction?",
-    a: "IS 456:2000 specifies that water used for mixing and curing concrete must have a pH value not less than 6.0. Acidic water can impede cement hydration, delay setting time, reduce compressive strength, and accelerate the corrosion of steel reinforcement.",
+    a: "Standard engineering specifications require that water used for mixing and curing concrete must have a pH value not less than 6.0. Acidic water can impede cement hydration, delay setting time, reduce compressive strength, and accelerate the corrosion of steel reinforcement.",
   },
   {
     q: "What does Automatic Temperature Compensation (ATC) actually do?",
@@ -332,57 +332,57 @@ export default function PhTestingPage() {
 
       <main className="min-h-screen bg-white text-slate-800">
         {/* Hero Section */}
-        <section className="relative w-full bg-[#eef4f9] lg:bg-[#06182b] overflow-hidden">
+        <section className="relative w-full bg-[#07182b] overflow-hidden">
           {/* Mobile & Tablet */}
-          <div className="lg:hidden relative px-4 py-8 sm:px-6 sm:py-10 bg-gradient-to-b from-[#f3f7fa] via-[#e9f1f6] to-[#dfebf3] border-b border-slate-300/80">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500 via-blue-600 to-cyan-500" />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-sky-200/40 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
+          <div className="lg:hidden relative px-4 py-8 sm:px-6 sm:py-10 bg-gradient-to-br from-[#07182b] via-[#0b2440] to-[#07182b] text-white border-b border-white/10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 max-w-xl mx-auto sm:max-w-none">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-sky-200/80 shadow-2xs mb-3 animate-fade-in-up">
-                <span className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" />
-                <span className="text-sky-800 font-bold tracking-wider text-[11px] uppercase">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white/90 shadow-2xs mb-3 backdrop-blur-md animate-fade-in-up">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+                <span className="text-sky-300 font-bold tracking-wider text-[11px] uppercase">
                   WATER TESTING SPECIALIZATION
                 </span>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight mb-2.5 animate-fade-in-up animation-delay-100">
+              <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight mb-2.5 animate-fade-in-up animation-delay-100">
                 pH Water Testing Services in Noida – Acidity &amp; Alkalinity Analysis
               </h1>
 
-              <p className="text-slate-600 text-xs sm:text-[14px] leading-relaxed mb-5 animate-fade-in-up animation-delay-200">
+              <p className="text-slate-300 text-xs sm:text-[14px] leading-relaxed mb-5 animate-fade-in-up animation-delay-200">
                 Professional electrometric pH analysis using calibrated digital pH meters with temperature compensation. Essential for drinking water quality, concrete batching, and industrial water systems.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-5 animate-fade-in-up animation-delay-300">
                 <Link
                   href="/contact-us"
-                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                  className="btn-shimmer bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
                 >
                   Request a Test
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/testing/water-testing"
-                  className="bg-white/85 hover:bg-white text-slate-700 hover:text-slate-900 border border-slate-300/80 font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center shadow-2xs transition-all"
+                  className="bg-white/10 hover:bg-white/15 text-white border border-white/20 font-semibold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center backdrop-blur-md transition-all"
                 >
                   All Water Services
                 </Link>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/80 backdrop-blur-xs border border-white/90 shadow-2xs animate-fade-in-up animation-delay-400">
-                <div className="grid grid-cols-3 gap-2 text-center divide-x divide-slate-200">
+              <div className="p-3.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xs animate-fade-in-up animation-delay-400">
+                <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/10">
                   <div className="px-1">
                     <p className="text-[10px] uppercase font-bold text-slate-400">Method</p>
-                    <p className="text-xs font-bold text-slate-800">Electrometric</p>
+                    <p className="text-xs font-bold text-white">Electrometric</p>
                   </div>
                   <div className="px-1">
                     <p className="text-[10px] uppercase font-bold text-slate-400">Resolution</p>
-                    <p className="text-xs font-bold text-slate-800">0.01 pH</p>
+                    <p className="text-xs font-bold text-white">0.01 pH</p>
                   </div>
                   <div className="px-1">
                     <p className="text-[10px] uppercase font-bold text-slate-400">Reports</p>
-                    <p className="text-xs font-bold text-slate-800">Verified</p>
+                    <p className="text-xs font-bold text-white">Verified</p>
                   </div>
                 </div>
               </div>
@@ -398,10 +398,10 @@ export default function PhTestingPage() {
               priority
               className="object-cover object-center transition-transform duration-700 hover:scale-[1.01]"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#051628]/95 via-[#051628]/85 via-42% to-transparent to-62% z-10" />
 
             <div className="relative z-20 h-full max-w-7xl mx-auto px-6 lg:px-8 flex items-center">
-              <div className="max-w-2xl py-6">
+              <div className="max-w-2xl lg:max-w-[680px] xl:max-w-[740px] py-6">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-xs mb-3 animate-fade-in-up">
                   <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
                   <span className="text-sky-300 font-bold tracking-wider text-[11px] uppercase">
@@ -413,14 +413,14 @@ export default function PhTestingPage() {
                   pH Water Testing Services in Noida – Acidity &amp; Alkalinity Analysis
                 </h1>
 
-                <p className="text-slate-200 text-sm xl:text-[15px] leading-relaxed mb-6 max-w-xl animate-fade-in-up animation-delay-200">
+                <p className="text-slate-200 text-sm xl:text-[15px] leading-relaxed mb-6 animate-fade-in-up animation-delay-200">
                   Professional electrometric pH testing utilizing calibrated digital meters and combination glass electrodes. Verify acidity and alkalinity balance for drinking water safety, concrete mixing durability, and industrial system protection.
                 </p>
 
                 <div className="flex items-center gap-3.5 mb-6 animate-fade-in-up animation-delay-300">
                   <Link
                     href="/contact-us"
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                    className="btn-shimmer bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.98] transition-all duration-200"
                   >
                     Request a Test
                     <ChevronRight className="w-4 h-4" />
@@ -453,38 +453,38 @@ export default function PhTestingPage() {
         </section>
 
         {/* Key Stats */}
-        <section className="bg-[#081e35] border-y border-white/10 text-white">
+        <section className="bg-[#081e35] border-y border-white/10 text-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   0 – 14
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Conventional pH Scale
                 </span>
               </div>
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   0.01
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Measurement Resolution
                 </span>
               </div>
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
-                  IS 3025
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
+                  Standard
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
-                  Standardized Method
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
+                  Test Methods
                 </span>
               </div>
-              <div className="py-7 sm:py-8 px-4 text-center">
-                <span className="block text-3xl sm:text-4xl lg:text-[40px] font-black text-red-500 mb-1.5 tracking-tight">
+              <div className="py-6 sm:py-7 px-4 text-center">
+                <span className="block text-2xl sm:text-3xl lg:text-[32px] font-bold text-red-500 mb-1 tracking-tight">
                   Quality
                 </span>
-                <span className="block text-xs sm:text-[13px] font-bold text-gray-200 uppercase tracking-wider">
+                <span className="block text-xs sm:text-[12.5px] font-medium text-gray-300 uppercase tracking-wider">
                   Controlled Testing
                 </span>
               </div>
@@ -493,7 +493,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Understanding pH Testing */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="md:col-span-5 relative h-[320px] sm:h-[320px] rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
@@ -523,7 +523,7 @@ export default function PhTestingPage() {
                 </p>
                 <div className="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200/70 mb-6">
                   <p className="text-xs text-sky-900 font-medium leading-relaxed">
-                    <strong>Drinking Water Benchmark:</strong> India&apos;s drinking water standard BIS IS 10500:2012 specifies an acceptable pH range of <strong>6.5 to 8.5</strong>, with no relaxation permitted.
+                    <strong>Drinking Water Benchmark:</strong> National drinking water quality specifications prescribe an acceptable pH range of <strong>6.5 to 8.5</strong>, with no relaxation permitted.
                   </p>
                 </div>
 
@@ -561,7 +561,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Benchmarks Table */}
-        <section className="py-14 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70">
+        <section className="py-14 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -607,7 +607,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Testing Methodology */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -615,7 +615,7 @@ export default function PhTestingPage() {
               </h2>
               <div className="w-12 h-0.5 bg-red-500 mx-auto mt-3 rounded-full" />
               <p className="text-sm text-gray-500 max-w-xl mx-auto mt-2">
-                Conducted in accordance with IS 3025 (Part 11) and APHA 4500-H⁺ B using calibrated digital instruments.
+                Conducted in accordance with standard electrometric procedures and APHA 4500-H⁺ B using calibrated digital instruments.
               </p>
             </div>
 
@@ -669,7 +669,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Applications */}
-        <section className="py-14 sm:py-20 bg-[#f0f5fa] border-y border-slate-200/70">
+        <section className="py-14 sm:py-20 bg-[#f0f5fa] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -703,7 +703,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Sample Collection Requirements (New Dedicated Section) */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-wider text-sky-700 bg-sky-100 border border-sky-200 px-3.5 py-1 rounded-full">
@@ -771,7 +771,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Testing Standards & Analytical References (New Dedicated Section) */}
-        <section className="py-14 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70">
+        <section className="py-14 sm:py-20 bg-[#f8fafc] border-y border-slate-200/70 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-wider text-[#05526e] bg-sky-100 border border-sky-200 px-3.5 py-1 rounded-full">
@@ -793,7 +793,7 @@ export default function PhTestingPage() {
                     01
                   </div>
                   <h3 className="font-bold text-slate-900 text-sm">
-                    IS 3025 (Part 11) &amp; APHA 4500-H⁺ B
+                    Standard Electrometric &amp; APHA 4500-H⁺ B
                   </h3>
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed">
@@ -807,11 +807,11 @@ export default function PhTestingPage() {
                     02
                   </div>
                   <h3 className="font-bold text-slate-900 text-sm">
-                    BIS IS 10500:2012 (Drinking Water)
+                    National Drinking Water Quality Standards
                   </h3>
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Indian Standard Drinking Water Specification, prescribing an acceptable limit of pH 6.5 to 8.5 with no relaxation permitted across public, municipal, and packaged potable water sources.
+                  Standard Drinking Water Specifications prescribing an acceptable limit of pH 6.5 to 8.5 with no relaxation permitted across public, municipal, and packaged potable water sources.
                 </p>
               </div>
 
@@ -821,11 +821,11 @@ export default function PhTestingPage() {
                     03
                   </div>
                   <h3 className="font-bold text-slate-900 text-sm">
-                    IS 456:2000 &amp; Environment Rules
+                    Construction &amp; Environment Guidelines
                   </h3>
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  IS 456 specification for concrete mixing water requiring pH not less than 6.0, alongside Environment (Protection) Rules general effluent discharge guidelines of pH 5.5 to 9.0.
+                  Technical specifications for concrete mixing water requiring pH not less than 6.0, alongside Environment (Protection) Rules general effluent discharge guidelines of pH 5.5 to 9.0.
                 </p>
               </div>
             </div>
@@ -833,7 +833,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Testing Procedure */}
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="py-14 sm:py-20 bg-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -866,7 +866,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Why Choose MQTL */}
-        <section className="py-14 sm:py-20 bg-gradient-to-br from-[#06182b] via-[#09223e] to-[#0d2d50] text-white">
+        <section className="py-14 sm:py-20 bg-gradient-to-br from-[#06182b] via-[#09223e] to-[#0d2d50] text-white reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-wider text-red-400 bg-red-500/15 border border-red-500/30 px-3.5 py-1 rounded-full">
@@ -901,7 +901,7 @@ export default function PhTestingPage() {
                 <BookOpen className="w-8 h-8 text-sky-400 mb-3" />
                 <h3 className="font-bold text-white text-sm mb-1.5">Documented Procedures</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Standard operating procedures aligned with IS 3025 and APHA methods ensure reliable, reproducible test results.
+                  Standard operating procedures aligned with standard electrometric and APHA methods ensure reliable, reproducible test results.
                 </p>
               </div>
 
@@ -933,7 +933,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* Related Water Testing Services */}
-        <section className="py-12 bg-gradient-to-r from-sky-50 to-blue-50 border-y border-sky-100">
+        <section className="py-12 bg-gradient-to-r from-sky-50 to-blue-50 border-y border-sky-100 reveal-on-scroll">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="card-interactive group bg-white rounded-2xl border border-sky-200 hover:border-sky-400 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs hover:shadow-md transition-all duration-300 cursor-default">
               <div className="max-w-2xl">
@@ -968,7 +968,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-[#07192d] via-[#092544] to-[#0d345e] py-14 sm:py-16">
+        <section className="relative overflow-hidden bg-gradient-to-r from-[#07192d] via-[#092544] to-[#0d345e] py-14 sm:py-16 reveal-scale">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left max-w-2xl">
@@ -983,7 +983,7 @@ export default function PhTestingPage() {
               <div className="shrink-0 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact-us"
-                  className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-[15px] px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all"
+                  className="btn-shimmer bg-red-600 hover:bg-red-700 text-white font-semibold text-sm sm:text-[15px] px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] transition-all"
                 >
                   Request a Test
                   <ArrowRight className="w-4 h-4" />
@@ -1000,7 +1000,7 @@ export default function PhTestingPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 sm:py-20 bg-white" id="faqs">
+        <section className="py-16 sm:py-20 bg-white reveal-on-scroll" id="faqs">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
