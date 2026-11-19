@@ -1,5 +1,11 @@
 import Hero from "../../components/Hero";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://mqtlab.com",
+  },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -10,6 +16,8 @@ const faqSchema = {
       url: "https://mqtlab.com",
       telephone: "+91-9971234474",
       email: "info@mqtlab.com",
+      image: "https://mqtlab.com/testing/laboratory-banner.png",
+      priceRange: "₹₹",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Plot No. 79, Sector 155",
@@ -18,6 +26,33 @@ const faqSchema = {
         postalCode: "201310",
         addressCountry: "IN",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 28.4312,
+        longitude: 77.4984,
+      },
+      hasMap: "https://maps.google.com/?q=Plot+No+79+Sector+155+Noida+Uttar+Pradesh+201310",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          opens: "09:30",
+          closes: "18:30",
+        },
+      ],
+      areaServed: [
+        { "@type": "City", name: "Noida" },
+        { "@type": "City", name: "Greater Noida" },
+        { "@type": "City", name: "Delhi NCR" },
+        { "@type": "Country", name: "India" },
+      ],
     },
     {
       "@type": "FAQPage",

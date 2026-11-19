@@ -81,7 +81,7 @@ export async function POST(req) {
       console.error("[Firestore] Save error:", firestoreError.message || firestoreError);
     }
 
-    const recipientEmail = process.env.ENQUIRY_TO_EMAIL || "mail@anglobalservices.com";
+    const recipientEmail = process.env.ENQUIRY_TO_EMAIL || "info@mqtlab.com";
     if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
       const transporter = nodemailer.createTransport({
         service: "gmail",

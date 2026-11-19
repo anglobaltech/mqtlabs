@@ -30,12 +30,77 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title:
-    "About Us | Minu Quality Testing Laboratories Private Limited",
+  title: "About Us | Minu Quality Testing Laboratories Private Limited",
   description:
     "Learn about Minu Quality Testing Laboratories Private Limited (MQTL) — a dedicated material testing laboratory located at Plot No. 79, Sector 155, Noida. We deliver reliable, verified testing services for wood, plywood, water, furniture, cement, soil, aggregates, hinges, and paver blocks across Delhi NCR and nationwide.",
-  keywords:
-    "About Minu Quality Testing Laboratories Private Limited, Material Testing Laboratory Noida, Water Testing Lab Delhi NCR, Wood Testing Lab, Plywood Testing Lab, Soil Testing Laboratory, Construction Materials Testing, MQTL Noida",
+  keywords: [
+    "About Minu Quality Testing Laboratories Private Limited",
+    "Material Testing Laboratory Noida",
+    "Water Testing Lab Delhi NCR",
+    "Wood Testing Lab",
+    "Plywood Testing Lab",
+    "Soil Testing Laboratory",
+    "Construction Materials Testing",
+    "MQTL Noida",
+  ],
+  alternates: {
+    canonical: "https://mqtlab.com/about",
+  },
+  openGraph: {
+    title: "About Minu Quality Testing Laboratories Private Limited",
+    description:
+      "Independent testing facility delivering rigorous physical, mechanical, and chemical material evaluations at Plot 79, Sector 155, Noida.",
+    url: "https://mqtlab.com/about",
+    siteName: "Minu Quality Testing Laboratories Private Limited",
+    images: [
+      {
+        url: "/testing/laboratory-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "MQTL Laboratory Testing Bay",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Minu Quality Testing Laboratories Private Limited",
+    description:
+      "Independent testing laboratory in Sector 155, Noida delivering verified test reports.",
+    images: ["/testing/laboratory-banner.png"],
+  },
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://mqtlab.com/about#page",
+      url: "https://mqtlab.com/about",
+      name: "About Minu Quality Testing Laboratories Private Limited",
+      description:
+        "Learn about MQTL laboratory, our testing methodology, facility at Sector 155 Noida, and our quality standards.",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://mqtlab.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About Us",
+          item: "https://mqtlab.com/about",
+        },
+      ],
+    },
+  ],
 };
 
 export default function AboutPage() {
@@ -176,6 +241,10 @@ export default function AboutPage() {
 
   return (
     <main className="bg-white text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       {/* ── 1. MODERN HERO SECTION ── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#06182c] via-[#09223c] to-[#0c2b4c] text-white py-14 sm:py-20">
         {/* Subtle decorative background glow */}
