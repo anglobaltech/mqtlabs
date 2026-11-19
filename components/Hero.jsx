@@ -349,9 +349,9 @@ const qualityPillars = [
     icon: Award,
   },
   {
-    title: "Data Confidentiality & Fast Dispatch",
+    title: "Data Confidentiality & Prompt Dispatch",
     description:
-      "Secure, tamper-proof digital PDF certificates delivered within 2 to 5 working days, protected by strict commercial confidentiality.",
+      "Secure, tamper-proof digital PDF certificates delivered with prompt dispatch, protected by strict commercial confidentiality.",
     icon: Clock,
   },
 ];
@@ -748,7 +748,7 @@ const HomePage = () => {
                 About Minu Quality Testing Laboratories
               </h2>
               <div className="w-16 h-1 bg-red-500 mx-auto mb-6 rounded-full" />
-              <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 max-w-6xl mx-auto leading-relaxed">
                 <b>Minu Quality Testing Laboratories Private Limited</b> is an independent commercial testing
                 laboratory in Noida, Uttar Pradesh, India, providing professional testing and evaluation services for{" "}
                 <b>wooden products, plywood, furniture, water, soil, cement, aggregates, and construction materials</b>.
@@ -1184,7 +1184,7 @@ const HomePage = () => {
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
                   <span className="text-sm sm:text-base text-slate-200">
-                    Standard testing reports delivered in 2 to 5 working days
+                    Standard verified testing reports with prompt digital dispatch
                   </span>
                 </div>
                 <div className="flex items-center gap-3">

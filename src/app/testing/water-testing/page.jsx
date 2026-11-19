@@ -288,7 +288,7 @@ const faqs = [
   },
   {
     q: "How can I submit water samples to MQTL Laboratory?",
-    a: "You can deliver water samples directly to our facility at Plot No. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh 201310, India, or send them via courier with a formal testing requisition slip. For microbiological testing, samples should be delivered within 24 hours of collection.",
+    a: "You can deliver water samples directly to our facility at Plot No. 79, Sector 155, Noida, Gautam Buddha Nagar, Uttar Pradesh 201310, India, or send them via courier with a formal testing requisition slip. For microbiological testing, samples should be delivered promptly following collection.",
   },
   {
     q: "Does MQTL provide laboratory test reports with digital verification?",
@@ -337,7 +337,7 @@ export default function WaterTestingPage() {
                 "Friday",
                 "Saturday",
               ],
-              opens: "09:00",
+              opens: "09:30",
               closes: "18:30",
             },
           ],

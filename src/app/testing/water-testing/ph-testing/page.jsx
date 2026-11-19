@@ -263,7 +263,7 @@ export default function PhTestingPage() {
                 "Friday",
                 "Saturday",
               ],
-              opens: "09:00",
+              opens: "09:30",
               closes: "18:30",
             },
           ],

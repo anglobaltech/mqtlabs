@@ -131,7 +131,7 @@ const testServices = [
   {
     title: "Concealed Cup Hinge Fatigue Test",
     description:
-      "Specialized cycle and slam testing for furniture auto-close and soft-close concealed cup hinges (standard cycle endurance protocols / EN 15570) on modular kitchen and wardrobe doors.",
+      "Specialized cycle and slam testing for furniture auto-close and soft-close concealed cup hinges (standard cyclic endurance protocols) on modular kitchen and wardrobe doors.",
     icon: Boxes,
   },
   {

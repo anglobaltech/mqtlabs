@@ -14,9 +14,24 @@ export async function POST(req) {
       (body.service ? `Consultation request for ${body.service}` : "Consultation Call Request");
     const source = body.source || "Website Enquiry";
 
-    if (!fullName.trim() || !email.trim() || !phone.trim()) {
+    if (!fullName.trim() || !phone.trim() || !service.trim()) {
       return Response.json(
-        { success: false, message: "Name, email, and 10-digit phone number are required" },
+        { success: false, message: "Name, phone number, and testing service are required" },
+        { status: 400 }
+      );
+    }
+
+    const cleanPhone = phone.replace(/\D/g, "");
+    if (cleanPhone.length !== 10) {
+      return Response.json(
+        { success: false, message: "Phone number must be exactly 10 digits" },
+        { status: 400 }
+      );
+    }
+
+    if (email.trim() && (!email.includes("@") || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))) {
+      return Response.json(
+        { success: false, message: "Please provide a valid email address with '@'" },
         { status: 400 }
       );
     }
@@ -79,7 +94,7 @@ export async function POST(req) {
       await transporter.sendMail({
         from: `"MQTL" <${process.env.EMAIL_USER}>`,
         to: recipientEmail,
-        replyTo: email,
+        replyTo: email.trim() || process.env.EMAIL_USER,
         subject: `New Enquiry [${nextLeadId}] Received From MQTL Laboratory`,
         html: `
           <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f1f5f9;">
@@ -107,7 +122,7 @@ export async function POST(req) {
                   </tr>
                   <tr style="border-top: 1px solid #f1f5f9;">
                     <td style="padding: 9px 0; color: #64748b; font-weight: 600;">Email Address:</td>
-                    <td style="padding: 9px 0; color: #0f172a;"><a href="mailto:${email}" style="color: #0284c7; text-decoration: none;">${email}</a></td>
+                    <td style="padding: 9px 0; color: #0f172a;">${email.trim() ? `<a href="mailto:${email}" style="color: #0284c7; text-decoration: none;">${email}</a>` : '<span style="color: #94a3b8;">Not Provided</span>'}</td>
                   </tr>
                   <tr style="border-top: 1px solid #f1f5f9;">
                     <td style="padding: 9px 0; color: #64748b; font-weight: 600;">Required Service:</td>

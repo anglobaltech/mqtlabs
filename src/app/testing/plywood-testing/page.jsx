@@ -353,7 +353,7 @@ export default function PlywoodTestingPage() {
                 "Friday",
                 "Saturday",
               ],
-              opens: "09:00",
+              opens: "09:30",
               closes: "18:30",
             },
           ],
